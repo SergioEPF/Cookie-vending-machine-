@@ -1,4 +1,4 @@
-# Nome do projeto
+# Cookie Vending Machine 
 
 **(Adicionar abaixo UM parágrafo com visão geral do projeto.)**
 
