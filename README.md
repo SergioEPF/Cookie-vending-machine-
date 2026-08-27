@@ -2,7 +2,7 @@
 
 **(Adicionar abaixo UM parágrafo com visão geral do projeto.)**
 
-Esse projeto é um sistema de controle de motor de passo... O desenvolvimento foi divido em quatro etapas:
+Desenvolvimento de uma máquina de venda de cookies de forma automatizada, contendo uma interface homem-máquina(IHM) para realizar a interação com o usuário , além de um sistema mecânico para a entrega do cookie.  
 
 - Etapa 1 (data da entrega): (breve descrição da etapa)
 - Etapa 2 (data da entrega): (breve descrição da etapa)
