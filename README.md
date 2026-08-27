@@ -1,7 +1,5 @@
 # Cookie Vending Machine 
 
-**(Adicionar abaixo UM parágrafo com visão geral do projeto.)**
-
 Desenvolvimento de uma máquina de venda de cookies de forma automatizada, contendo uma interface homem-máquina(IHM) para realizar a interação com o usuário , além de um sistema mecânico para a entrega do cookie.  
 
 - Etapa 1 (data da entrega): (breve descrição da etapa)
