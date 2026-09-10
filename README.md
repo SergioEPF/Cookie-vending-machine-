@@ -2,8 +2,6 @@
 
 Desenvolvimento de uma máquina de venda de cookies de forma automatizada, contendo uma interface homem-máquina(IHM) para realizar a interação com o usuário , além de um sistema mecânico para a entrega do cookie.  
 
-**(Exemplo com os links dos READMEs das etapas:)**
-
 - [Etapa 1](./etapa_1/README.md) (02/04/2026): Pesquisa, planejamento e outline do projeto.
 - [Etapa 2](./etapa_2/README.md) (30/04/2026): Teste dos módulos e desenvolvimento de protótipo.
 - [Etapa 3](./etapa_3/README.md) (28/05/2026): Desenvolvimento do produto.
