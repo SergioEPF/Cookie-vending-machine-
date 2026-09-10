@@ -12,7 +12,7 @@ A Figura 1 apresenta o diagrama de blocos do funcionamento geral da máquina. O 
 
 <p align="center">
  
-  <img width="956" height="866" alt="image" src="https://github.com/user-attachments/assets/fb7adfe5-52b8-4086-826e-4f593f78a32e" />
+  <img width="956" height="500" alt="image" src="https://github.com/user-attachments/assets/fb7adfe5-52b8-4086-826e-4f593f78a32e" />
 
 
   <br>
