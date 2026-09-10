@@ -35,7 +35,8 @@ Os cookies serão acondicionados individualmente em embalagens fechadas e posici
 
 O MDF será utilizado como estrutura do gabinete. As áreas de apoio, a calha e a bandeja terão superfícies lisas e removíveis para facilitar a limpeza; o alimento permanecerá protegido pela embalagem. O compartimento eletrônico será separado do espaço de produtos e da trajetória de queda.
 
-<img width="1200" height="544" alt="image" src="https://github.com/user-attachments/assets/5907f187-6b4f-49b5-9cb4-5f08e688e732" />
+<p align="center">
+<img width="1200" height="400" alt="image" src="https://github.com/user-attachments/assets/5907f187-6b4f-49b5-9cb4-5f08e688e732" />
 <br>
 <em>Figura 3 — Protótipo Inicial da Máquina.</em>
 </p>
