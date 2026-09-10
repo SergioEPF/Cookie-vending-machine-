@@ -4,7 +4,17 @@ A etapa 1 foi dedicada à definição dos principais conceitos de hardware, soft
 
 ## Desenvolvimento
 
-Apresentar o desenvolvimento da etapa contendo detalhes de implementação (se houver) de hardware e software. Use fotos, diagramas, tabelas etc. Adicionar pesqusisas realizadas. Relacionar as fotos, diagramas, etc no texto. Todas as referências devem citadas no texto. 
+A ideia do projeto surgiu da proposta de desenvolver uma máquina de venda automática de pequeno porte, voltada a microempreendedores que produzem seus próprios alimentos e buscam uma alternativa para comercializá-los. Nesse contexto, escolhemos os cookies como produto para o desenvolvimento do protótipo.
+
+###Conceito geral do funcionamento
+
+A Figura 1 apresenta o diagrama de blocos do funcionamento geral da máquina. O usuário inicia a interação pela IHM, que se comunica por Wi-Fi com o microcontrolador. Este recebe o sabor selecionado, verifica as condições para a liberação e aciona o motor correspondente. A entrega do cookie é então verificada por meio do sensor ultrassônico.
+
+![Figura 1 - Diagrama de blocos da máquina](etapa_1/assets/diagrama_blocos_cookie_vending.png)
+*Figura 1 — Diagrama de blocos da máquina.*
+
+
+
 
 ## Testes
 
