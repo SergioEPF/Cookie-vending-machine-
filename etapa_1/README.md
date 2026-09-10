@@ -31,9 +31,10 @@ A Figura 2 apresenta o fluxograma do software a ser implementado nas próximas e
 
 ### Armazenamento e liberação dos cookies
 
-Os cookies serão armazenados em embalagens individuais fechadas, entre as espiras de molas fabricadas para o projeto. As molas ficarão em canais separados por divisórias, com acesso por uma tampa na parte superior da caixa para facilitar a reposição.
+A alternativa escolhida para o desenvolvimento do protótipo é o sistema de espirais acionadas individualmente, aproveitando as espirais de aço mola já produzidas e permitindo a divisão dos produtos em canais independentes. Os cookies serão armazenados em embalagens individuais fechadas, posicionadas entre as espiras, com os canais separados por divisórias. A reposição será realizada por uma tampa localizada na parte superior da caixa, facilitando o acesso ao compartimento de armazenamento.
 
-A caixa será feita em MDF, com superfícies de apoio e bandeja de retirada lisas e removíveis para facilitar a limpeza. O compartimento eletrônico ficará separado da área de armazenamento e do caminho de queda dos cookies.
+A estrutura da caixa será fabricada em MDF, com superfícies de apoio e bandeja de retirada lisas e removíveis, facilitando a limpeza e a manutenção. O compartimento eletrônico ficará isolado da área de armazenamento e do caminho de queda dos cookies.
+
 
 <p align="center">
 <img width="1200" height="400" alt="image" src="https://github.com/user-attachments/assets/5907f187-6b4f-49b5-9cb4-5f08e688e732" />
@@ -76,7 +77,7 @@ As imagens abaixo apresentam exemplos das principais telas da interface. O fluxo
 
 ### Mecanismos de liberação
 
-A alternativa escolhida para desenvolver o protótipo é a espiral acionada individualmente. A escolha aproveita as espirais de aço mola já produzidas e permite dividir os produtos em canais independentes. 
+
 
 
 
