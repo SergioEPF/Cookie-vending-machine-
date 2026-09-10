@@ -6,15 +6,67 @@ A etapa 1 foi dedicada à definição dos principais conceitos de hardware, soft
 
 A ideia do projeto surgiu da proposta de desenvolver uma máquina de venda automática de pequeno porte, voltada a microempreendedores que produzem seus próprios alimentos e buscam uma alternativa para comercializá-los. Nesse contexto, escolhemos os cookies como produto para o desenvolvimento do protótipo.
 
-###Conceito geral do funcionamento
+### Conceito geral do funcionamento
 
 A Figura 1 apresenta o diagrama de blocos do funcionamento geral da máquina. O usuário inicia a interação pela IHM, que se comunica por Wi-Fi com o microcontrolador. Este recebe o sabor selecionado, verifica as condições para a liberação e aciona o motor correspondente. A entrega do cookie é então verificada por meio do sensor ultrassônico.
 
-![Figura 1 - Diagrama de blocos da máquina](assets/diagrama_blocos_cookie_vending.png)
-*Figura 1 — Diagrama de blocos da máquina.*
+<p align="center">
+  <img src="assets/diagrama_blocos_cookie_vending.png"
+       alt="Figura 1 - Diagrama de blocos da máquina"
+       width="500">
+  <br>
+  <em>Figura 1 — Diagrama de blocos da máquina.</em>
+</p>
+
+### Conceito geral do software 
+
+A Figura 2 apresenta o fluxograma do software a ser implementado nas próximas etapas. Para realizar uma compra, o usuário deverá estar cadastrado e fazer login com sua senha. Após a seleção do sabor, o sistema verificará a disponibilidade em estoque e, caso haja produto disponível, acionará o motor correspondente. A entrega será confirmada pelo sensor. Caso o cookie não seja detectado, será necessário tratar a falha, definindo um limite de tentativas.
+
+<p align="center">
+  <img src="assets/fluxograma_software.png"
+       alt="Figura 2 - Fluxograma software"
+       width="220">
+  <br>
+  <em>Figura 2 — Fluxograma do software da máquina.</em>
+</p>
+
+### Interface com o usuário 
+
+A interação com o usuário será realizada por meio de um celular utilizado como Interface Homem-Máquina (IHM), conectado ao microcontrolador por Wi-Fi. As telas foram organizadas para orientar cada etapa da compra: identificação por login e senha, seleção do sabor, conferência do pedido e acompanhamento da liberação do cookie. Ao final, a interface informará que o produto está disponível para retirada. 
+As imagens abaixo apresentam exemplos das principais telas da interface. O fluxo completo pode ser consultado no [protótipo interativo no Figma](https://www.figma.com/proto/RLSzlbX6hY4JLrHZYsqM1v/Cookie-Vending-Machine---IHM-Mockup?node-id=2-19&viewport=-164%2C-284%2C0.24&t=vtPGIQQFpD4Fdbzo-1&scaling=scale-down&content-scaling=fixed&starting-point-node-id=2%3A19&page-id=0%3A1).
+
+<table align="center">
+  <tr>
+    <td align="center">
+      <img src="assets/login.jpeg"
+           alt="Tela de login"
+           width="220">
+      <br>
+      <em>Figura 3 — Tela de login.</em>
+    </td>
+    <td align="center">
+      <img src="assets/escolha_cookie.jpeg"
+           alt="Tela de escolha de sabor"
+           width="210">
+      <br>
+      <em>Figura 4 — Escolha de sabor.</em>
+    </td>
+    <td align="center">
+      <img src="assets/tela_final.jpeg"
+           alt="Tela de compra concluída"
+           width="220">
+      <br>
+      <em>Figura 5 — Compra concluída.</em>
+    </td>
+  </tr>
+</table>
+
+### Sensores 
+
+Para o sensoriamento, utilizaremos um sensor ultrassônico para detectar a passagem do cookie e confirmar sua entrega, além de uma chave de fim de curso para identificar a abertura da porta de manutenção. Os modelos dos sensores serão definidos nas próximas etapas.
 
 
-
+### Estrutura mecânica 
 
 ## Testes
 
