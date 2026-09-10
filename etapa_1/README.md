@@ -33,7 +33,10 @@ A Figura 2 apresenta o fluxograma do software a ser implementado nas próximas e
 
 A alternativa escolhida para o desenvolvimento do protótipo é o sistema de espirais acionadas individualmente, aproveitando as espirais de aço mola já produzidas e permitindo a divisão dos produtos em canais independentes. Os cookies serão armazenados em embalagens individuais fechadas, posicionadas entre as espiras, com os canais separados por divisórias. A reposição será realizada por uma tampa localizada na parte superior da caixa, facilitando o acesso ao compartimento de armazenamento.
 
-A estrutura da caixa será fabricada em MDF, com superfícies de apoio e bandeja de retirada lisas e removíveis, facilitando a limpeza e a manutenção. O compartimento eletrônico ficará isolado da área de armazenamento e do caminho de queda dos cookies.
+A estrutura da caixa será fabricada em MDF, material escolhido por apresentar boa rigidez, facilidade de fabricação e baixo custo, características adequadas para a construção do protótipo. Na parte frontal será instalada uma placa de acrílico transparente, permitindo a visualização dos cookies armazenados nos canais internos sem a necessidade de abertura da máquina. Além de facilitar o acompanhamento da quantidade de produtos disponíveis, essa solução também contribui para uma melhor apresentação visual do protótipo.
+
+O compartimento destinado aos componentes eletrônicos será separado da região de armazenamento dos cookies e também do caminho de queda dos produtos. Essa separação tem como objetivo proteger os componentes elétricos e eletrônicos, evitar interferências durante a movimentação dos cookies e facilitar as atividades de manutenção, limpeza e reposição.
+
 
 <p align="center">
 <img width="1200" height="400" alt="image" src="https://github.com/user-attachments/assets/c3e7c261-d5ff-4b7a-a3ab-4a08e82c8982" />
