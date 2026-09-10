@@ -35,11 +35,16 @@ A alternativa escolhida para o desenvolvimento do protótipo é o sistema de esp
 
 A estrutura da caixa será fabricada em MDF, com superfícies de apoio e bandeja de retirada lisas e removíveis, facilitando a limpeza e a manutenção. O compartimento eletrônico ficará isolado da área de armazenamento e do caminho de queda dos cookies.
 
+<p align="center">
+<img width="1600" height="628" alt="image" src="https://github.com/user-attachments/assets/c3e7c261-d5ff-4b7a-a3ab-4a08e82c8982" />
+<br>
+<em>Figura 3 — Molas fabicadas.</em>
+</p>
 
 <p align="center">
 <img width="1200" height="400" alt="image" src="https://github.com/user-attachments/assets/5907f187-6b4f-49b5-9cb4-5f08e688e732" />
 <br>
-<em>Figura 3 — Protótipo Inicial da Máquina.</em>
+<em>Figura 4 — Protótipo Inicial da Máquina.</em>
 </p>
 
 ### Interface com o usuário 
