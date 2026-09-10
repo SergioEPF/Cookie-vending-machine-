@@ -80,5 +80,12 @@ As imagens abaixo apresentam exemplos das principais telas da interface. O fluxo
 
 ### Sensores 
 
-A máquina contará com uma barreira infravermelha para confirmar a passagem do cookie, um sensor Hall com ímã para verificar a posição de cada espiral e um sensor magnético na tampa superior para bloquear os motores durante a reposição.
+Para garantir maior confiabilidade e segurança durante o funcionamento da máquina, serão utilizados diferentes sensores responsáveis pelo monitoramento das etapas de dispensação e reposição dos produtos. Na região de saída dos cookies será instalada uma barreira infravermelha, utilizada para detectar a passagem do produto após o acionamento da espiral. Dessa forma, o sistema poderá confirmar se o cookie foi realmente liberado, permitindo identificar possíveis falhas, como travamentos ou ausência de produto no canal.
+
+Cada espiral contará também com um sensor de efeito Hall associado a um pequeno ímã fixado ao conjunto mecânico. Esse sensor será utilizado para identificar a posição de referência da espiral e acompanhar o seu movimento durante o acionamento. Com essa informação, o sistema poderá controlar melhor a rotação do motor, garantindo que a espiral complete o deslocamento necessário para liberar apenas uma unidade por ciclo e retorne à posição adequada para o próximo acionamento.
+
+Além disso, será instalado um sensor magnético na tampa superior destinada à reposição dos cookies. Esse sensor permitirá identificar se a tampa está aberta ou fechada. Caso a abertura seja detectada, o sistema bloqueará automaticamente o acionamento dos motores, evitando movimentações das espirais enquanto o operador estiver realizando a reposição dos produtos. Essa medida contribui para aumentar a segurança do usuário e reduzir o risco de acionamentos acidentais durante o acesso ao interior da máquina.
+
+A utilização conjunta desses sensores permite que o protótipo monitore a liberação do produto, a posição das espirais e as condições de segurança da tampa, tornando o processo de dispensação mais controlado e confiável.
+
 
