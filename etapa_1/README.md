@@ -97,7 +97,14 @@ Além disso, será instalado um sensor de fim de curso na tampa superior destina
 
 A utilização conjunta do sensor fotoelétrico e do sensor de fim de curso permitirá monitorar tanto a correta liberação dos cookies quanto as condições de segurança durante a reposição, contribuindo para um funcionamento mais confiável e controlado do protótipo.
 
-## Desenvolvimento
+## Referências
+
+## Referências (links/datasheets/livros)
+
+* https://www.mundodaeletrica.com.br/sensor-fotoeletrico-veja-o-que-e-como-funciona-e-tipos/.
+* https://mpautomacao.com/como-funciona-um-sensor-fotoeletrico/.
+* https://blog.eletrogate.com/maquina-de-vendas-automatica-com-rfid-e-nodemcu/.
+
 
 
 
