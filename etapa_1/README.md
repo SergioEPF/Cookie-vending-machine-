@@ -29,11 +29,11 @@ A Figura 2 apresenta o fluxograma do software a ser implementado nas próximas e
   <em>Figura 2 — Fluxograma de funcionamento.</em>
 </p>
 
-### Definir como os cookies serão armazenados
+### Armazenamento dos cookies
 
-Os cookies serão acondicionados individualmente em embalagens fechadas e posicionados entre as espiras, em canais separados por divisórias. O diâmetro da espiral, o passo entre voltas, a largura da guia e o espaço de saída serão definidos pelas dimensões máximas da embalagem. O produto deverá permanecer apoiado, sem compressão que favoreça quebra ou travamento.
+Os cookies serão armazenados em embalagens individuais fechadas e posicionados entre as espiras, em canais separados por divisórias. A reposição será feita por uma tampa na parte superior da caixa, que dará acesso aos canais.
 
-O MDF será utilizado como estrutura do gabinete. As áreas de apoio, a calha e a bandeja terão superfícies lisas e removíveis para facilitar a limpeza; o alimento permanecerá protegido pela embalagem. O compartimento eletrônico será separado do espaço de produtos e da trajetória de queda.
+A estrutura da caixa será feita em MDF. As superfícies de apoio dos cookies e a bandeja de retirada serão lisas e removíveis para facilitar a limpeza e a reposição. O compartimento eletrônico ficará separado da área de armazenamento e do caminho de queda dos cookies.
 
 <p align="center">
 <img width="1200" height="400" alt="image" src="https://github.com/user-attachments/assets/5907f187-6b4f-49b5-9cb4-5f08e688e732" />
