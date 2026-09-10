@@ -97,4 +97,7 @@ Além disso, será instalado um sensor de fim de curso na tampa superior destina
 
 A utilização conjunta do sensor fotoelétrico e do sensor de fim de curso permitirá monitorar tanto a correta liberação dos cookies quanto as condições de segurança durante a reposição, contribuindo para um funcionamento mais confiável e controlado do protótipo.
 
+## Desenvolvimento
+
+
 
