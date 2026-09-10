@@ -41,29 +41,6 @@ A estrutura da caixa será feita em MDF. As superfícies de apoio dos cookies e 
 <em>Figura 3 — Protótipo Inicial da Máquina.</em>
 </p>
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 ### Interface com o usuário 
 
 A interação com o usuário será realizada por meio de um celular utilizado como Interface Homem-Máquina (IHM), conectado ao microcontrolador por Wi-Fi. As telas foram organizadas para orientar cada etapa da compra: identificação por login e senha, seleção do sabor, conferência do pedido e acompanhamento da liberação do cookie. Ao final, a interface informará que o produto está disponível para retirada. 
@@ -96,9 +73,6 @@ As imagens abaixo apresentam exemplos das principais telas da interface. O fluxo
 </table>
 
 
-### Armazenamento dos cookies
-
-
 
 ### Mecanismos de liberação
 
@@ -108,7 +82,8 @@ A alternativa escolhida para desenvolver o protótipo é a espiral acionada indi
 
 ### Sensores 
 
-Para o sensoriamento, utilizaremos um sensor ultrassônico para detectar a passagem do cookie e confirmar sua entrega, além de uma chave de fim de curso para identificar a abertura da porta de manutenção. Os modelos dos sensores serão definidos nas próximas etapas.
+
+A máquina contará com uma barreira infravermelha para confirmar a passagem do cookie, um sensor Hall com ímã para verificar a posição de cada espiral e um sensor magnético na tampa superior para bloquear os motores durante a reposição.
 
 
 ### Estrutura mecânica 
