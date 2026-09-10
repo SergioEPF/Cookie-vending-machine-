@@ -38,7 +38,7 @@ A estrutura da caixa será fabricada em MDF, com superfícies de apoio e bandeja
 <p align="center">
 <img width="1200" height="400" alt="image" src="https://github.com/user-attachments/assets/c3e7c261-d5ff-4b7a-a3ab-4a08e82c8982" />
 <br>
-<em>Figura 3 — Molas fabicadas.</em>
+<em>Figura 3 — Molas fabricadas.</em>
 </p>
 
 <p align="center">
@@ -78,16 +78,7 @@ As imagens abaixo apresentam exemplos das principais telas da interface. O fluxo
   </tr>
 </table>
 
-
-
-### Mecanismos de liberação
-
-
-
-
-
 ### Sensores 
-
 
 A máquina contará com uma barreira infravermelha para confirmar a passagem do cookie, um sensor Hall com ímã para verificar a posição de cada espiral e um sensor magnético na tampa superior para bloquear os motores durante a reposição.
 
