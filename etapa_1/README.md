@@ -11,9 +11,8 @@ A ideia do projeto surgiu da proposta de desenvolver uma máquina de venda autom
 A Figura 1 apresenta o diagrama de blocos do funcionamento geral da máquina. O usuário inicia a interação pela IHM, que se comunica por Wi-Fi com o microcontrolador. Este recebe o sabor selecionado, verifica as condições para a liberação e aciona o motor correspondente. A entrega do cookie é então verificada por meio do sensor ultrassônico.
 
 <p align="center">
-  <img src="assets/diagrama_blocos_cookie_vending.png"
-       alt="Figura 1 - Diagrama de blocos da máquina"
-       width="500">
+  <img width="377" height="732" alt="Diagrama sem nome drawio" src="https://github.com/user-attachments/assets/1781f7c5-0e7b-4030-a75d-fe9271dd0d97" />
+
   <br>
   <em>Figura 1 — Diagrama de blocos da máquina.</em>
 </p>
