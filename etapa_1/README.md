@@ -26,7 +26,7 @@ A Figura 2 apresenta o fluxograma do software a ser implementado nas próximas e
 <p align="center">
   <img width="377" height="732" alt="Diagrama sem nome drawio" src="https://github.com/user-attachments/assets/1781f7c5-0e7b-4030-a75d-fe9271dd0d97" />
   <br>
-  <em>Figura 1 — Diagrama de blocos da máquina.</em>
+  <em>Figura 2 — Fluxograma de funcionamento.</em>
 </p>
 
 ### Definir como os cookies serão armazenados
@@ -36,6 +36,8 @@ Os cookies serão acondicionados individualmente em embalagens fechadas e posici
 O MDF será utilizado como estrutura do gabinete. As áreas de apoio, a calha e a bandeja terão superfícies lisas e removíveis para facilitar a limpeza; o alimento permanecerá protegido pela embalagem. O compartimento eletrônico será separado do espaço de produtos e da trajetória de queda.
 
 <img width="1600" height="544" alt="image" src="https://github.com/user-attachments/assets/5907f187-6b4f-49b5-9cb4-5f08e688e732" />
+ <em>Figura 3 — Protótipo Inicial da Máquina.</em>
+</p>
 
 
 
