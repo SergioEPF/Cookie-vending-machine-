@@ -59,21 +59,21 @@ As imagens abaixo apresentam exemplos das principais telas da interface. O fluxo
            alt="Tela de login"
            width="220">
       <br>
-      <em>Figura 3 — Tela de login.</em>
+      <em>Figura 5 — Tela de login.</em>
     </td>
     <td align="center">
       <img src="assets/escolha_cookie.jpeg"
            alt="Tela de escolha de sabor"
            width="210">
       <br>
-      <em>Figura 4 — Escolha de sabor.</em>
+      <em>Figura 6 — Escolha de sabor.</em>
     </td>
     <td align="center">
       <img src="assets/tela_final.jpeg"
            alt="Tela de compra concluída"
            width="220">
       <br>
-      <em>Figura 5 — Compra concluída.</em>
+      <em>Figura 7 — Compra concluída.</em>
     </td>
   </tr>
 </table>
@@ -82,12 +82,6 @@ As imagens abaixo apresentam exemplos das principais telas da interface. O fluxo
 
 A máquina contará com uma barreira infravermelha para confirmar a passagem do cookie, um sensor Hall com ímã para verificar a posição de cada espiral e um sensor magnético na tampa superior para bloquear os motores durante a reposição.
 
-
-### Estrutura mecânica 
-
-## Testes
-
-Descrição dos testes/validações realizadas. Use fotos, diagramas, tabelas, etc.
 
 ## Referências (links/datasheets/livros)
 
