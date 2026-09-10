@@ -30,6 +30,37 @@ A Figura 2 apresenta o fluxograma do software a ser implementado nas próximas e
   <em>Figura 2 — Fluxograma do software da máquina.</em>
 </p>
 
+### Definir como os cookies serão armazenados
+
+Os cookies serão acondicionados individualmente em embalagens fechadas e posicionados entre as espiras, em canais separados por divisórias. O diâmetro da espiral, o passo entre voltas, a largura da guia e o espaço de saída serão definidos pelas dimensões máximas da embalagem. O produto deverá permanecer apoiado, sem compressão que favoreça quebra ou travamento.
+
+O MDF será utilizado como estrutura do gabinete. As áreas de apoio, a calha e a bandeja terão superfícies lisas e removíveis para facilitar a limpeza; o alimento permanecerá protegido pela embalagem. O compartimento eletrônico será separado do espaço de produtos e da trajetória de queda.
+
+<img width="1600" height="544" alt="image" src="https://github.com/user-attachments/assets/5907f187-6b4f-49b5-9cb4-5f08e688e732" />
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 ### Interface com o usuário 
 
 A interação com o usuário será realizada por meio de um celular utilizado como Interface Homem-Máquina (IHM), conectado ao microcontrolador por Wi-Fi. As telas foram organizadas para orientar cada etapa da compra: identificação por login e senha, seleção do sabor, conferência do pedido e acompanhamento da liberação do cookie. Ao final, a interface informará que o produto está disponível para retirada. 
@@ -60,6 +91,17 @@ As imagens abaixo apresentam exemplos das principais telas da interface. O fluxo
     </td>
   </tr>
 </table>
+
+
+### Armazenamento dos cookies
+
+
+
+### Mecanismos de liberação
+
+A alternativa escolhida para desenvolver o protótipo é a espiral acionada individualmente. A escolha aproveita as espirais de aço mola já produzidas e permite dividir os produtos em canais independentes. 
+
+
 
 ### Sensores 
 
