@@ -23,7 +23,8 @@ A Figura 1 apresenta o diagrama de blocos do funcionamento geral da máquina. O 
 A Figura 2 apresenta o fluxograma do software a ser implementado nas próximas etapas. Para realizar uma compra, o usuário deverá estar cadastrado e fazer login com sua senha. Após a seleção do sabor, o sistema verificará a disponibilidade em estoque e, caso haja produto disponível, acionará o motor correspondente. A entrega será confirmada pelo sensor. Caso o cookie não seja detectado, será necessário tratar a falha, definindo um limite de tentativas.
 
 <p align="center">
-  <img src="assets/diagrama_blocos_cookie_vending.png"
+  <img width="377" height="732" alt="Diagrama sem nome drawio" src="https://github.com/user-attachments/assets/2817b396-b235-4e9b-ba97-2b092bcf2f21" />
+
        alt="Figura 1 - Diagrama de blocos da máquina"
        width="500">
   <br>
