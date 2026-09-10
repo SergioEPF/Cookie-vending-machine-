@@ -29,11 +29,11 @@ A Figura 2 apresenta o fluxograma do software a ser implementado nas próximas e
   <em>Figura 2 — Fluxograma de funcionamento.</em>
 </p>
 
-### Armazenamento dos cookies
+### Armazenamento e liberação dos cookies
 
-Os cookies serão armazenados em embalagens individuais fechadas e posicionados entre as espiras, em canais separados por divisórias. A reposição será feita por uma tampa na parte superior da caixa, que dará acesso aos canais.
+Os cookies serão armazenados em embalagens individuais fechadas, entre as espiras de molas fabricadas para o projeto. As molas ficarão em canais separados por divisórias, com acesso por uma tampa na parte superior da caixa para facilitar a reposição.
 
-A estrutura da caixa será feita em MDF. As superfícies de apoio dos cookies e a bandeja de retirada serão lisas e removíveis para facilitar a limpeza e a reposição. O compartimento eletrônico ficará separado da área de armazenamento e do caminho de queda dos cookies.
+A caixa será feita em MDF, com superfícies de apoio e bandeja de retirada lisas e removíveis para facilitar a limpeza. O compartimento eletrônico ficará separado da área de armazenamento e do caminho de queda dos cookies.
 
 <p align="center">
 <img width="1200" height="400" alt="image" src="https://github.com/user-attachments/assets/5907f187-6b4f-49b5-9cb4-5f08e688e732" />
