@@ -1,12 +1,6 @@
 # Etapa 1
 
-**(MÍNIMO DE 600 E MÁXIMO DE 1000 PALAVRAS no total do arquivo md.)**
-
-A etapa 1 ...
-
-**(Adicionar aqui UM parágrafo com visão geral da etapa. Resumo dos itens da planilha.)**
-
-**(Não adicione código em nenhum arquivo md. )**
+A etapa 1 foi dedicada à definição dos principais conceitos de hardware, software e mecânica da nossa cookie vending machine e de como essas três partes irão funcionar em conjunto. A proposta é desenvolver uma máquina automatizada que ofereça seis sabores de cookies, organizados em molas acopladas a motores de passo, com sensores para confirmar a entrega do produto e identificar a abertura da porta de manutenção. A interação com o usuário será feita por uma IHM, enquanto o microcontrolador será responsável por integrar esses elementos e controlar o funcionamento da máquina.
 
 ## Desenvolvimento
 
