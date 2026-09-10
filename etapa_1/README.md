@@ -11,7 +11,9 @@ A ideia do projeto surgiu da proposta de desenvolver uma máquina de venda autom
 A Figura 1 apresenta o diagrama de blocos do funcionamento geral da máquina. O usuário inicia a interação pela IHM, que se comunica por Wi-Fi com o microcontrolador. Este recebe o sabor selecionado, verifica as condições para a liberação e aciona o motor correspondente. A entrega do cookie é então verificada por meio do sensor ultrassônico.
 
 <p align="center">
-  <img width="377" height="732" alt="Diagrama sem nome drawio" src="https://github.com/user-attachments/assets/1781f7c5-0e7b-4030-a75d-fe9271dd0d97" />
+ 
+  <img width="956" height="866" alt="image" src="https://github.com/user-attachments/assets/fb7adfe5-52b8-4086-826e-4f593f78a32e" />
+
 
   <br>
   <em>Figura 1 — Diagrama de blocos da máquina.</em>
@@ -22,9 +24,7 @@ A Figura 1 apresenta o diagrama de blocos do funcionamento geral da máquina. O 
 A Figura 2 apresenta o fluxograma do software a ser implementado nas próximas etapas. Para realizar uma compra, o usuário deverá estar cadastrado e fazer login com sua senha. Após a seleção do sabor, o sistema verificará a disponibilidade em estoque e, caso haja produto disponível, acionará o motor correspondente. A entrega será confirmada pelo sensor. Caso o cookie não seja detectado, será necessário tratar a falha, definindo um limite de tentativas.
 
 <p align="center">
-  <img width="377" height="732" alt="Diagrama sem nome drawio"
-       alt="Figura 1 - Diagrama de blocos da máquina"
-       width="500">
+  <img width="377" height="732" alt="Diagrama sem nome drawio" src="https://github.com/user-attachments/assets/1781f7c5-0e7b-4030-a75d-fe9271dd0d97" />
   <br>
   <em>Figura 1 — Diagrama de blocos da máquina.</em>
 </p>
