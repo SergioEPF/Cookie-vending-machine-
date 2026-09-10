@@ -24,7 +24,7 @@ A Figura 1 apresenta o diagrama de blocos do funcionamento geral da máquina. O 
 A Figura 2 apresenta o fluxograma do software a ser implementado nas próximas etapas. Para realizar uma compra, o usuário deverá estar cadastrado e fazer login com sua senha. Após a seleção do sabor, o sistema verificará a disponibilidade em estoque e, caso haja produto disponível, acionará o motor correspondente. A entrega será confirmada pelo sensor. Caso o cookie não seja detectado, será necessário tratar a falha, definindo um limite de tentativas.
 
 <p align="center">
-  <img width="200" height="500" alt="Diagrama sem nome drawio" src="https://github.com/user-attachments/assets/1781f7c5-0e7b-4030-a75d-fe9271dd0d97" />
+  <img width="300" height="500" alt="Diagrama sem nome drawio" src="https://github.com/user-attachments/assets/1781f7c5-0e7b-4030-a75d-fe9271dd0d97" />
   <br>
   <em>Figura 2 — Fluxograma de funcionamento.</em>
 </p>
@@ -35,8 +35,9 @@ Os cookies serão acondicionados individualmente em embalagens fechadas e posici
 
 O MDF será utilizado como estrutura do gabinete. As áreas de apoio, a calha e a bandeja terão superfícies lisas e removíveis para facilitar a limpeza; o alimento permanecerá protegido pela embalagem. O compartimento eletrônico será separado do espaço de produtos e da trajetória de queda.
 
-<img width="1600" height="544" alt="image" src="https://github.com/user-attachments/assets/5907f187-6b4f-49b5-9cb4-5f08e688e732" />
- <em>Figura 3 — Protótipo Inicial da Máquina.</em>
+<img width="1200" height="544" alt="image" src="https://github.com/user-attachments/assets/5907f187-6b4f-49b5-9cb4-5f08e688e732" />
+<br>
+<em>Figura 3 — Protótipo Inicial da Máquina.</em>
 </p>
 
 
