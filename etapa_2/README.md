@@ -16,6 +16,11 @@ A estrutura proposta utiliza MDF na base, nas laterais e na parte traseira, com 
 
 O dimensionamento deverá considerar a largura e a altura da embalagem, o comprimento das espirais, a quantidade de cookies por canal e o espaço ocupado pelos motores. Também será reservado espaço para a passagem do produto até a bandeja de retirada, evitando pontos onde a embalagem possa ficar presa.
 
+<p align="center">
+  <br>
+  <em>Figura 2 — Colocar uma imagem contendo todas as dimensoes.</em>
+</p>
+
 As superfícies de apoio e a bandeja de retirada serão lisas e removíveis para facilitar a limpeza. O compartimento eletrônico ficará separado da área dos produtos e terá acesso para manutenção. Os suportes dos motores e das espirais deverão permitir a desmontagem individual de cada conjunto.
 
 
