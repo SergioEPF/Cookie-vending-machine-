@@ -8,11 +8,16 @@ A etapa 2 tem como objetivo detalhar a construção da máquina de venda de cook
 
 A estrutura proposta utiliza MDF na base, nas laterais e na parte traseira, com um visor de acrílico na frente para permitir a visualização dos produtos. A reposição será feita por uma tampa superior, que dará acesso aos seis canais de armazenamento. Cada canal terá uma espiral e um motor independente.
 
+<p align="center">
+  <img width="1381" height="1139" alt="CAD completo da máquina" src="https://github.com/user-attachments/assets/c5c8cf37-9741-46da-9d0a-7d2933c9acdf" />
+  <br>
+  <em>Figura 2 — Estrutura completa.</em>
+</p>
+
 O dimensionamento deverá considerar a largura e a altura da embalagem, o comprimento das espirais, a quantidade de cookies por canal e o espaço ocupado pelos motores. Também será reservado espaço para a passagem do produto até a bandeja de retirada, evitando pontos onde a embalagem possa ficar presa.
 
 As superfícies de apoio e a bandeja de retirada serão lisas e removíveis para facilitar a limpeza. O compartimento eletrônico ficará separado da área dos produtos e terá acesso para manutenção. Os suportes dos motores e das espirais deverão permitir a desmontagem individual de cada conjunto.
 
-O desenho em CAD deverá mostrar a posição dos seis canais, a fixação dos motores, a tampa de reposição, o visor e o caminho de queda. As medidas finais e as espessuras dos materiais ainda serão definidas. Após a atualização do modelo, serão adicionadas vistas gerais e detalhes de montagem para acompanhar esta descrição.
 
 ### Armazenamento e dispensação
 
