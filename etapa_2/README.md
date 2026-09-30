@@ -26,7 +26,7 @@ As superfícies de apoio e a bandeja de retirada serão lisas e removíveis para
 Para iluminação será utilizado uma fita de led controlada pelo microcontrolador. 
 
 
-### Armazenamento e dispensação
+## Armazenamento e dispensação
 
 Os cookies serão armazenados em embalagens individuais fechadas, posicionados entre as espiras das molas de aço mola. Divisórias separarão os canais e ajudarão a manter os produtos alinhados durante o avanço.
 
@@ -36,7 +36,7 @@ Serão utilizados seis motores de passo, um por espiral. A escolha permite coman
 
 Cada motor terá um driver próprio. O DRV8825 está em avaliação por oferecer controle por sinais STEP/DIR e limitação ajustável de corrente [2]. A seleção deverá considerar a corrente do motor e a dissipação de calor. Os seis drivers compartilharão uma fonte, com distribuição em paralelo. A potência da fonte será definida considerando o acionamento e a eventual manutenção dos motores energizados em repouso.
 
-### Motores, Atuadores e Sensores 
+## Motores, Atuadores e Sensores 
 
 Para o sistema de entrega da máquina, foram utilizados motores de passo acoplados às molas responsáveis pelo armazenamento e liberação dos cookies. A escolha desse tipo de motor foi feita principalmente pela possibilidade de controlar de forma precisa o deslocamento angular do eixo, permitindo realizar uma volta completa da mola sempre que uma venda for efetuada.
 
@@ -68,33 +68,19 @@ No projeto serão utilizados três conjuntos de sensores, compostos por:
 
 Os sensores não serão responsáveis por controlar a posição dos motores. O movimento continuará sendo definido pela quantidade de passos enviada ao driver, enquanto os sensores funcionarão como uma confirmação independente de que a entrega ocorreu corretamente.
 
-### Funcionamento do conjunto
+## Sistema de pagamento
 
-O funcionamento básico do sistema de entrega pode ser resumido da seguinte forma:
+Para o funcionamento da vending machine, optou-se por não utilizar um sistema de pagamento integrado diretamente à máquina. Em vez disso, será utilizado um cadastro de usuários, permitindo identificar quem realizou cada compra e registrar os produtos retirados.
 
-O usuário seleciona um sabor na interface da máquina.
+Essa abordagem foi escolhida com o objetivo de simplificar o desenvolvimento do protótipo, evitando a necessidade de integração com meios de pagamento, instituições financeiras ou leitores específicos. Ao mesmo tempo, o sistema continua permitindo o controle das vendas e a identificação do responsável por cada retirada.
 
-O microcontrolador identifica qual motor deve ser acionado.
+### Cadastro do usuário
 
-O respectivo DRV8825 recebe os pulsos de controle.
+Antes de realizar uma compra, o usuário deverá se identificar na interface da máquina. Caso ainda não possua cadastro, poderá realizar um cadastro simples diretamente pela IHM.
 
-O motor de passo realiza uma volta completa, movimentando a mola.
+O cadastro deverá conter apenas as informações necessárias para identificar posteriormente o usuário e associar as compras realizadas a ele.
 
-O cookie é deslocado até a região de saída.
-
-O produto interrompe temporariamente a barreira infravermelha.
-
-O microcontrolador identifica a passagem pelo sensor e confirma a entrega.
-
-Caso o motor complete o movimento e nenhuma passagem seja detectada, o sistema poderá tratar a situação como uma possível falha de entrega.
-
-Essa arquitetura permite separar o controle de movimento da validação da venda, aumentando a confiabilidade do sistema e facilitando a identificação de possíveis falhas durante a operação da máquina.
-
-### Sistema de pagamento
-
-A proposta é utilizar pagamento por Pix. A interface apresentará a cobrança, e um servidor verificará sua aprovação antes de autorizar a liberação. O serviço de pagamento e sua integração ainda serão definidos.
-
-Cada autorização deverá estar associada a um pedido específico, evitando liberações repetidas por atualização da página ou reenvio de comandos. Caso o pagamento seja aprovado e a queda não seja detectada, o sistema deverá registrar a falha e informar o usuário, sem executar outra liberação automaticamente.
+Após o cadastro, o usuário poderá acessar a máquina utilizando suas credenciais e selecionar normalmente o produto desejado.
 
 ## Testes
 
