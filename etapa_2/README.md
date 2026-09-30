@@ -23,6 +23,8 @@ O dimensionamento deverá considerar a largura e a altura da embalagem, o compri
 
 As superfícies de apoio e a bandeja de retirada serão lisas e removíveis para facilitar a limpeza. O compartimento eletrônico ficará separado da área dos produtos e terá acesso para manutenção. Os suportes dos motores e das espirais deverão permitir a desmontagem individual de cada conjunto.
 
+Para iluminação será utilizado uma fita de led controlada pelo microcontrolador. 
+
 
 ### Armazenamento e dispensação
 
@@ -34,15 +36,59 @@ Serão utilizados seis motores de passo, um por espiral. A escolha permite coman
 
 Cada motor terá um driver próprio. O DRV8825 está em avaliação por oferecer controle por sinais STEP/DIR e limitação ajustável de corrente [2]. A seleção deverá considerar a corrente do motor e a dissipação de calor. Os seis drivers compartilharão uma fonte, com distribuição em paralelo. A potência da fonte será definida considerando o acionamento e a eventual manutenção dos motores energizados em repouso.
 
-### Controlador, interface e sensores
+### Motores, Atuadores e Sensores 
 
-O controlador escolhido é o ESP32, responsável por receber os comandos da interface, ler os sensores e controlar os drivers. Sua comunicação Wi-Fi permite integrar uma interface acessada pelo celular [3]. O Redmi M2006C3LG será utilizado como IHM, exibindo os produtos disponíveis, as instruções de pagamento e o resultado da liberação.
+Para o sistema de entrega da máquina, foram utilizados motores de passo acoplados às molas responsáveis pelo armazenamento e liberação dos cookies. A escolha desse tipo de motor foi feita principalmente pela possibilidade de controlar de forma precisa o deslocamento angular do eixo, permitindo realizar uma volta completa da mola sempre que uma venda for efetuada.
 
-Um sensor de fim de curso será instalado na tampa superior. Sua função será identificar a abertura para reposição e impedir novos acionamentos enquanto a tampa estiver aberta. A abertura durante um ciclo deverá interromper o movimento e sinalizar a ocorrência.
+Diferentemente de um motor DC convencional, o motor de passo permite controlar diretamente a quantidade de passos realizados, dispensando a necessidade de um sensor específico para verificar a posição final da mola. Dessa forma, o sistema pode comandar uma rotação de aproximadamente 360° a cada acionamento e utilizar os sensores apenas para validar se o produto foi efetivamente entregue.
 
-Para detectar a queda, está prevista uma barreira fotoelétrica infravermelha com emissor e receptor em lados opostos da passagem. O Adafruit 2168 foi pesquisado como referência por apresentar alcance nominal aproximado de 50 cm e resposta inferior a 2 ms [4].
+### Drivers dos motores
 
-A instalação deverá garantir que o cookie atravesse o feixe. A necessidade de mais de uma barreira dependerá da geometria da saída. A contagem de passos do motor não será considerada confirmação de entrega: essa confirmação dependerá da detecção da passagem do produto.
+Durante os testes iniciais foi utilizado um shield para Arduino para realizar o acionamento dos motores de passo. Para a versão final do projeto, entretanto, optou-se pela utilização de drivers individuais, devido a escolha do microtrolador utilizado na máquina.
+
+O driver selecionado para o projeto foi o DRV8825. Esse componente utiliza sinais do tipo STEP e DIR, o que torna seu controle simples.
+
+Como a máquina possui seis mecanismos de entrega, o sistema utilizará um driver para cada motor, totalizando seis drivers. Essa configuração também permite que cada conjunto motor/mola seja controlado individualmente.
+
+### Sensores de detecção de produto
+
+Para confirmar que o cookie foi realmente liberado após o acionamento do motor, será utilizado um sistema de barreira infravermelha.
+
+O conjunto selecionado é formado pelo emissor infravermelho TSAL6200 e pelo receptor TSSP58038.
+
+O TSAL6200 é responsável por emitir luz infravermelha, enquanto o TSSP58038 detecta esse sinal. Os dois componentes são posicionados em lados opostos do caminho de queda do produto, formando uma barreira óptica.
+
+Quando não existe nenhum objeto entre os componentes, o receptor detecta normalmente o sinal infravermelho. Durante a queda de um cookie, essa comunicação é momentaneamente interrompida, permitindo que o microcontrolador identifique que houve passagem de um produto.
+
+No projeto serão utilizados três conjuntos de sensores, compostos por:
+
+3 emissores TSAL6200;
+
+3 receptores TSSP58038.
+
+Os sensores não serão responsáveis por controlar a posição dos motores. O movimento continuará sendo definido pela quantidade de passos enviada ao driver, enquanto os sensores funcionarão como uma confirmação independente de que a entrega ocorreu corretamente.
+
+### Funcionamento do conjunto
+
+O funcionamento básico do sistema de entrega pode ser resumido da seguinte forma:
+
+O usuário seleciona um sabor na interface da máquina.
+
+O microcontrolador identifica qual motor deve ser acionado.
+
+O respectivo DRV8825 recebe os pulsos de controle.
+
+O motor de passo realiza uma volta completa, movimentando a mola.
+
+O cookie é deslocado até a região de saída.
+
+O produto interrompe temporariamente a barreira infravermelha.
+
+O microcontrolador identifica a passagem pelo sensor e confirma a entrega.
+
+Caso o motor complete o movimento e nenhuma passagem seja detectada, o sistema poderá tratar a situação como uma possível falha de entrega.
+
+Essa arquitetura permite separar o controle de movimento da validação da venda, aumentando a confiabilidade do sistema e facilitando a identificação de possíveis falhas durante a operação da máquina.
 
 ### Sistema de pagamento
 
