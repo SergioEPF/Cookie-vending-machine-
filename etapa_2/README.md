@@ -64,7 +64,7 @@ No projeto serão utilizados três conjuntos de sensores, compostos por:
 
 3 emissores TSAL6200;
 
-3 receptores TSSP58038.
+2 receptores TSSP58038.
 
 Os sensores não serão responsáveis por controlar a posição dos motores. O movimento continuará sendo definido pela quantidade de passos enviada ao driver, enquanto os sensores funcionarão como uma confirmação independente de que a entrega ocorreu corretamente.
 
