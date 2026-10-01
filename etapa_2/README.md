@@ -78,7 +78,7 @@ A liberação do produto ocorrerá por meio da rotação da espiral corresponden
   </tr>
   <tr>
     <td align="center">
-      <em>Figura 7 — Mola para armazenamento.</em>
+      <em>Figura 7 — CAD da mola.</em>
     </td>
     <td align="center">
       <em>Figura 8 — Dimensões do Sistema de Dispenser.</em>
