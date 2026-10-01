@@ -44,7 +44,7 @@ Conforme apresentado na **Figura 1**, a estrutura proposta utiliza MDF na base, 
   </tr>
 </table>
 
-Conforme apresentado na **Figura 5 e 6**, o dimensionamento deverá considerar a largura e a altura das embalagens, o comprimento das espirais, a quantidade de cookies armazenada em cada canal e o espaço necessário para a instalação dos motores. Também será reservado espaço adequado para a passagem do produto até a bandeja de retirada, de modo a evitar pontos de interferência ou regiões onde a embalagem possa ficar presa durante a dispensação.
+Conforme apresentado na **Figura 5**, o dimensionamento deverá considerar a largura e a altura das embalagens, o comprimento das espirais, a quantidade de cookies armazenada em cada canal e o espaço necessário para a instalação dos motores. Também será reservado espaço adequado para a passagem do produto até a bandeja de retirada, de modo a evitar pontos de interferência ou regiões onde a embalagem possa ficar presa durante a dispensação.
 
 <p align="center">
   <br>
@@ -84,7 +84,7 @@ A liberação do produto ocorrerá por meio da rotação da espiral corresponden
     </td>
     <td align="center">
       <em>Figura 9 — Dimensões do Sistema de Dispenser.</em>
-</p>.</em>
+</p></em>
     </td>
   </tr>
 </table>
