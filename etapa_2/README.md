@@ -52,7 +52,7 @@ Conforme apresentado na **Figura 5**, o dimensionamento deverá considerar a lar
 
 As superfícies de apoio e a bandeja de retirada serão lisas e removíveis para facilitar a limpeza. O compartimento eletrônico ficará separado da área dos produtos e terá acesso para manutenção. Os suportes dos motores e das espirais deverão permitir a desmontagem individual de cada conjunto.
 
-Para iluminação será utilizado uma fita de led controlada pelo microcontrolador. 
+Para iluminação será utilizado uma fita de led controlada pelo microcontrolador, conforme a figura 6.
 
 <p align="center">
   <img width="400" height="300" alt="fita led" src="./assets/fita_led.jpg" />
