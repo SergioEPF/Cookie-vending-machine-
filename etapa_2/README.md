@@ -43,7 +43,7 @@ Conforme apresentado na **Figura 1**, a estrutura proposta utiliza MDF na base, 
   </tr>
 </table>
 
-Conforme apresentado na **Figura 5**, o dimensionamento deverá considerar a largura e a altura das embalagens, o comprimento das espirais, a quantidade de cookies armazenada em cada canal e o espaço necessário para a instalação dos motores. Também será reservado espaço adequado para a passagem do produto até a bandeja de retirada, de modo a evitar pontos de interferência ou regiões onde a embalagem possa ficar presa durante a dispensação.
+Conforme apresentado na **Figura 5 e 6**, o dimensionamento deverá considerar a largura e a altura das embalagens, o comprimento das espirais, a quantidade de cookies armazenada em cada canal e o espaço necessário para a instalação dos motores. Também será reservado espaço adequado para a passagem do produto até a bandeja de retirada, de modo a evitar pontos de interferência ou regiões onde a embalagem possa ficar presa durante a dispensação.
 
 <p align="center">
   <br>
@@ -52,14 +52,22 @@ Conforme apresentado na **Figura 5**, o dimensionamento deverá considerar a lar
   <em>Figura 5 — Dimensões da Máquina de Vendas.</em>
 </p>
 
+<p align="center">
+  <br>
+<img width="512" height="192" alt="image" src="https://github.com/user-attachments/assets/221130d9-2022-46a0-9c0b-a55ee64580ec" />
+<br>
+  <em>Figura 6 — Dimensões do Sistema de Dispenser.</em>
+</p>
+
+
 As superfícies de apoio e a bandeja de retirada serão lisas e removíveis para facilitar a limpeza. O compartimento eletrônico ficará separado da área dos produtos e terá acesso para manutenção. Os suportes dos motores e das espirais deverão permitir a desmontagem individual de cada conjunto.
 
-Para iluminação será utilizado uma fita de led controlada pelo microcontrolador, conforme a figura 6.
+Para iluminação será utilizado uma fita de led controlada pelo microcontrolador, conforme a figura 7.
 
 <p align="center">
   <img width="400" height="300" alt="fita led" src="./assets/fita_led.jpg" />
   <br>
-  <em>Figura 6 — Fita led para iluminação.</em>
+  <em>Figura 7 — Fita led para iluminação.</em>
 </p>
 
 ## Armazenamento e dispensação
@@ -68,7 +76,7 @@ Os cookies serão armazenados em embalagens individuais fechadas, posicionados e
 
 A liberação do produto ocorrerá por meio da rotação da espiral correspondente ao item selecionado. Esse movimento deslocará as embalagens em direção à saída, permitindo que o primeiro cookie caia na bandeja de retirada. O espaçamento entre as espiras e o avanço realizado a cada venda deverão ser ajustados de forma a liberar apenas uma unidade por acionamento, evitando a compressão ou o travamento dos produtos.
 
-A **Figura 7** apresenta a mola utilizada no mecanismo de dispensação, enquanto a **Figura 8** apresenta o cookie em sua embalagem individual, respectivamente. 
+A **Figura 8** apresenta a mola utilizada no mecanismo de dispensação, enquanto a **Figura 9** apresenta o cookie em sua embalagem individual, respectivamente. 
 
 <table align="center">
   <tr>
@@ -81,10 +89,10 @@ A **Figura 7** apresenta a mola utilizada no mecanismo de dispensação, enquant
   </tr>
   <tr>
     <td align="center">
-      <em>Figura 7 — Mola para armazenamento.</em>
+      <em>Figura 8 — Mola para armazenamento.</em>
     </td>
     <td align="center">
-      <em>Figura 8 — Cookie embalado.</em>
+      <em>Figura 9 — Cookie embalado.</em>
     </td>
   </tr>
 </table>
@@ -115,7 +123,7 @@ Abaixo GIF do funcionamento básico do APP da IHM
 <p align="center">
   <img width="700" height="600" alt="fita led" src="./assets/app_ihm.gif" />
   <br>
-  <em>Figura 9 — Funcionamento Aplicativo IHM.</em>
+  <em>Figura 10 — Funcionamento Aplicativo IHM.</em>
 </p>
 
 
@@ -138,7 +146,7 @@ Abaixo GIF do funcionamento básico da página web do backoffice:
 <p align="center">
   <img width="800" height="700" alt="backoffice" src="./assets/backoffice.gif" />
   <br>
-  <em>Figura 10 — Funcionamento Página WEB Backoffice.</em>
+  <em>Figura 11 — Funcionamento Página WEB Backoffice.</em>
 </p>
 
 
