@@ -46,7 +46,7 @@ Conforme apresentado na **Figura 5**, o dimensionamento deverá considerar a lar
 
 <p align="center">
   <br>
-  <img width="961" height="634" alt="image (2)" src="https://github.com/user-attachments/assets/3ef16562-c990-439c-9df6-818cd78f551c" />
+ <img width="856" height="591" alt="image" src="https://github.com/user-attachments/assets/b361f9a8-54d1-44ae-a753-2c55ea049bfd" />
   <br>
   <em>Figura 5 — Dimensões da Máquina de Vendas.</em>
 </p>
