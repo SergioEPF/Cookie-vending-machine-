@@ -89,7 +89,7 @@ A liberação do produto ocorrerá por meio da rotação da espiral corresponden
   </tr>
 </table>
 
-A **Figura 8** apresenta a mola utilizada no mecanismo de dispensação, enquanto a **Figura 9** apresenta o cookie em sua embalagem individual, respectivamente. 
+A **Figura 10** apresenta a mola utilizada no mecanismo de dispensação, enquanto a **Figura 11** apresenta o cookie em sua embalagem individual, respectivamente. 
 
 <table align="center">
   <tr>
@@ -102,10 +102,10 @@ A **Figura 8** apresenta a mola utilizada no mecanismo de dispensação, enquant
   </tr>
   <tr>
     <td align="center">
-      <em>Figura 8 — Mola para armazenamento.</em>
+      <em>Figura 10 — Mola para armazenamento.</em>
     </td>
     <td align="center">
-      <em>Figura 9 — Cookie embalado.</em>
+      <em>Figura 11 — Cookie embalado.</em>
     </td>
   </tr>
 </table>
@@ -136,7 +136,7 @@ Abaixo GIF do funcionamento básico do APP da IHM
 <p align="center">
   <img width="1000" height="900" alt="fita led" src="./assets/app_ihm.gif" />
   <br>
-  <em>Figura 10 — Funcionamento Aplicativo IHM.</em>
+  <em>Figura 11 — Funcionamento Aplicativo IHM.</em>
 </p>
 
 
@@ -159,7 +159,7 @@ Abaixo GIF do funcionamento básico da página web do backoffice:
 <p align="center">
   <img width="1000" height="900" alt="backoffice" src="./assets/backoffice.gif" />
   <br>
-  <em>Figura 11 — Funcionamento Página WEB Backoffice.</em>
+  <em>Figura 12 — Funcionamento Página WEB Backoffice.</em>
 </p>
 
 
