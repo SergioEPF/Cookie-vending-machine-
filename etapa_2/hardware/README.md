@@ -97,9 +97,15 @@ Os sensores não serão responsáveis pelo controle direto dos motores. Sua fun�
   </tr>
 </table>
 
+### Sensor para detecção da tampa fechada
+
 Será instalado um sensor de fim de curso na tampa de reposição. Com a tampa fechada, o sensor permanecerá acionado e a máquina poderá operar normalmente. Ao abrir a tampa para reabastecer os produtos, o sensor deixará de ser acionado e o sistema entrará em modo de manutenção, bloqueando as vendas e o acionamento dos mecanismos. Quando a tampa for fechada novamente, o sensor será acionado e a máquina poderá voltar a funcionar normalmente.
 
-
+<p align="center">
+  <img width="300" height="300" alt="Microswitch com Alavanca Metálica" src="https://github.com/user-attachments/assets/d730265e-b2ac-4997-973a-f51a3db1e47d" />
+  <br>
+  <em>Figura 8 — Sensor de Fim de Curso.</em>
+</p>
 
 
 ## Microcontrolador 
