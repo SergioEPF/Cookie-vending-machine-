@@ -136,7 +136,7 @@ O sistema permitirá consultar o histórico de consumo e o valor acumulado das c
 Abaixo GIF do funcionamento básico da página web do backoffice:
 
 <p align="center">
-  <img width="500" height="400" alt="backoffice" src="./assets/backoffice.gif" />
+  <img width="700" height="600" alt="backoffice" src="./assets/backoffice.gif" />
   <br>
   <em>Figura 10 — Funcionamento Página WEB Backoffice.</em>
 </p>
