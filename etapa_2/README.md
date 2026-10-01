@@ -14,11 +14,40 @@ A estrutura proposta utiliza MDF na base, nas laterais e na parte traseira, com 
   <em>Figura 1 — Estrutura completa.</em>
 </p>
 
+<p align="center">
+</p>
+<p align="center">
+</p>
+<table align="center">
+  <tr>
+    <td align="center">
+      <img height="250" width="300" alt="animação mola" src="./assets/imagem_top_mola.gif" />
+    </td>
+    <td align="center">
+      <img height="250" width="300" alt="porta manutenção" src="./assets/manutenção.gif" />
+    </td>
+    <td align="center">
+      <img height="250" width="300" alt="Mola" src="./assets/molagirandolado.gif" />
+    </td>
+  </tr>
+  <tr>
+    <td align="center">
+      <em>Figura 2 — Animação Mola</em>
+    </td>
+    <td align="center">
+      <em>Figura 3 — Porta Manutenção.</em>
+    </td>
+    <td align="center">
+      <em>Figura 4 — Animação Mola.</em>
+    </td>
+  </tr>
+</table>
+
 O dimensionamento deverá considerar a largura e a altura da embalagem, o comprimento das espirais, a quantidade de cookies por canal e o espaço ocupado pelos motores. Também será reservado espaço para a passagem do produto até a bandeja de retirada, evitando pontos onde a embalagem possa ficar presa.
 
 <p align="center">
   <br>
-  <em>Figura 2 — Colocar uma imagem contendo todas as dimensoes.</em>
+  <em>Figura 5 — Colocar uma imagem contendo todas as dimensoes.</em>
 </p>
 
 As superfícies de apoio e a bandeja de retirada serão lisas e removíveis para facilitar a limpeza. O compartimento eletrônico ficará separado da área dos produtos e terá acesso para manutenção. Os suportes dos motores e das espirais deverão permitir a desmontagem individual de cada conjunto.
@@ -26,9 +55,9 @@ As superfícies de apoio e a bandeja de retirada serão lisas e removíveis para
 Para iluminação será utilizado uma fita de led controlada pelo microcontrolador. 
 
 <p align="center">
-  <img width="500" height="400" alt="fita led" src="./assets/fita_led.jpg" />
+  <img width="400" height="300" alt="fita led" src="./assets/fita_led.jpg" />
   <br>
-  <em>Figura 3 — Fita led para iluminação.</em>
+  <em>Figura 6 — Fita led para iluminação.</em>
 </p>
 
 ## Armazenamento e dispensação
@@ -42,18 +71,18 @@ Segue abaixo fotos da mola e cookie embalado respectivamente:
 <table align="center">
   <tr>
     <td align="center">
-      <img width="350" alt="mola" src="./assets/fita_led.jpg" />
+      <img width="200" height="280" alt="mola" src="./assets/mola.jpg" />
     </td>
     <td align="center">
-      <img width="350" alt="cookie" src="./assets/fita_led.jpg" />
+      <img width="350" alt="cookie" src="./assets/cookie.jpg" />
     </td>
   </tr>
   <tr>
     <td align="center">
-      <em>Figura 4 — Mola para armazenamento.</em>
+      <em>Figura 7 — Mola para armazenamento.</em>
     </td>
     <td align="center">
-      <em>Figura 5 — Cookie embalado.</em>
+      <em>Figura 8 — Cookie embalado.</em>
     </td>
   </tr>
 </table>
@@ -84,7 +113,7 @@ Abaixo GIF do funcionamento básico do APP da IHM
 <p align="center">
   <img width="500" height="400" alt="fita led" src="./assets/app_ihm.gif" />
   <br>
-  <em>Figura 6 — Funcionamento Aplicativo IHM.</em>
+  <em>Figura 9 — Funcionamento Aplicativo IHM.</em>
 </p>
 
 
@@ -107,7 +136,7 @@ Abaixo GIF do funcionamento básico da página web do backoffice:
 <p align="center">
   <img width="500" height="400" alt="backoffice" src="./assets/backoffice.gif" />
   <br>
-  <em>Figura 6 — Funcionamento Página WEB Backoffice.</em>
+  <em>Figura 10 — Funcionamento Página WEB Backoffice.</em>
 </p>
 
 
