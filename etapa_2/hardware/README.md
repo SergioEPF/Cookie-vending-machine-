@@ -102,7 +102,30 @@ Os sensores não serão responsáveis pelo controle direto dos motores. Sua fun�
 
 ## Microcontrolador 
 
-O ESP32 foi escolhido por atender aos principais requisitos da vending machine, oferecendo Wi-Fi integrado, quantidade suficiente de GPIOs e baixo custo. Em comparação, o NXP RW610 também possui conectividade sem fio e bom desempenho, porém apresenta maior custo e menor disponibilidade no mercado. Já a STM32F411 Black Pill possui baixo consumo e boa quantidade de GPIOs, mas não possui Wi-Fi integrado, exigindo um módulo adicional para a comunicação com a IHM. Como o baixo consumo de energia não é um requisito crítico para o projeto, já que a máquina será alimentada continuamente pela rede elétrica, essa vantagem da Black Pill e de outras soluções de baixo consumo tem menor impacto na escolha. Dessa forma, o ESP32 apresentou a melhor relação entre recursos, simplicidade de implementação e custo para o projeto.
+Para a escolha do microcontrolador, foram comparadas três opções principais:
+
+- **ESP32**
+  - Wi-Fi integrado;
+  - Quantidade suficiente de GPIOs para o projeto;
+  - Baixo custo;
+  - Boa disponibilidade no mercado;
+  - Implementação mais simples para comunicação com a IHM.
+
+- **NXP RW610**
+  - Possui conectividade sem fio;
+  - Apresenta bom desempenho;
+  - Custo mais elevado em comparação ao ESP32;
+  - Menor disponibilidade no mercado.
+
+- **STM32F411 Black Pill**
+  - Baixo consumo de energia;
+  - Boa quantidade de GPIOs;
+  - Não possui Wi-Fi integrado;
+  - Necessita de um módulo adicional para comunicação sem fio com a IHM.
+
+Como a vending machine será alimentada continuamente pela rede elétrica, o baixo consumo de energia não representa um requisito crítico para o projeto. Dessa forma, essa vantagem da STM32F411 Black Pill e de outras soluções de baixo consumo possui menor peso na decisão.
+
+Considerando conectividade, número de GPIOs, custo, disponibilidade e simplicidade de implementação, o **ESP32 foi selecionado para o projeto**.
 
 <p align="center">
   <img width="350" height="500" alt="ESP" src="../assets/esp.png"/>
