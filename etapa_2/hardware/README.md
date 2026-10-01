@@ -126,14 +126,14 @@ Os testes realizados tiveram como objetivo validar o funcionamento dos principai
 <p align="center">
   <img width="300" height="300" alt="teste motor de Passo" src="../assets/motor_passo.gif"/>
   <br>
-  <em>Video 02 — Teste Motor DC.</em>
+  <em>Video 02 — Teste Motor de passo.</em>
 </p>
 
 ### Teste Motor para máquina de vendas
 <p align="center">
   <img width="300" height="300" alt="teste Motor maq vendas" src="../assets/maq_venda.gif"/>
   <br>
-  <em>Video 03 — Teste Motor DC.</em>
+  <em>Video 03 — Teste Motor para máquina de vendas.</em>
 </p>
 
 
