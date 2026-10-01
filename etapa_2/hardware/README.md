@@ -125,7 +125,7 @@ Para a escolha do microcontrolador, foram comparadas três opções principais:
 
 Como a vending machine será alimentada continuamente pela rede elétrica, o baixo consumo de energia não representa um requisito crítico para o projeto. Dessa forma, essa vantagem da STM32F411 Black Pill e de outras soluções de baixo consumo possui menor peso na decisão.
 
-Considerando conectividade, número de GPIOs, custo, disponibilidade e simplicidade de implementação, o **ESP32 foi selecionado para o projeto**.
+Considerando conectividade, número de GPIOs, custo, disponibilidade e simplicidade de implementação, o **ESP32 foi selecionado para o projeto**. A **Figura 8** apresenta o modelo de ESP32  ser utilizado.
 
 <p align="center">
   <img width="350" height="500" alt="ESP" src="../assets/esp.png"/>
