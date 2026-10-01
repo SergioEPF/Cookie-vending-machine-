@@ -9,7 +9,7 @@ A etapa 2 tem como objetivo detalhar a construção da máquina de venda de cook
 Conforme apresentado na **Figura 1**, a estrutura proposta utiliza MDF na base, nas laterais e na parte traseira, com um visor de acrílico na parte frontal, permitindo a visualização dos produtos. A reposição será realizada por meio de uma tampa superior, que dará acesso aos seis canais de armazenamento. Cada canal contará com uma espiral e um motor independente, responsáveis pela dispensação individual dos produtos.
 
 <p align="center">
-  <img width="500" height="400" alt="CAD completo da máquina" src="https://github.com/user-attachments/assets/c5c8cf37-9741-46da-9d0a-7d2933c9acdf" />
+  <img width="400" height="300" alt="image" src="https://github.com/user-attachments/assets/1ae8446f-c051-4b94-b006-1a96331ff176" />
   <br>
   <em>Figura 1 — Estrutura completa.</em>
 </p>
