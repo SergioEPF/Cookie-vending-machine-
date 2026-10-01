@@ -167,6 +167,11 @@ Abaixo GIF do funcionamento básico da página web do backoffice:
 * [2] [Pololu — Driver de motor de passo DRV8825](https://www.pololu.com/product/2133).
 * [3] [Espressif — Datasheet da série ESP32](https://www.espressif.com/sites/default/files/documentation/esp32_datasheet_en.pdf).
 * [4] [Adafruit — Sensor infravermelho de barreira 2168](https://www.adafruit.com/product/2168).
+* [5] [Vishay — Receptor infravermelho TSSP580..: datasheet](https://www.vishay.com/docs/82479/tssp580.pdf).
+* [6] [Vishay — Emissor infravermelho TSAL6200: datasheet](https://www.vishay.com/docs/81010/tsal6200.pdf).
+* [7] [Vishay — Barreiras infravermelhas: nota de aplicação](https://www.vishay.com/docs/49650/pt0402-lightbarriers.pdf).
+* [8] [Texas Instruments — Motores CC com escovas: Precision Labs](https://www.ti.com/video/series/precision-labs/ti-precision-labs-brushed-dc-motors.html).
+* [9] [Anvisa — Resolução RDC nº 216, de 15 de setembro de 2004](https://bvsms.saude.gov.br/bvs/saudelegis/anvisa/2004/res0216_15_09_2004.html).
 
 
 
