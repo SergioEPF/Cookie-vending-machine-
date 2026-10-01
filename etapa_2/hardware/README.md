@@ -105,7 +105,7 @@ Os sensores não serão responsáveis pelo controle direto dos motores. Sua fun�
 O ESP32 foi escolhido por atender aos principais requisitos da vending machine, oferecendo Wi-Fi integrado, quantidade suficiente de GPIOs e baixo custo. Em comparação, o NXP RW610 também possui conectividade sem fio e bom desempenho, porém apresenta maior custo e menor disponibilidade no mercado. Já a STM32F411 Black Pill possui baixo consumo e boa quantidade de GPIOs, mas não possui Wi-Fi integrado, exigindo um módulo adicional para a comunicação com a IHM. Como o baixo consumo de energia não é um requisito crítico para o projeto, já que a máquina será alimentada continuamente pela rede elétrica, essa vantagem da Black Pill e de outras soluções de baixo consumo tem menor impacto na escolha. Dessa forma, o ESP32 apresentou a melhor relação entre recursos, simplicidade de implementação e custo para o projeto.
 
 <p align="center">
-  <img width="350" height="400" alt="ESP" src="../assets/esp.png"/>
+  <img width="350" height="500" alt="ESP" src="../assets/esp.png"/>
   <br>
   <em>Figura 8 — ESP32.</em>
 </p>
@@ -124,14 +124,14 @@ Os testes realizados tiveram como objetivo validar o funcionamento dos principai
 
 ### Teste Motor de passo 
 <p align="center">
-  <img width="300" height="300" alt="teste motor de Passo" src="../assets/teste_dc.gif"/>
+  <img width="300" height="300" alt="teste motor de Passo" src="../assets/motor_passo.gif"/>
   <br>
   <em>Video 02 — Teste Motor DC.</em>
 </p>
 
 ### Teste Motor para máquina de vendas
 <p align="center">
-  <img width="300" height="300" alt="teste Motor maq vendas" src="../assets/teste_dc.gif"/>
+  <img width="300" height="300" alt="teste Motor maq vendas" src="../assets/maq_venda.gif"/>
   <br>
   <em>Video 03 — Teste Motor DC.</em>
 </p>
