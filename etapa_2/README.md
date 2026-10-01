@@ -2,9 +2,7 @@
 
 A etapa 2 tem como objetivo detalhar a construção da máquina de venda de cookies, considerando a estrutura, o armazenamento, a liberação dos produtos e os componentes eletrônicos. As atividades incluem verificar o acesso para manutenção e reposição, dimensionar a caixa, desenvolver os desenhos em CAD, projetar os mecanismos de armazenamento e dispensação, selecionar motores e sensores, definir o controlador e planejar o sistema de pagamento. Nesta etapa, as escolhas iniciais serão ajustadas conforme as dimensões dos cookies embalados e os resultados dos testes com o mecanismo.
 
-## Desenvolvimento
-
-### Estrutura, dimensionamento e manutenção
+## Estrutura, dimensionamento e manutenção
 
 Conforme apresentado na **Figura 1**, a estrutura proposta utiliza MDF na base, nas laterais e na parte traseira, com um visor de acrílico na parte frontal, permitindo a visualização dos produtos. A reposição será realizada por meio de uma tampa superior, que dará acesso aos seis canais de armazenamento. Cada canal contará com uma espiral e um motor independente, responsáveis pela dispensação individual dos produtos.
 
@@ -140,7 +138,7 @@ Abaixo GIF do funcionamento básico do APP da IHM
 </p>
 
 
-### Funcionamento do sistema
+## Funcionamento do sistema
 
 Após a seleção do produto, a IHM registrará a solicitação e enviará o comando ao microcontrolador. O microcontrolador será responsável por acionar o motor correspondente ao sabor escolhido.
 
@@ -148,7 +146,7 @@ Depois da liberação do produto, o sensor de barreira verificará a passagem do
 
 Caso o sensor não identifique a passagem do produto após o acionamento do motor, a operação poderá ser registrada como uma falha de entrega, evitando que uma compra seja contabilizada sem que o usuário tenha recebido o produto.
 
-### Cobrança e histórico
+## Cobrança e histórico
 
 Como o pagamento não será realizado diretamente na máquina, as compras registradas poderão ser utilizadas posteriormente para realizar a cobrança de cada usuário.
 
