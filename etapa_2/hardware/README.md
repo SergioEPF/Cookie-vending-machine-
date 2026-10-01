@@ -112,7 +112,9 @@ O ESP32 foi escolhido por atender aos principais requisitos da vending machine, 
 
 ## Testes
 
-Os testes realizados tiveram como objetivo validar o funcionamento dos principais componentes do sistema, especialmente motores, drivers e sensores. Durante essa etapa, foram avaliados o acionamento dos motores, o comportamento das molas e a detecção da passagem dos cookies. Esses testes permitiram identificar ajustes necessários antes da integração definitiva dos componentes na vending machine.
+Os testes realizados tiveram como objetivo validar o funcionamento dos principais componentes do sistema, especialmente os motores, drivers e sensores. Durante essa etapa, foram avaliados o acionamento dos motores, o comportamento das molas e a detecção da passagem dos cookies. Esses testes permitiram identificar ajustes necessários antes da integração definitiva dos componentes na vending machine.
+
+**Abaixo, podem ser visualizados os vídeos dos testes realizados**, demonstrando o funcionamento dos componentes e dos mecanismos avaliados durante esta etapa do desenvolvimento.
 
 ### Teste Motor DC 
 
