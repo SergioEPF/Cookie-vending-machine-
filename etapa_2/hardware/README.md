@@ -10,6 +10,32 @@ No terceiro teste, foi utilizado um motor DC com redução desenvolvido para apl
 
 Dessa forma, o motor DC com redução para máquinas de venda automática foi escolhido para a versão final do projeto.
 
+Abaixo foto dos motores testados: 
+
+<table align="center">
+  <tr>
+    <td align="center">
+      <img width="350" alt="Motor DC" src="../assets/motor_dc.jpg" />
+    </td>
+    <td align="center">
+      <img width="350" alt="Motor Passo" src="../assets/motor_passo.jpg" />
+    </td>
+    <td align="center">
+      <img width="350" alt="Motor maquia venda" src="../assets/foto_motor_maq_venda.jpeg" />
+    </td>
+  </tr>
+  <tr>
+    <td align="center">
+      <em>Figura 1 — Motor DC.</em>
+    </td>
+    <td align="center">
+      <em>Figura 2 — Motor de Passo.</em>
+    </td>
+        <td align="center">
+      <em>Figura 3 — Motor de Máquina de Venda.</em>
+    </td>
+  </tr>
+</table>
 
 ### Acionamento dos motores
 
@@ -18,6 +44,28 @@ Como os motores selecionados são motores DC, não será necessária a utilizaç
 A máquina possui seis mecanismos independentes de entrega, sendo cada mecanismo responsável por um sabor diferente de cookie. Para selecionar qual motor deverá ser acionado, serão utilizados seis relés, permitindo que o microcontrolador controle individualmente cada mecanismo de entrega.
 
 Esse sistema reduz a quantidade de componentes necessários para o acionamento dos motores e simplifica o controle realizado pelo microcontrolador, mantendo cada mecanismo de entrega independente dos demais.
+
+
+Abaixo circuito do acionamento utilizado: 
+
+<table align="center">
+  <tr>
+    <td align="center">
+      <img width="350"  alt="Circuito Acionamento" src="../assets/circuito_acionamento.jpeg" />
+    </td>
+    <td align="center">
+      <img width="350" height="400" alt="Motor Passo" src="../assets/circuito_montado.jpeg" />
+    </td>
+  </tr>
+  <tr>
+    <td align="center">
+      <em>Figura 4 — Circuito do Acionamento.</em>
+    </td>
+    <td align="center">
+      <em>Figura 5 — Circuito Montado em Bancada.</em>
+    </td>
+  </tr>
+</table>
 
 ### Sensores de detecção de produto
 
@@ -33,9 +81,34 @@ No projeto serão utilizados três 3 emissores e 2 receptores. Cada conjunto ser
 
 Os sensores não serão responsáveis pelo controle direto dos motores. Sua função será atuar como uma confirmação independente da liberação do produto após o acionamento do mecanismo de entrega.
 
+<table align="center">
+  <tr>
+    <td align="center">
+      <img width="350"  alt="Receptor" src="../assets/receptor.png" />
+    </td>
+    <td align="center">
+      <img width="350" alt="Emissor" src="../assets/emissor.png" />
+    </td>
+  </tr>
+  <tr>
+    <td align="center">
+      <em>Figura 6 — Receptor TSSP58038.</em>
+    </td>
+    <td align="center">
+      <em>Figura 7 — Emissor TSAL6200.</em>
+    </td>
+  </tr>
+</table>
+
 ## Microcontrolador 
 
 O ESP32 foi escolhido por atender aos principais requisitos da vending machine, oferecendo Wi-Fi integrado, quantidade suficiente de GPIOs e baixo custo. Em comparação, o NXP RW610 também possui conectividade sem fio e bom desempenho, porém apresenta maior custo e menor disponibilidade no mercado. Já a STM32F411 Black Pill possui baixo consumo e boa quantidade de GPIOs, mas não possui Wi-Fi integrado, exigindo um módulo adicional para a comunicação com a IHM. Como o baixo consumo de energia não é um requisito crítico para o projeto, já que a máquina será alimentada continuamente pela rede elétrica, essa vantagem da Black Pill e de outras soluções de baixo consumo tem menor impacto na escolha. Dessa forma, o ESP32 apresentou a melhor relação entre recursos, simplicidade de implementação e custo para o projeto.
+
+<p align="center">
+  <img width="500" height="400" alt="ESP" src="../assets/esp.png"/>
+  <br>
+  <em>Figura 8 — ESP32.</em>
+</p>
 
 ## Testes
 
@@ -43,14 +116,25 @@ Os testes realizados tiveram como objetivo validar o funcionamento dos principai
 
 ### Teste Motor DC 
 
+<p align="center">
+  <img width="300" height="300" alt="teste DC" src="../assets/teste_dc.gif"/>
+  <br>
+  <em>Video 01 — Teste Motor DC.</em>
+</p>
 
 ### Teste Motor de passo 
+<p align="center">
+  <img width="300" height="300" alt="teste motor de Passo" src="../assets/teste_dc.gif"/>
+  <br>
+  <em>Video 02 — Teste Motor DC.</em>
+</p>
 
 ### Teste Motor para máquina de vendas
+<p align="center">
+  <img width="300" height="300" alt="teste Motor maq vendas" src="../assets/teste_dc.gif"/>
+  <br>
+  <em>Video 03 — Teste Motor DC.</em>
+</p>
 
-## Referências (links/datasheets/livros)
-
-
-- [nRF Connect SDK](https://developer.nordicsemi.com/nRF_Connect_SDK/doc/2.4.2/nrf/getting_started/modifying.html#configure-application>)
 
 
