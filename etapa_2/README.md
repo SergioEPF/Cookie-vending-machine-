@@ -14,34 +14,6 @@ Conforme apresentado na **Figura 1**, a estrutura proposta utiliza MDF na base, 
   <em>Figura 1 — Estrutura completa.</em>
 </p>
 
-<p align="center">
-</p>
-<p align="center">
-</p>
-<table align="center">
-  <tr>
-    <td align="center">
-      <img height="250" width="300" alt="animação mola" src="./assets/imagem_top_mola.gif" />
-    </td>
-    <td align="center">
-      <img height="250" width="300" alt="porta manutenção" src="./assets/manutenção.gif" />
-    </td>
-    <td align="center">
-      <img height="250" width="300" alt="Mola" src="./assets/molagirandolado.gif" />
-    </td>
-  </tr>
-  <tr>
-    <td align="center">
-      <em>Figura 2 — Animação Mola</em>
-    </td>
-    <td align="center">
-      <em>Figura 3 — Porta Manutenção.</em>
-    </td>
-    <td align="center">
-      <em>Figura 4 — Animação Mola.</em>
-    </td>
-  </tr>
-</table>
 
 <p align="center">
 </p>
@@ -81,14 +53,6 @@ Conforme apresentado na **Figura 5 e 6**, o dimensionamento deverá considerar a
   <em>Figura 5 — Dimensões da Máquina de Vendas.</em>
 </p>
 
-<p align="center">
-  <br>
-<img width="512" height="192" alt="image" src="https://github.com/user-attachments/assets/221130d9-2022-46a0-9c0b-a55ee64580ec" />
-<br>
-  <em>Figura 6 — Dimensões do Sistema de Dispenser.</em>
-</p>
-
-
 As superfícies de apoio e a bandeja de retirada serão lisas e removíveis para facilitar a limpeza. O compartimento eletrônico ficará separado da área dos produtos e terá acesso para manutenção. Os suportes dos motores e das espirais deverão permitir a desmontagem individual de cada conjunto.
 
 Para iluminação será utilizado uma fita de led controlada pelo microcontrolador, conforme a figura 7.
@@ -104,6 +68,26 @@ Para iluminação será utilizado uma fita de led controlada pelo microcontrolad
 Os cookies serão armazenados em embalagens individuais fechadas, posicionados entre as espiras das molas de aço mola. Divisórias separarão os canais e ajudarão a manter os produtos alinhados durante o avanço.
 
 A liberação do produto ocorrerá por meio da rotação da espiral correspondente ao item selecionado. Esse movimento deslocará as embalagens em direção à saída, permitindo que o primeiro cookie caia na bandeja de retirada. O espaçamento entre as espiras e o avanço realizado a cada venda deverão ser ajustados de forma a liberar apenas uma unidade por acionamento, evitando a compressão ou o travamento dos produtos.
+
+<table align="center">
+  <tr>
+    <td align="center">
+      <img height="250" width="300" alt="animação mola" src="./assets/imagem_top_mola.gif" />
+    </td>
+    <td align="center">
+      <img width="512" height="192" alt="image" src="https://github.com/user-attachments/assets/221130d9-2022-46a0-9c0b-a55ee64580ec" />
+    </td>
+  </tr>
+  <tr>
+    <td align="center">
+      <em>Figura 8 — Mola para armazenamento.</em>
+    </td>
+    <td align="center">
+      <em>Figura 9 — Dimensões do Sistema de Dispenser.</em>
+</p>.</em>
+    </td>
+  </tr>
+</table>
 
 A **Figura 8** apresenta a mola utilizada no mecanismo de dispensação, enquanto a **Figura 9** apresenta o cookie em sua embalagem individual, respectivamente. 
 
