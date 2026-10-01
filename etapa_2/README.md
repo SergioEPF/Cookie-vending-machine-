@@ -121,7 +121,7 @@ Após a identificação, o usuário poderá visualizar os sabores disponíveis e
 Abaixo GIF do funcionamento básico do APP da IHM
 
 <p align="center">
-  <img width="700" height="600" alt="fita led" src="./assets/app_ihm.gif" />
+  <img width="1000" height="900" alt="fita led" src="./assets/app_ihm.gif" />
   <br>
   <em>Figura 10 — Funcionamento Aplicativo IHM.</em>
 </p>
@@ -144,7 +144,7 @@ O sistema permitirá consultar o histórico de consumo e o valor acumulado das c
 Abaixo GIF do funcionamento básico da página web do backoffice:
 
 <p align="center">
-  <img width="800" height="700" alt="backoffice" src="./assets/backoffice.gif" />
+  <img width="1000" height="900" alt="backoffice" src="./assets/backoffice.gif" />
   <br>
   <em>Figura 11 — Funcionamento Página WEB Backoffice.</em>
 </p>
