@@ -53,12 +53,12 @@ Conforme apresentado na **Figura 5**, o dimensionamento deverá considerar a lar
 
 As superfícies de apoio e a bandeja de retirada serão lisas e removíveis para facilitar a limpeza. O compartimento eletrônico ficará separado da área dos produtos e terá acesso para manutenção. Os suportes dos motores e das espirais deverão permitir a desmontagem individual de cada conjunto.
 
-Para iluminação será utilizado uma fita de led controlada pelo microcontrolador, conforme a figura 7.
+Para iluminação será utilizado uma fita de led controlada pelo microcontrolador, conforme a figura 6.
 
 <p align="center">
   <img width="400" height="300" alt="fita led" src="./assets/fita_led.jpg" />
   <br>
-  <em>Figura 7 — Fita led para iluminação.</em>
+  <em>Figura 6 — Fita led para iluminação.</em>
 </p>
 
 ## Armazenamento e dispensação
@@ -78,16 +78,16 @@ A liberação do produto ocorrerá por meio da rotação da espiral corresponden
   </tr>
   <tr>
     <td align="center">
-      <em>Figura 8 — Mola para armazenamento.</em>
+      <em>Figura 7 — Mola para armazenamento.</em>
     </td>
     <td align="center">
-      <em>Figura 9 — Dimensões do Sistema de Dispenser.</em>
+      <em>Figura 8 — Dimensões do Sistema de Dispenser.</em>
 </p></em>
     </td>
   </tr>
 </table>
 
-A **Figura 10** apresenta a mola utilizada no mecanismo de dispensação, enquanto a **Figura 11** apresenta o cookie em sua embalagem individual, respectivamente. 
+A **Figura 9** apresenta a mola utilizada no mecanismo de dispensação, enquanto a **Figura 10** apresenta o cookie em sua embalagem individual, respectivamente. 
 
 <table align="center">
   <tr>
@@ -100,10 +100,10 @@ A **Figura 10** apresenta a mola utilizada no mecanismo de dispensação, enquan
   </tr>
   <tr>
     <td align="center">
-      <em>Figura 10 — Mola para armazenamento.</em>
+      <em>Figura 9 — Mola para armazenamento.</em>
     </td>
     <td align="center">
-      <em>Figura 11 — Cookie embalado.</em>
+      <em>Figura 10 — Cookie embalado.</em>
     </td>
   </tr>
 </table>
