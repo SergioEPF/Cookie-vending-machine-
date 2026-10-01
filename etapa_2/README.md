@@ -42,7 +42,7 @@ Conforme apresentado na **Figura 1**, a estrutura proposta utiliza MDF na base, 
   </tr>
 </table>
 
-Conforme apresentado na **Figura 5**, o dimensionamento deverá considerar a largura e a altura das embalagens, o comprimento das espirais, a quantidade de cookies armazenada em cada canal e o espaço necessário para a instalação dos motores. Também será reservado espaço adequado para a passagem do produto até a bandeja de retirada, de modo a evitar pontos de interferência ou regiões onde a embalagem possa ficar presa durante a dispensação.
+Conforme apresentado na **Figura 5**, a vista 1 corresponde à vista frontal, a vista 2 à vista superior, a vista 3 à vista lateral e a vista 4 à vista traseira da máquina. O dimensionamento deverá considerar a largura e a altura das embalagens, o comprimento das espirais, a quantidade de cookies armazenada em cada canal e o espaço necessário para a instalação dos motores. Também será reservado espaço adequado para a passagem dos produtos até a bandeja de retirada, a fim de evitar interferências ou pontos onde as embalagens possam ficar presas durante a dispensação.
 
 <p align="center">
   <br>
