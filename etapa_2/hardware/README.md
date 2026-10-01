@@ -51,7 +51,7 @@ Abaixo circuito do acionamento utilizado:
 <table align="center">
   <tr>
     <td align="center">
-      <img width="350"  alt="Circuito Acionamento" src="../assets/circuito_acionamento.jpeg" />
+      <img width="350" alt="Circuito Acionamento" src="../assets/circuito_acionamento.jpeg" />
     </td>
     <td align="center">
       <img width="350" height="400" alt="Motor Passo" src="../assets/circuito_montado.jpeg" />
