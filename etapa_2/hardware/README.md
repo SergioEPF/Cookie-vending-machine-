@@ -41,10 +41,7 @@ Abaixo foto dos motores testados:
 
 Como os motores selecionados são motores DC, não será necessária a utilização de drivers específicos para motores de passo. O acionamento será realizado por meio de um circuito de potência simples utilizando um MOSFET e resistores, conforme apresentado na Figura X.
 
-A máquina possui seis mecanismos independentes de entrega, sendo cada mecanismo responsável por um sabor diferente de cookie. Para selecionar qual motor deverá ser acionado, serão utilizados seis relés, permitindo que o microcontrolador controle individualmente cada mecanismo de entrega.
-
-Esse sistema reduz a quantidade de componentes necessários para o acionamento dos motores e simplifica o controle realizado pelo microcontrolador, mantendo cada mecanismo de entrega independente dos demais.
-
+A máquina possui seis mecanismos independentes de entrega, cada um responsável por um sabor diferente de cookie. A forma de acionamento individual dos seis motores ainda está em estudo. O circuito apresentado representa uma configuração de teste, e a solução final será definida após a avaliação dos componentes e dos resultados dos testes.
 
 Abaixo circuito do acionamento utilizado: 
 
