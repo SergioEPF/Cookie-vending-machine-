@@ -47,6 +47,7 @@ Conforme apresentado na **Figura 5**, o dimensionamento deverá considerar a lar
 
 <p align="center">
   <br>
+  <img width="961" height="634" alt="image (2)" src="https://github.com/user-attachments/assets/3ef16562-c990-439c-9df6-818cd78f551c" />
   <em>Figura 5 — Colocar uma imagem contendo todas as dimensoes.</em>
 </p>
 
