@@ -6,7 +6,7 @@ A etapa 2 tem como objetivo detalhar a construção da máquina de venda de cook
 
 ### Estrutura, dimensionamento e manutenção
 
-A estrutura proposta utiliza MDF na base, nas laterais e na parte traseira, com um visor de acrílico na frente para permitir a visualização dos produtos. A reposição será feita por uma tampa superior, que dará acesso aos seis canais de armazenamento. Cada canal terá uma espiral e um motor independente.
+Conforme apresentado na **Figura 1**, a estrutura proposta utiliza MDF na base, nas laterais e na parte traseira, com um visor de acrílico na parte frontal, permitindo a visualização dos produtos. A reposição será realizada por meio de uma tampa superior, que dará acesso aos seis canais de armazenamento. Cada canal contará com uma espiral e um motor independente, responsáveis pela dispensação individual dos produtos.
 
 <p align="center">
   <img width="500" height="400" alt="CAD completo da máquina" src="https://github.com/user-attachments/assets/c5c8cf37-9741-46da-9d0a-7d2933c9acdf" />
