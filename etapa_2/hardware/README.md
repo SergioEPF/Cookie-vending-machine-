@@ -69,17 +69,17 @@ Abaixo circuito do acionamento utilizado:
 
 ### Sensores de detecção de produto
 
-Para confirmar que o cookie foi realmente liberado após o acionamento do motor, será utilizado um sistema de barreira infravermelha.
+Para confirmar que o cookie foi efetivamente liberado após o acionamento do motor, será utilizado um sistema de barreira infravermelha.
 
-O conjunto selecionado é formado pelo emissor infravermelho TSAL6200 e pelo receptor TSSP58038.
+O conjunto selecionado é formado pelo receptor infravermelho **TSSP58038**, apresentado na **Figura 6**, e pelo emissor infravermelho **TSAL6200**, apresentado na **Figura 7**, respectivamente.
 
-O TSAL6200 é responsável por emitir luz infravermelha, enquanto o TSSP58038 detecta esse sinal. Os dois componentes são posicionados em lados opostos do caminho de queda do produto, formando uma barreira óptica.
+O TSAL6200 é responsável pela emissão da luz infravermelha, enquanto o TSSP58038 realiza a detecção desse sinal. Os dois componentes serão posicionados em lados opostos do caminho de queda do produto, formando uma barreira óptica.
 
-Quando não existe nenhum objeto entre os componentes, o receptor detecta normalmente o sinal infravermelho. Durante a queda de um cookie, essa comunicação é momentaneamente interrompida, permitindo que o microcontrolador identifique que houve passagem de um produto.
+Quando não houver nenhum objeto entre os componentes, o receptor detectará normalmente o sinal infravermelho emitido. Durante a queda de um cookie, essa comunicação será momentaneamente interrompida, permitindo que o microcontrolador identifique a passagem do produto.
 
-No projeto serão utilizados três 3 emissores e 2 receptores. Cada conjunto será responsável por monitorar a passagem dos produtos e confirmar que a entrega ocorreu corretamente.
+No projeto, serão utilizados **três emissores TSAL6200 e dois receptores TSSP58038**. Esses componentes serão distribuídos de forma a monitorar a passagem dos produtos e confirmar que a entrega ocorreu corretamente.
 
-Os sensores não serão responsáveis pelo controle direto dos motores. Sua função será atuar como uma confirmação independente da liberação do produto após o acionamento do mecanismo de entrega.
+Os sensores não serão responsáveis pelo controle direto dos motores. Sua função será atuar como um sistema independente de confirmação da liberação do produto após o acionamento do mecanismo de entrega.
 
 <table align="center">
   <tr>
