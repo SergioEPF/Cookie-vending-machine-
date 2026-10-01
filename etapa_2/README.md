@@ -64,9 +64,9 @@ Para iluminação será utilizado uma fita de led controlada pelo microcontrolad
 
 Os cookies serão armazenados em embalagens individuais fechadas, posicionados entre as espiras das molas de aço mola. Divisórias separarão os canais e ajudarão a manter os produtos alinhados durante o avanço.
 
-A liberação ocorrerá pela rotação da espiral correspondente ao produto selecionado. O movimento deslocará as embalagens em direção à saída, permitindo que o primeiro cookie caia na bandeja de retirada. O espaçamento das espiras e o avanço por venda deverão ser ajustados para liberar apenas uma unidade, sem comprimir os produtos.
+A liberação do produto ocorrerá por meio da rotação da espiral correspondente ao item selecionado. Esse movimento deslocará as embalagens em direção à saída, permitindo que o primeiro cookie caia na bandeja de retirada. O espaçamento entre as espiras e o avanço realizado a cada venda deverão ser ajustados de forma a liberar apenas uma unidade por acionamento, evitando a compressão ou o travamento dos produtos.
 
-Segue abaixo fotos da mola e cookie embalado respectivamente: 
+A **Figura 7** apresenta a mola utilizada no mecanismo de dispensação, enquanto a **Figura 8** apresenta o cookie em sua embalagem individual, respectivamente. 
 
 <table align="center">
   <tr>
