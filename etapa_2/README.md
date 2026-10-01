@@ -43,6 +43,35 @@ Conforme apresentado na **Figura 1**, a estrutura proposta utiliza MDF na base, 
   </tr>
 </table>
 
+<p align="center">
+</p>
+<p align="center">
+</p>
+<table align="center">
+  <tr>
+    <td align="center">
+      <img width="250" height="300" alt="tampa" src="https://github.com/user-attachments/assets/dc152bbd-fa32-4743-8e42-9b52b458d330" />
+    </td>
+    <td align="center">
+      <img height="290" width="300" alt="porta manutenção" src="./assets/manutenção.gif" />
+    </td>
+    <td align="center">
+      <img width="290" height="300" alt="portinhola" src="https://github.com/user-attachments/assets/53d58dc7-a39b-4fc1-86fc-4096cf554089" />
+    </td>
+  </tr>
+  <tr>
+    <td align="center">
+      <em>Figura 2 — Tampa para reabastecer </em>
+    </td>
+    <td align="center">
+      <em>Figura 3 — Porta Manutenção.</em>
+    </td>
+    <td align="center">
+      <em>Figura 4 — Portinhola.</em>
+    </td>
+  </tr>
+</table>
+
 Conforme apresentado na **Figura 5 e 6**, o dimensionamento deverá considerar a largura e a altura das embalagens, o comprimento das espirais, a quantidade de cookies armazenada em cada canal e o espaço necessário para a instalação dos motores. Também será reservado espaço adequado para a passagem do produto até a bandeja de retirada, de modo a evitar pontos de interferência ou regiões onde a embalagem possa ficar presa durante a dispensação.
 
 <p align="center">
