@@ -113,7 +113,7 @@ Após a identificação, o usuário poderá visualizar os sabores disponíveis e
 Abaixo GIF do funcionamento básico do APP da IHM
 
 <p align="center">
-  <img width="500" height="400" alt="fita led" src="./assets/app_ihm.gif" />
+  <img width="700" height="600" alt="fita led" src="./assets/app_ihm.gif" />
   <br>
   <em>Figura 9 — Funcionamento Aplicativo IHM.</em>
 </p>
