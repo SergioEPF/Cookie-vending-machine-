@@ -11,7 +11,7 @@ A estrutura proposta utiliza MDF na base, nas laterais e na parte traseira, com 
 <p align="center">
   <img width="500" height="400" alt="CAD completo da máquina" src="https://github.com/user-attachments/assets/c5c8cf37-9741-46da-9d0a-7d2933c9acdf" />
   <br>
-  <em>Figura 2 — Estrutura completa.</em>
+  <em>Figura 1 — Estrutura completa.</em>
 </p>
 
 O dimensionamento deverá considerar a largura e a altura da embalagem, o comprimento das espirais, a quantidade de cookies por canal e o espaço ocupado pelos motores. Também será reservado espaço para a passagem do produto até a bandeja de retirada, evitando pontos onde a embalagem possa ficar presa.
@@ -25,11 +25,38 @@ As superfícies de apoio e a bandeja de retirada serão lisas e removíveis para
 
 Para iluminação será utilizado uma fita de led controlada pelo microcontrolador. 
 
+<p align="center">
+  <img width="500" height="400" alt="fita led" src="./assets/fita_led.jpg" />
+  <br>
+  <em>Figura 3 — Fita led para iluminação.</em>
+</p>
+
 ## Armazenamento e dispensação
 
 Os cookies serão armazenados em embalagens individuais fechadas, posicionados entre as espiras das molas de aço mola. Divisórias separarão os canais e ajudarão a manter os produtos alinhados durante o avanço.
 
 A liberação ocorrerá pela rotação da espiral correspondente ao produto selecionado. O movimento deslocará as embalagens em direção à saída, permitindo que o primeiro cookie caia na bandeja de retirada. O espaçamento das espiras e o avanço por venda deverão ser ajustados para liberar apenas uma unidade, sem comprimir os produtos.
+
+Segue abaixo fotos da mola e cookie embalado respectivamente: 
+
+<table align="center">
+  <tr>
+    <td align="center">
+      <img width="350" alt="mola" src="./assets/fita_led.jpg" />
+    </td>
+    <td align="center">
+      <img width="350" alt="cookie" src="./assets/fita_led.jpg" />
+    </td>
+  </tr>
+  <tr>
+    <td align="center">
+      <em>Figura 4 — Mola para armazenamento.</em>
+    </td>
+    <td align="center">
+      <em>Figura 5 — Cookie embalado.</em>
+    </td>
+  </tr>
+</table>
 
 ## Motores, Atuadores e Sensores
 
@@ -52,6 +79,15 @@ Antes de realizar uma compra, o usuário deverá se identificar pela IHM da máq
 
 Após a identificação, o usuário poderá visualizar os sabores disponíveis e selecionar o cookie desejado.
 
+Abaixo GIF do funcionamento básico do APP da IHM
+
+<p align="center">
+  <img width="500" height="400" alt="fita led" src="./assets/app_ihm.gif" />
+  <br>
+  <em>Figura 6 — Funcionamento Aplicativo IHM.</em>
+</p>
+
+
 ### Funcionamento do sistema
 
 Após a seleção do produto, a IHM registrará a solicitação e enviará o comando ao microcontrolador. O microcontrolador será responsável por acionar o motor correspondente ao sabor escolhido.
@@ -66,10 +102,13 @@ Como o pagamento não será realizado diretamente na máquina, as compras regist
 
 O sistema permitirá consultar o histórico de consumo e o valor acumulado das compras realizadas em uma área administrativa.
 
+Abaixo GIF do funcionamento básico da página web do backoffice:
 
-Mais informações sobre o aplicativo da IHM e página web do backoffice podem ser encontradas em [Software](./software/README.md)
-
-
+<p align="center">
+  <img width="500" height="400" alt="backoffice" src="./assets/backoffice.gif" />
+  <br>
+  <em>Figura 6 — Funcionamento Página WEB Backoffice.</em>
+</p>
 
 
 ## Referências
