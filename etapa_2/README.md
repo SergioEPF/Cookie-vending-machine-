@@ -22,7 +22,7 @@ Conforme apresentado na **Figura 1**, a estrutura proposta utiliza MDF na base, 
 <table align="center">
   <tr>
     <td align="center">
-      <img width="250" height="300" alt="tampa" src="https://github.com/user-attachments/assets/dc152bbd-fa32-4743-8e42-9b52b458d330" />
+      <img width="300" height="300" alt="tampaa" src="https://github.com/user-attachments/assets/3ae054cf-7d48-4b8d-8635-0aba8e4cfdde" />
     </td>
     <td align="center">
       <img height="290" width="300" alt="porta manutenção" src="./assets/manutenção.gif" />
