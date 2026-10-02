@@ -87,10 +87,24 @@ A liberação do produto ocorrerá por meio da rotação da espiral corresponden
   </tr>
 </table>
 
-A **Figura 9** apresenta a mola utilizada no mecanismo de dispensação, enquanto a **Figura 10** apresenta o cookie em sua embalagem individual, respectivamente. 
+Para a confecção das molas, foi utilizada uma máquina semelhante à apresentada na Figura 9. O processo de fabricação mostrou-se bastante complexo, principalmente devido à necessidade de manter precisão no passo da mola, isto é, na distância entre cada uma de suas espiras. Esse espaçamento deve ser adequado às dimensões do produto que será armazenado e dispensado pela máquina.
+
+Além disso, durante a fabricação, foi necessário manter o arame o mais firme e alinhado possível, a fim de evitar deformações laterais e garantir que a mola permanecesse uniforme ao longo de todo o seu comprimento. Ao todo, foram confeccionadas seis molas utilizando esse processo.
+
+Entretanto, durante os testes realizados com os motores, verificou-se que as molas apresentavam deformações significativas e não estavam suficientemente alinhadas para garantir o funcionamento adequado do mecanismo de dispensação. Dessa forma, concluiu-se que seria necessário aprimorar o processo de fabricação.
+
+Durante a busca por uma solução, entramos em contato com um colega do IFSC que possui experiência no desenvolvimento de máquinas de venda automática. Ele disponibilizou uma mola para a realização de testes, apresentada na Figura 10, e também se dispôs a auxiliar na fabricação das próximas unidades. Para isso, será utilizado um molde desenvolvido por ele especificamente para a produção de molas destinadas a máquinas de vendas, o que deverá proporcionar maior uniformidade no passo, no diâmetro e no alinhamento das espiras.
+
+Na próxima etapa do projeto, o processo de fabricação e os resultados obtidos com as novas molas serão apresentados de forma mais detalhada.
+
+
+A **Figura 10** apresenta a mola utilizada no mecanismo de dispensação, enquanto a **Figura 11** apresenta o cookie em sua embalagem individual, respectivamente. 
 
 <table align="center">
   <tr>
+      <td align="center">
+      <img width="350" src="https://github.com/user-attachments/assets/bed00aa2-1375-4786-ab84-4e1f89f30433"  />
+    </td>
     <td align="center">
       <img width="200" height="280" alt="mola" src="./assets/mola.jpg" />
     </td>
@@ -100,10 +114,13 @@ A **Figura 9** apresenta a mola utilizada no mecanismo de dispensação, enquant
   </tr>
   <tr>
     <td align="center">
-      <em>Figura 9 — Mola para armazenamento.</em>
+      <em>Figura 09 - Máquina para Fabricar Molas.</em>
     </td>
     <td align="center">
-      <em>Figura 10 — Cookie embalado.</em>
+      <em>Figura 10 — Mola para armazenamento.</em>
+    </td>
+    <td align="center">
+      <em>Figura 11 — Cookie embalado.</em>
     </td>
   </tr>
 </table>
@@ -134,7 +151,7 @@ Abaixo GIF do funcionamento básico do APP da IHM
 <p align="center">
   <img width="1000" height="900" alt="fita led" src="./assets/app_ihm.gif" />
   <br>
-  <em>Figura 11 — Funcionamento Aplicativo IHM.</em>
+  <em>Figura 12 — Funcionamento Aplicativo IHM.</em>
 </p>
 
 
@@ -157,7 +174,7 @@ Abaixo GIF do funcionamento básico da página web do backoffice:
 <p align="center">
   <img width="1000" height="900" alt="backoffice" src="./assets/backoffice.gif" />
   <br>
-  <em>Figura 12 — Funcionamento Página WEB Backoffice.</em>
+  <em>Figura 13 — Funcionamento Página WEB Backoffice.</em>
 </p>
 
 
