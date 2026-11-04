@@ -7,18 +7,42 @@ A etapa 3 do projeto apresenta a construção da estrutura física e o desenvolv
 
 Foi desenvolvido um gabinete para acomodar os seis compartimentos de armazenamento e distribuição dos cookies. A estrutura possui divisórias individuais, espirais para movimentação dos produtos e áreas destinadas à interface e aos componentes eletrônicos.
 
-<p align="center">
-  <img
-    width="500"
-    height="300"
-    alt="Estrutura da máquina de cookies"
-    src="https://github.com/user-attachments/assets/9852b0da-3e48-4849-b797-1bd041af14e2"
-  />
-  <br>
-  <em>Figura 1 – Estrutura da máquina de cookies com seis compartimentos.</em>
-</p>
-<img width="1442" height="941" alt="image" src="https://github.com/user-attachments/assets/d2465485-4246-44cf-99db-96fa1ec1eee2" />
-<img width="1476" height="1005" alt="image" src="https://github.com/user-attachments/assets/3205a4b2-eb67-4070-9166-fadc959a2a99" />
+
+<!-- Tabela com as três etapas de construção da máquina -->
+<table>
+  <!-- Linha das imagens -->
+  <tr>
+    <td align="center" width="33%">
+      <img src="https://github.com/user-attachments/assets/d2465485-4246-44cf-99db-96fa1ec1eee2"
+           width="350" alt="Estrutura em MDF cru">
+    </td>
+
+    <td align="center" width="33%">
+      <img src="https://github.com/user-attachments/assets/3205a4b2-eb67-4070-9166-fadc959a2a99"
+           width="350" alt="Estrutura pintada de branco">
+    </td>
+
+    <td align="center" width="33%">
+      <img src="https://github.com/user-attachments/assets/9852b0da-3e48-4849-b797-1bd041af14e2"
+           width="350" alt="Estrutura final da máquina de cookies">
+    </td>
+  </tr>
+
+  <!-- Linha das legendas -->
+  <tr>
+    <td align="center">
+      <em>Figura 1 — Estrutura em MDF cru após montagem.</em>
+    </td>
+
+    <td align="center">
+      <em>Figura 2 — Estrutura após pintura e acabamento.</em>
+    </td>
+
+    <td align="center">
+      <em>Figura 3 — Estrutura com os seis compartimentos e espirais instalados.</em>
+    </td>
+  </tr>
+</table>
 
 
 
