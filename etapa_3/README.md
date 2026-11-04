@@ -5,6 +5,67 @@ A etapa 3 do projeto apresenta a construção da estrutura física e o desenvolv
 ## Desenvolvimento
 
 Apresentar o desenvolvimento da etapa contendo detalhes de implementação (se houver) de hardware e software. Use fotos, diagramas, tabelas etc. Adicionar pesqusisas realizadas. Relacionar as fotos, diagramas, etc no texto. Todas as referências devem citadas no texto. 
+# Máquina Automática de Cookies — Desenvolvimento e Testes
+
+## Objetivo do projeto
+
+Desenvolver uma máquina automática de venda de cookies, composta por seis compartimentos com mecanismos de espiral acionados individualmente por motores elétricos. O sistema deverá realizar a seleção do produto, processar o pagamento e controlar a distribuição de maneira automatizada.
+
+## 1. Construir a estrutura
+
+Foi desenvolvido um gabinete para acomodar os seis compartimentos de armazenamento e distribuição dos cookies. A estrutura possui divisórias individuais, espirais para movimentação dos produtos e áreas destinadas à interface e aos componentes eletrônicos.
+
+**Testes previstos:** estabilidade da estrutura, alinhamento das espirais, encaixe dos produtos e funcionamento mecânico da distribuição.
+
+**Situação:** protótipo físico montado e fotografado; validação mecânica pendente de registro.
+
+## 2. Firmware da lógica de venda funcional
+
+Desenvolver a lógica responsável por gerenciar a seleção dos produtos, verificar sua disponibilidade, solicitar o pagamento e autorizar a distribuição após a confirmação da transação.
+
+**Testes previstos:** seleção correta, identificação do canal, bloqueio de produtos indisponíveis, recusa de pagamentos e prevenção de entregas duplicadas.
+
+**Situação:** requisitos e testes definidos; implementação funcional ainda precisa ser documentada.
+
+## 3. Integrar o sistema de pagamento escolhido
+
+Integrar o método de pagamento à lógica de venda, permitindo que a distribuição seja autorizada somente após a confirmação de uma transação válida.
+
+**Testes previstos:** confirmação de pagamento, pagamentos recusados, cancelamentos, falhas de comunicação e prevenção de acionamentos indevidos.
+
+**Situação:** solução de pagamento e integração ainda precisam ser registradas.
+
+## 4. Instalar motores e sensores
+
+Foi realizada a montagem física de seis conjuntos de motores responsáveis pelo acionamento das espirais. O sistema prevê sensores para monitoramento das condições de funcionamento e da distribuição.
+
+**Testes previstos:** acionamento individual, sentido de rotação, consumo elétrico, leitura dos sensores e desligamento em situações de falha.
+
+**Situação:** motores instalados e fotografados; instalação dos sensores e resultados de testes ainda precisam ser confirmados.
+
+## 5. Firmware do controle do mecanismo
+
+Desenvolver o firmware responsável por comandar os motores, interpretar os sinais dos sensores e finalizar cada ciclo de distribuição.
+
+O projeto também contempla o desenvolvimento de uma placa eletrônica de controle, com layout e face de cobre registrados fotograficamente.
+
+**Testes previstos:** acionamento correto de cada motor, funcionamento dos sensores, tempo máximo de acionamento, tratamento de falhas e verificação elétrica da placa.
+
+**Situação:** desenvolvimento da placa documentado por imagens; firmware e validações elétricas ainda precisam de evidências.
+
+## 6. Projetar painel/interface com o usuário
+
+Desenvolver a interface responsável pela interação entre o consumidor e a máquina, apresentando produtos disponíveis, preços, informações de pagamento e andamento da distribuição.
+
+**Testes previstos:** navegação, seleção dos produtos, exibição dos valores, atualização do estado do pagamento e mensagens de confirmação ou erro.
+
+**Situação:** espaço físico para interface identificado na estrutura; implementação e testes da interface pendentes de documentação.
+
+## Conclusão
+
+O projeto já apresenta elementos físicos de desenvolvimento, incluindo gabinete, mecanismos de espiral, montagem dos motores e fabricação da placa eletrônica.
+
+As próximas etapas de documentação envolvem registrar a implementação dos sistemas de controle e pagamento, executar os ensaios funcionais e anexar evidências que comprovem o atendimento aos requisitos de cada subentrega.
 
 <img width="400" height="400" alt="image" src="https://github.com/user-attachments/assets/b00feebc-5ee0-4bf5-8a90-9f8e58ff877b" />
 
