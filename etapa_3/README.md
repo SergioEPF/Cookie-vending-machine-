@@ -10,6 +10,10 @@ Apresentar o desenvolvimento da etapa contendo detalhes de implementação (se h
 
 <img width="1107" height="702" alt="image" src="https://github.com/user-attachments/assets/b1df0e02-4995-4d15-be0a-7b2cddd3a8dc" />
 
+<img width="868" height="856" alt="image" src="https://github.com/user-attachments/assets/c8339860-ae59-4b57-97a1-9c2be5efcc6d" />
+
+<img width="1468" height="923" alt="image" src="https://github.com/user-attachments/assets/9852b0da-3e48-4849-b797-1bd041af14e2" />
+
 
 
 
