@@ -17,6 +17,9 @@ Foi desenvolvido um gabinete para acomodar os seis compartimentos de armazenamen
   <br>
   <em>Figura 1 – Estrutura da máquina de cookies com seis compartimentos.</em>
 </p>
+<img width="1442" height="941" alt="image" src="https://github.com/user-attachments/assets/d2465485-4246-44cf-99db-96fa1ec1eee2" />
+<img width="1476" height="1005" alt="image" src="https://github.com/user-attachments/assets/3205a4b2-eb67-4070-9166-fadc959a2a99" />
+
 
 
 **Testes previstos:** estabilidade da estrutura, alinhamento das espirais, encaixe dos produtos e funcionamento mecânico da distribuição.
