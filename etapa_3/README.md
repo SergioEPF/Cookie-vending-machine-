@@ -7,7 +7,8 @@ A etapa 3 do projeto apresenta a construção da estrutura física e o desenvolv
 
 Foi desenvolvido um gabinete para acomodar os seis compartimentos de armazenamento e distribuição dos cookies. A estrutura possui divisórias individuais, espirais para movimentação dos produtos e áreas destinadas à interface e aos componentes eletrônicos.
 
-<img width="400" height="400" alt="image" src="https://github.com/user-attachments/assets/b00feebc-5ee0-4bf5-8a90-9f8e58ff877b" />
+<img width="500" height="300" alt="image" src="https://github.com/user-attachments/assets/9852b0da-3e48-4849-b797-1bd041af14e2" />
+
 
 **Testes previstos:** estabilidade da estrutura, alinhamento das espirais, encaixe dos produtos e funcionamento mecânico da distribuição.
 
@@ -62,12 +63,12 @@ O projeto já apresenta elementos físicos de desenvolvimento, incluindo gabinet
 As próximas etapas de documentação envolvem registrar a implementação dos sistemas de controle e pagamento, executar os ensaios funcionais e anexar evidências que comprovem o atendimento aos requisitos de cada subentrega.
 
 
-
+<img width="400" height="400" alt="image" src="https://github.com/user-attachments/assets/b00feebc-5ee0-4bf5-8a90-9f8e58ff877b" />
 <img width="700" height="400" alt="image" src="https://github.com/user-attachments/assets/b1df0e02-4995-4d15-be0a-7b2cddd3a8dc" />
 
 <img width="400" height="400" alt="image" src="https://github.com/user-attachments/assets/c8339860-ae59-4b57-97a1-9c2be5efcc6d" />
 
-<img width="500" height="300" alt="image" src="https://github.com/user-attachments/assets/9852b0da-3e48-4849-b797-1bd041af14e2" />
+
 
 
 
