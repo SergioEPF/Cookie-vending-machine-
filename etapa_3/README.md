@@ -2,18 +2,12 @@
 
 A etapa 3 do projeto apresenta a construção da estrutura física e o desenvolvimento do firmware responsável pela lógica de venda. Também contempla a integração do sistema de pagamento escolhido, a instalação dos motores e sensores e a programação do controle do mecanismo. Além disso, inclui o projeto do painel de interface com o usuário, que permite a seleção de produtos e o acompanhamento do processo de compra.
 
-## Desenvolvimento
 
-Apresentar o desenvolvimento da etapa contendo detalhes de implementação (se houver) de hardware e software. Use fotos, diagramas, tabelas etc. Adicionar pesqusisas realizadas. Relacionar as fotos, diagramas, etc no texto. Todas as referências devem citadas no texto. 
-# Máquina Automática de Cookies — Desenvolvimento e Testes
-
-## Objetivo do projeto
-
-Desenvolver uma máquina automática de venda de cookies, composta por seis compartimentos com mecanismos de espiral acionados individualmente por motores elétricos. O sistema deverá realizar a seleção do produto, processar o pagamento e controlar a distribuição de maneira automatizada.
-
-## 1. Construir a estrutura
+## 1. Estrutura
 
 Foi desenvolvido um gabinete para acomodar os seis compartimentos de armazenamento e distribuição dos cookies. A estrutura possui divisórias individuais, espirais para movimentação dos produtos e áreas destinadas à interface e aos componentes eletrônicos.
+
+<img width="400" height="400" alt="image" src="https://github.com/user-attachments/assets/b00feebc-5ee0-4bf5-8a90-9f8e58ff877b" />
 
 **Testes previstos:** estabilidade da estrutura, alinhamento das espirais, encaixe dos produtos e funcionamento mecânico da distribuição.
 
@@ -67,7 +61,7 @@ O projeto já apresenta elementos físicos de desenvolvimento, incluindo gabinet
 
 As próximas etapas de documentação envolvem registrar a implementação dos sistemas de controle e pagamento, executar os ensaios funcionais e anexar evidências que comprovem o atendimento aos requisitos de cada subentrega.
 
-<img width="400" height="400" alt="image" src="https://github.com/user-attachments/assets/b00feebc-5ee0-4bf5-8a90-9f8e58ff877b" />
+
 
 <img width="700" height="400" alt="image" src="https://github.com/user-attachments/assets/b1df0e02-4995-4d15-be0a-7b2cddd3a8dc" />
 
