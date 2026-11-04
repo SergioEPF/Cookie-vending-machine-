@@ -16,28 +16,23 @@ Foi desenvolvido um gabinete para acomodar os seis compartimentos de armazenamen
       <img src="https://github.com/user-attachments/assets/d2465485-4246-44cf-99db-96fa1ec1eee2"
            width="350" alt="Estrutura em MDF cru">
     </td>
-
     <td align="center" width="33%">
       <img src="https://github.com/user-attachments/assets/3205a4b2-eb67-4070-9166-fadc959a2a99"
            width="350" alt="Estrutura pintada de branco">
     </td>
-
     <td align="center" width="33%">
       <img src="https://github.com/user-attachments/assets/9852b0da-3e48-4849-b797-1bd041af14e2"
            width="350" alt="Estrutura final da máquina de cookies">
     </td>
   </tr>
-
   <!-- Linha das legendas -->
   <tr>
     <td align="center">
       <em>Figura 1 — Estrutura em MDF cru após montagem.</em>
     </td>
-
     <td align="center">
       <em>Figura 2 — Estrutura após pintura e acabamento.</em>
     </td>
-
     <td align="center">
       <em>Figura 3 — Estrutura com os seis compartimentos e espirais instalados.</em>
     </td>
