@@ -8,7 +8,7 @@ Apresentar o desenvolvimento da etapa contendo detalhes de implementação (se h
 
 <img width="400" height="400" alt="image" src="https://github.com/user-attachments/assets/b00feebc-5ee0-4bf5-8a90-9f8e58ff877b" />
 
-<img width="1107" height="702" alt="image" src="https://github.com/user-attachments/assets/b1df0e02-4995-4d15-be0a-7b2cddd3a8dc" />
+<img width="700" height="400" alt="image" src="https://github.com/user-attachments/assets/b1df0e02-4995-4d15-be0a-7b2cddd3a8dc" />
 
 <img width="868" height="856" alt="image" src="https://github.com/user-attachments/assets/c8339860-ae59-4b57-97a1-9c2be5efcc6d" />
 
