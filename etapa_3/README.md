@@ -28,13 +28,13 @@ Foi desenvolvido um gabinete para acomodar os seis compartimentos de armazenamen
   <!-- Linha das legendas -->
   <tr>
     <td align="center">
-      <em>Figura 1 — Estrutura em MDF cru após montagem.</em>
+      <em>Figura 1 - Estrutura em MDF cru após montagem.</em>
     </td>
     <td align="center">
-      <em>Figura 2 — Estrutura após pintura e acabamento.</em>
+      <em>Figura 2 - Estrutura após pintura e acabamento.</em>
     </td>
     <td align="center">
-      <em>Figura 3 — Estrutura com os seis compartimentos e espirais instalados.</em>
+      <em>Figura 3 - Estrutura com os seis compartimentos e espirais instalados.</em>
     </td>
   </tr>
 </table>
