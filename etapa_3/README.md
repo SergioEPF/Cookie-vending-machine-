@@ -69,6 +69,14 @@ Foi realizada a montagem física de seis conjuntos de motores responsáveis pelo
 
 **Situação:** motores instalados e fotografados; instalação dos sensores e resultados de testes ainda precisam ser confirmados.
 
+<!-- Figura 4: Imagem centralizada com legenda -->
+<p align="center">
+  <img src="https://github.com/user-attachments/assets/9159dc15-d98a-4ba7-9ad3-1e0cdb0594c7"
+       width="700" alt="Figura 4">
+  <br>
+  <em>Figura 4 - Desenvolvimento da máquina de cookies.</em>
+</p>
+
 
 <!-- Tabela com as três imagens lado a lado -->
 <table>
