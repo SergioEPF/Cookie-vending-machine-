@@ -74,7 +74,7 @@ Foi realizada a montagem física de seis conjuntos de motores responsáveis pelo
   <img src="https://github.com/user-attachments/assets/9159dc15-d98a-4ba7-9ad3-1e0cdb0594c7"
        width="700" alt="Figura 4">
   <br>
-  <em>Figura 4 - Desenvolvimento da máquina de cookies.</em>
+  <em>Figura 4 - Motores instalados.</em>
 </p>
 
 
@@ -99,13 +99,13 @@ Foi realizada a montagem física de seis conjuntos de motores responsáveis pelo
   <!-- Linha das legendas -->
   <tr>
     <td align="center">
-      <em>Figura 4 - Primeira imagem.</em>
+      <em>Figura 5 - Chave de fim de curso.</em>
     </td>
     <td align="center">
-      <em>Figura 5 - Segunda imagem.</em>
+      <em>Figura 6 - Emissor.</em>
     </td>
     <td align="center">
-      <em>Figura 6 - Terceira imagem.</em>
+      <em>Figura 7 - Receptor.</em>
     </td>
   </tr>
 </table>
