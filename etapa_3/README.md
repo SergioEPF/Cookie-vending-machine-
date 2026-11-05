@@ -172,7 +172,8 @@ Desenvolver a interface responsável pela interação entre o consumidor e a má
 
 <!-- GIF centralizado com reprodução automática -->
 <p align="center">
-  <img src="<img width="280" height="498" alt="Pedidos_otimizado" src="https://github.com/user-attachments/assets/3866fb87-c1d7-446f-8132-2d3d35433538" />"
+  <img src="<img width="280" height="498" alt="Pedidos_otimizado" src="https://github.com/user-attachments/assets/3866fb87-c1d7-446f-8132-2d3d35433538" 
+  />
        width="320"
        alt="Demonstração do sistema de pedidos">
   <br>
