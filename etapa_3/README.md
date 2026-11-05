@@ -41,9 +41,9 @@ Foi desenvolvido um gabinete para acomodar os seis compartimentos de armazenamen
 
     
 
-**Testes previstos:** estabilidade da estrutura, alinhamento das espirais, encaixe dos produtos e funcionamento mecânico da distribuição.
+**Testes realizados:** estabilidade da estrutura, alinhamento das espirais, encaixe dos produtos e funcionamento mecânico da distribuição.
 
-**Situação:** protótipo físico montado e fotografado; validação mecânica pendente de registro.
+
 
 ## 2. Firmware da lógica de venda funcional
 
