@@ -69,20 +69,38 @@ Foi realizada a montagem física de seis conjuntos de motores responsáveis pelo
 
 **Situação:** motores instalados e fotografados; instalação dos sensores e resultados de testes ainda precisam ser confirmados.
 
-<!-- Imagem centralizada da instalação dos motores -->
-<p align="center">
-  <img src="https://github.com/user-attachments/assets/4d05a471-b0d8-4a11-a1ac-18b8778a721d" width="700" alt="Instalação dos motores e mecanismos de distribuição">
-  <br>
-  <em>Figura 4 — Instalação dos seis motores responsáveis pelo acionamento dos mecanismos de distribuição dos cookies.</em>
-</p>
 
-| Figura 1 | Figura 2 | Figura 3 |
-|:---:|:---:|:---:|
-| <img src="https://github.com/user-attachments/assets/ce77f973-a7b2-4e10-9d93-659b24ec106d" width="300" alt="Imagem 1"> | <img src="https://github.com/user-attachments/assets/98102b71-5bbc-4ad0-bb49-7e5db96fa568" width="300" alt="Imagem 2"> | <img src="https://github.com/user-attachments/assets/70f1376d-9366-442d-8c47-9f810b666a84" width="300" alt="Imagem 3"> |
-| *Etapa 1 — Primeira imagem.* | *Etapa 2 — Segunda imagem.* | *Etapa 3 — Terceira imagem.* |
+<!-- Tabela com as três imagens lado a lado -->
+<table>
+  <!-- Linha das imagens -->
+  <tr>
+    <td align="center" width="33%">
+      <img src="https://github.com/user-attachments/assets/ce77f973-a7b2-4e10-9d93-659b24ec106d"
+           width="350" alt="Imagem 1">
+    </td>
+    <td align="center" width="33%">
+      <img src="https://github.com/user-attachments/assets/98102b71-5bbc-4ad0-bb49-7e5db96fa568"
+           width="350" alt="Imagem 2">
+    </td>
+    <td align="center" width="33%">
+      <img src="https://github.com/user-attachments/assets/70f1376d-9366-442d-8c47-9f810b666a84"
+           width="350" alt="Imagem 3">
+    </td>
+  </tr>
 
-
-
+  <!-- Linha das legendas -->
+  <tr>
+    <td align="center">
+      <em>Figura 4 - Primeira imagem.</em>
+    </td>
+    <td align="center">
+      <em>Figura 5 - Segunda imagem.</em>
+    </td>
+    <td align="center">
+      <em>Figura 6 - Terceira imagem.</em>
+    </td>
+  </tr>
+</table>
 
 ## 5. Firmware do controle do mecanismo
 
