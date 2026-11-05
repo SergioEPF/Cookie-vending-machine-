@@ -131,6 +131,38 @@ Após a etapa de desenvolvimento do layout, a placa foi fabricada e os component
 
 **Situação:** layout desenvolvido e placa montada com os componentes soldados. Resultados dos testes elétricos e funcionais a serem documentados.
 
+<!-- Tabela com as três imagens da placa eletrônica -->
+<table>
+  <!-- Linha das imagens -->
+  <tr>
+    <td align="center" width="33%">
+      <img src="https://github.com/user-attachments/assets/b00feebc-5ee0-4bf5-8a90-9f8e58ff877b"
+           width="350" alt="Imagem 1 da placa eletrônica">
+    </td>
+    <td align="center" width="33%">
+      <img src="https://github.com/user-attachments/assets/b1df0e02-4995-4d15-be0a-7b2cddd3a8dc"
+           width="350" alt="Imagem 2 da placa eletrônica">
+    </td>
+    <td align="center" width="33%">
+      <img src="https://github.com/user-attachments/assets/c8339860-ae59-4b57-97a1-9c2be5efcc6d"
+           width="350" alt="Imagem 3 da placa eletrônica">
+    </td>
+  </tr>
+
+  <!-- Linha das legendas -->
+  <tr>
+    <td align="center">
+      <em>Figura 1 - Desenvolvimento da placa eletrônica.</em>
+    </td>
+    <td align="center">
+      <em>Figura 2 - Projeto e montagem da PCB.</em>
+    </td>
+    <td align="center">
+      <em>Figura 3 - Placa eletrônica do sistema de controle.</em>
+    </td>
+  </tr>
+</table>
+
 
 ## 6. Projetar painel/interface com o usuário
 
