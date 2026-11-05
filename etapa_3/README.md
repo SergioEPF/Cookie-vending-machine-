@@ -136,11 +136,11 @@ Após a etapa de desenvolvimento do layout, a placa foi fabricada e os component
   <!-- Linha das imagens -->
   <tr>
     <td align="center" width="33%">
-      <img src="https://github.com/user-attachments/assets/b00feebc-5ee0-4bf5-8a90-9f8e58ff877b"
+      <img src="https://github.com/user-attachments/assets/b1df0e02-4995-4d15-be0a-7b2cddd3a8dc"
            width="350" alt="Imagem 1 da placa eletrônica">
     </td>
     <td align="center" width="33%">
-      <img src="https://github.com/user-attachments/assets/b1df0e02-4995-4d15-be0a-7b2cddd3a8dc"
+      <img src="https://github.com/user-attachments/assets/b00feebc-5ee0-4bf5-8a90-9f8e58ff877b"
            width="350" alt="Imagem 2 da placa eletrônica">
     </td>
     <td align="center" width="33%">
@@ -152,13 +152,13 @@ Após a etapa de desenvolvimento do layout, a placa foi fabricada e os component
   <!-- Linha das legendas -->
   <tr>
     <td align="center">
-      <em>Figura 1 - Desenvolvimento da placa eletrônica.</em>
+      <em>Figura 1 - Esquemático da placa.</em>
     </td>
     <td align="center">
-      <em>Figura 2 - Projeto e montagem da PCB.</em>
+      <em>Figura 2 - Layout da placa.</em>
     </td>
     <td align="center">
-      <em>Figura 3 - Placa eletrônica do sistema de controle.</em>
+      <em>Figura 3 - Placa não montada.</em>
     </td>
   </tr>
 </table>
