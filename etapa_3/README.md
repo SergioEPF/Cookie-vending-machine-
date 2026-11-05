@@ -127,9 +127,6 @@ O projeto foi realizado no **Altium Designer**, incluindo o posicionamento dos c
 
 Após a etapa de desenvolvimento do layout, a placa foi fabricada e os componentes eletrônicos foram soldados, permitindo avançar para a integração com os motores, sensores e demais dispositivos da máquina.
 
-**Testes previstos:** verificação de continuidade elétrica, identificação de possíveis curtos-circuitos, medição das tensões de alimentação, testes dos acionamentos e validação das conexões com os sensores.
-
-**Situação:** layout desenvolvido e placa montada com os componentes soldados. Resultados dos testes elétricos e funcionais a serem documentados.
 
 <!-- Tabela com as três imagens da placa eletrônica -->
 <table>
