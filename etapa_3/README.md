@@ -75,6 +75,9 @@ Foi realizada a montagem física de seis conjuntos de motores responsáveis pelo
   <br>
   <em>Figura 4 — Instalação dos seis motores responsáveis pelo acionamento dos mecanismos de distribuição dos cookies.</em>
 </p>
+<img width="1280" height="922" alt="image" src="https://github.com/user-attachments/assets/ce77f973-a7b2-4e10-9d93-659b24ec106d" />
+<img width="1352" height="1199" alt="image" src="https://github.com/user-attachments/assets/98102b71-5bbc-4ad0-bb49-7e5db96fa568" />
+
 
 
 ## 5. Firmware do controle do mecanismo
