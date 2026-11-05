@@ -7,6 +7,9 @@ A etapa 3 do projeto apresenta a construção da estrutura física e o desenvolv
 
 Foi desenvolvido um gabinete para acomodar os seis compartimentos de armazenamento e distribuição dos cookies. A estrutura possui divisórias individuais, espirais para movimentação dos produtos e áreas destinadas à interface e aos componentes eletrônicos.
 
+A **primeira figura** apresenta as etapas de corte das peças em MDF, realizado por meio de uma máquina de corte a laser, e a montagem inicial da estrutura. Na **segunda figura**, observa-se a aplicação da primeira demão de tinta branca, utilizada como preparação para o acabamento. Por fim, a **terceira figura** apresenta o gabinete montado e com a pintura finalizada, incluindo a instalação das espirais responsáveis pela movimentação e distribuição dos cookies.
+
+**Testes realizados:** Foram realizados testes para verificar a estabilidade da estrutura, o alinhamento das espirais, o encaixe adequado dos produtos nos compartimentos e o funcionamento mecânico do sistema de distribuição, visando garantir a correta movimentação e liberação dos cookies.
 
 <!-- Tabela com as três etapas de construção da máquina -->
 <table>
@@ -41,7 +44,6 @@ Foi desenvolvido um gabinete para acomodar os seis compartimentos de armazenamen
 
     
 
-**Testes realizados:** estabilidade da estrutura, alinhamento das espirais, encaixe dos produtos e funcionamento mecânico da distribuição.
 
 
 
@@ -89,14 +91,17 @@ Além da interface do cliente, o sistema contará com uma página de administra�
 </p>
 
 
+
 ## 4. Instalar motores e sensores
 
-Foi realizada a montagem física de seis conjuntos de motores responsáveis pelo acionamento individual das espirais de distribuição dos cookies. Além disso, foram instalados sensores para garantir a segurança da operação e monitorar a entrega dos produtos.
+Foi realizada a montagem física de seis conjuntos de motores responsáveis pelo acionamento individual das espirais de distribuição dos cookies, conforme apresentado na **Figura 4**. Além disso, foram instalados sensores para garantir a segurança da operação e monitorar a entrega dos produtos.
 
-Na **porta de manutenção**, foi instalada uma **chave de fim de curso**, responsável por identificar sua abertura. Quando a porta está aberta, o sistema deve bloquear o acionamento dos motores e impedir que o usuário solicite novos cookies, garantindo maior segurança durante as atividades de manutenção.
+Na porta de reposição, foi instalada uma **chave de fim de curso**, apresentada na **Figura 5**, responsável por identificar sua abertura. Quando a porta está aberta, o sistema deve bloquear o acionamento dos motores e impedir que o usuário solicite novos cookies, garantindo maior segurança durante as atividades de reposição dos produtos.
 
-Também foram instalados um **emissor e um receptor infravermelho**, posicionados na saída de distribuição dos cookies. Esses sensores formam uma barreira óptica que permite detectar a passagem do produto durante a queda, possibilitando ao sistema identificar a entrega do cookie.
+Também foram instalados um **emissor e um receptor infravermelho**, posicionados na saída de distribuição dos cookies. A **Figura 6** apresenta o emissor, enquanto a **Figura 7** mostra o receptor. Esses sensores formam uma barreira óptica que permite detectar a passagem do produto durante a queda, possibilitando ao sistema identificar a entrega do cookie.
 
+
+<!-- Figura 4 - Motores instalados -->
 <p align="center">
   <img src="https://github.com/user-attachments/assets/9159dc15-d98a-4ba7-9ad3-1e0cdb0594c7"
        width="700" alt="Figura 4">
@@ -104,38 +109,42 @@ Também foram instalados um **emissor e um receptor infravermelho**, posicionado
   <em>Figura 4 - Motores instalados.</em>
 </p>
 
-
-<!-- Tabela com as três imagens lado a lado -->
+<!-- Tabela com as Figuras 5, 6 e 7 lado a lado -->
 <table>
   <!-- Linha das imagens -->
   <tr>
+    <!-- Figura 5 - Chave de fim de curso -->
     <td align="center" width="33%">
       <img src="https://github.com/user-attachments/assets/ce77f973-a7b2-4e10-9d93-659b24ec106d"
-           width="350" alt="Imagem 1">
+           width="350" alt="Chave de fim de curso">
     </td>
+    <!-- Figura 6 - Emissor infravermelho (nova imagem) -->
     <td align="center" width="33%">
-      <img src="https://github.com/user-attachments/assets/98102b71-5bbc-4ad0-bb49-7e5db96fa568"
-           width="350" alt="Imagem 2">
+      <img src="https://github.com/user-attachments/assets/4aa7376b-5070-4a1c-a0ba-90880c89cf18"
+           width="350" alt="Emissor infravermelho">
     </td>
+    <!-- Figura 7 - Receptor infravermelho (nova imagem) -->
     <td align="center" width="33%">
-      <img src="https://github.com/user-attachments/assets/70f1376d-9366-442d-8c47-9f810b666a84"
-           width="350" alt="Imagem 3">
+      <img src="https://github.com/user-attachments/assets/4c751f13-4afc-46b8-9e10-e3681442457b"
+           width="350" alt="Receptor infravermelho">
     </td>
   </tr>
-
+  
   <!-- Linha das legendas -->
   <tr>
     <td align="center">
       <em>Figura 5 - Chave de fim de curso.</em>
     </td>
     <td align="center">
-      <em>Figura 6 - Emissor.</em>
+      <em>Figura 6 - Emissor infravermelho.</em>
     </td>
     <td align="center">
-      <em>Figura 7 - Receptor.</em>
+      <em>Figura 7 - Receptor infravermelho.</em>
     </td>
   </tr>
 </table>
+
+
 
 ## 5. Firmware do controle do mecanismo
 O controle dos seis motores é realizado pelo ESP32, utilizando os GPIOs 18, 19, 21, 22, 23 e 25, conectados ao circuito de acionamento. Para evitar que dois motores sejam acionados ao mesmo tempo, o firmware desativa todas as saídas antes de ligar o motor correspondente ao compartimento escolhido.
@@ -164,12 +173,14 @@ O mecanismo também possui uma chave de fim de curso conectada ao GPIO32, utiliz
 
 ### 5.1 Desenvolvimento e montagem da placa eletrônica
 
+
 Foi desenvolvida uma placa de circuito impresso (PCB) para integrar os componentes eletrônicos responsáveis pelo controle dos mecanismos de distribuição da máquina de cookies.
 
-O projeto foi realizado no **Altium Designer**, incluindo o posicionamento dos componentes, o roteamento das trilhas e a definição das conexões elétricas necessárias para o funcionamento do sistema.
+O projeto foi realizado no **Altium Designer**, iniciando pela elaboração do **esquemático elétrico**, apresentado na **Figura 8**, no qual foram definidas as conexões entre os componentes eletrônicos. Em seguida, foi desenvolvido o **layout da PCB**, apresentado na **Figura 9**, incluindo o posicionamento dos componentes, o roteamento das trilhas e a organização das conexões elétricas necessárias para o funcionamento do sistema.
 
-Após a etapa de desenvolvimento do layout, a placa foi fabricada e os componentes eletrônicos foram soldados, permitindo avançar para a integração com os motores, sensores e demais dispositivos da máquina.
+Após a finalização do projeto, foi realizada a fabricação da placa de circuito impresso. A **Figura 10** apresenta a placa fabricada, ainda sem a montagem dos componentes eletrônicos. Posteriormente, foi realizada a soldagem dos componentes, resultando na placa montada, conforme apresentado na **Figura 11* e 12*.
 
+Com a conclusão dessa etapa, a placa ficou preparada para a integração com os motores, sensores e demais dispositivos eletrônicos da máquina de cookies.
 
 <!-- Tabela com as três imagens da placa eletrônica -->
 <table>
@@ -204,6 +215,31 @@ Após a etapa de desenvolvimento do layout, a placa foi fabricada e os component
 </table>
 
 
+<!-- Figuras 8 e 9 lado a lado -->
+<table align="center">
+  <tr>
+    <td align="center" width="50%">
+      <img
+        src="https://github.com/user-attachments/assets/d3dfc36b-71f0-43ce-8ec3-400846454987"
+        width="350"
+        alt="Esquemático elétrico da PCB">
+      <br>
+      <em>Figura 11 - Esquemático elétrico da PCB.</em>
+    </td>
+    <td align="center" width="50%">
+      <img
+        src="https://github.com/user-attachments/assets/84ff2ed7-ee79-4e1e-8132-a9e9f5463654"
+        width="350"
+        alt="Layout da placa de circuito impresso">
+      <br>
+      <em>Figura 12 - Layout da PCB no Altium Designer.</em>
+    </td>
+  </tr>
+</table>
+
+
+
+
 ## 6. Projetar painel/interface com o usuário
 
 Desenvolver a interface responsável pela interação entre o consumidor e a máquina, apresentando produtos disponíveis, preços, informações de pagamento e andamento da distribuição.
@@ -222,7 +258,7 @@ Desenvolver a interface responsável pela interação entre o consumidor e a má
     alt="Demonstração do sistema de pedidos"
   />
   <br>
-  <em>Figura 11 - Demonstração do funcionamento do sistema de pedidos.</em>
+  <em>Figura 13 - Demonstração do funcionamento do sistema de pedidos.</em>
 </p>
 
 
