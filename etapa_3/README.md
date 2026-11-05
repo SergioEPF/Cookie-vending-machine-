@@ -149,13 +149,13 @@ Após a etapa de desenvolvimento do layout, a placa foi fabricada e os component
   <!-- Linha das legendas -->
   <tr>
     <td align="center">
-      <em>Figura 1 - Esquemático da placa.</em>
+      <em>Figura 8 - Esquemático da placa.</em>
     </td>
     <td align="center">
-      <em>Figura 2 - Layout da placa.</em>
+      <em>Figura 9 - Layout da placa.</em>
     </td>
     <td align="center">
-      <em>Figura 3 - Placa não montada.</em>
+      <em>Figura 10 - Placa não montada.</em>
     </td>
   </tr>
 </table>
@@ -179,7 +179,7 @@ Desenvolver a interface responsável pela interação entre o consumidor e a má
     alt="Demonstração do sistema de pedidos"
   />
   <br>
-  <em>Figura 5 - Demonstração do funcionamento do sistema de pedidos.</em>
+  <em>Figura 11 - Demonstração do funcionamento do sistema de pedidos.</em>
 </p>
 
 
