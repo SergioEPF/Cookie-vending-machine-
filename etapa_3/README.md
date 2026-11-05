@@ -63,13 +63,12 @@ Integrar o método de pagamento à lógica de venda, permitindo que a distribui�
 
 ## 4. Instalar motores e sensores
 
-Foi realizada a montagem física de seis conjuntos de motores responsáveis pelo acionamento das espirais. O sistema prevê sensores para monitoramento das condições de funcionamento e da distribuição.
+Foi realizada a montagem física de seis conjuntos de motores responsáveis pelo acionamento individual das espirais de distribuição dos cookies. Além disso, foram instalados sensores para garantir a segurança da operação e monitorar a entrega dos produtos.
 
-**Testes previstos:** acionamento individual, sentido de rotação, consumo elétrico, leitura dos sensores e desligamento em situações de falha.
+Na **porta de manutenção**, foi instalada uma **chave de fim de curso**, responsável por identificar sua abertura. Quando a porta está aberta, o sistema deve bloquear o acionamento dos motores e impedir que o usuário solicite novos cookies, garantindo maior segurança durante as atividades de manutenção.
 
-**Situação:** motores instalados e fotografados; instalação dos sensores e resultados de testes ainda precisam ser confirmados.
+Também foram instalados um **emissor e um receptor infravermelho**, posicionados na saída de distribuição dos cookies. Esses sensores formam uma barreira óptica que permite detectar a passagem do produto durante a queda, possibilitando ao sistema identificar a entrega do cookie.
 
-<!-- Figura 4: Imagem centralizada com legenda -->
 <p align="center">
   <img src="https://github.com/user-attachments/assets/9159dc15-d98a-4ba7-9ad3-1e0cdb0594c7"
        width="700" alt="Figura 4">
