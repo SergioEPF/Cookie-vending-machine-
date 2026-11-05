@@ -1,0 +1,352 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="theme-color" content="#573422">
+<title>Cookie Express — 9 opções com celular, ESP32, computadores e VM</title>
+<style>
+:root{--paper:#fbf8f2;--white:#fffdf9;--ink:#34271f;--brown:#573422;--pink:#a32955;--green:#38664c;--line:#ded3c5;--muted:#6f6258;--rose:#f5e8e9;--sage:#eaf0e5;font-family:Arial,Helvetica,sans-serif;color:var(--ink);background:var(--paper);font-synthesis:none}*{box-sizing:border-box}html{scroll-behavior:smooth;scroll-padding-top:28px}body{margin:0}a{color:var(--pink);text-underline-offset:4px}a:hover{color:var(--brown)}button,select{font:inherit}button,a,select{-webkit-tap-highlight-color:transparent}button:focus-visible,a:focus-visible,select:focus-visible,[tabindex]:focus-visible{outline:3px solid var(--pink);outline-offset:5px}button{cursor:pointer}.wrap{width:min(1120px,calc(100% - 48px));margin:auto}.masthead{display:flex;justify-content:space-between;align-items:center;gap:20px;padding:26px 0;border-bottom:1px solid var(--line)}.brand{font-weight:800;letter-spacing:-.6px;font-size:21px;display:flex;gap:10px;align-items:center}.cookie{width:28px;height:28px;display:inline-block;border-radius:50%;background:radial-gradient(circle at 30% 28%,#573422 0 2px,transparent 3px),radial-gradient(circle at 65% 38%,#573422 0 2px,transparent 3px),radial-gradient(circle at 45% 70%,#573422 0 2px,transparent 3px),#deb37c;border:1px solid #c29461}.nav{display:flex;gap:22px;font-size:13px}.nav a{color:var(--muted);text-decoration:none}.hero{display:grid;grid-template-columns:1.45fr 1fr;gap:64px;padding:64px 0 54px;align-items:center}.kicker{text-transform:uppercase;letter-spacing:1.8px;font-size:11px;font-weight:800;color:var(--pink)}h1{font-size:clamp(38px,5.4vw,65px);line-height:1.04;letter-spacing:-2.7px;margin:19px 0 22px;max-width:750px;font-weight:800}h1 em{font-family:Georgia,serif;font-weight:400;color:var(--pink)}.lead{font-size:17px;line-height:1.7;color:var(--muted);max-width:620px}.small{font-size:13px;line-height:1.7;color:var(--muted)}.hero-aside{background:var(--brown);color:var(--paper);padding:30px;border-radius:3px 40px 3px 3px;position:relative}.hero-aside .kicker{color:#efc6ab}.hero-aside h2{font-size:25px;letter-spacing:-.5px;margin:12px 0}.hero-aside p{font-size:14px;line-height:1.7;color:#eedfce}.hero-number{font-family:Georgia,serif;font-size:82px;line-height:1;opacity:.5;display:block;margin:24px 0 14px}.hero-aside a{color:#fff1dc}.source-note{border-top:1px solid var(--line);border-bottom:1px solid var(--line);padding:22px 0;font-size:14px;line-height:1.8}.source-note p{margin:0}.source-note p+p{margin-top:9px}.section{padding:48px 0;border-bottom:1px solid var(--line)}.section-top{display:flex;justify-content:space-between;align-items:baseline;gap:25px;margin-bottom:25px}.section-top h2,h2.section-title{font-size:30px;letter-spacing:-1px;margin:0}.section-top p{font-size:13px;color:var(--muted);margin:0}.table-scroll{overflow-x:auto;border:1px solid var(--line);border-radius:6px}table{width:100%;border-collapse:collapse;text-align:left;font-size:13px;line-height:1.6;min-width:760px}caption{text-align:left;padding:16px 18px;background:#f0e9de;font-weight:700}th,td{padding:16px 18px;border-top:1px solid var(--line);vertical-align:top}thead th{background:#f7f1e8;font-size:11px;text-transform:uppercase;letter-spacing:.6px}tbody th{font-weight:700;min-width:180px}.recommended-row{background:#edf1e7}.label{display:inline-block;padding:5px 9px;border-radius:4px;background:#eee6db;font-size:11px;font-weight:700;color:var(--brown)}.label.green{background:var(--sage);color:var(--green)}.options-heading{padding:48px 0 12px}.option{display:grid;grid-template-columns:90px 1fr;gap:24px;padding:38px 0 42px;border-bottom:1px solid var(--line);scroll-margin-top:24px}.number{font:52px/1 Georgia,serif;color:#b89b80}.option h2{font-size:28px;letter-spacing:-.7px;margin:9px 0 15px}.option .summary{font-size:16px;line-height:1.7;margin:0 0 20px;color:var(--muted)}.facts{display:grid;grid-template-columns:1fr 1fr;gap:14px 28px;margin-bottom:24px}.facts div{font-size:14px;line-height:1.7}.facts strong{display:block;font-size:11px;letter-spacing:1px;text-transform:uppercase;color:var(--muted);margin-bottom:4px}.pros-cons{display:grid;grid-template-columns:1fr 1fr;gap:18px}.pros-cons>div{padding:19px 21px;background:var(--sage);border-radius:6px}.pros-cons>div+div{background:var(--rose)}h3{font-size:15px;margin:0 0 12px}.pros-cons ul{padding-left:17px;margin:0;font-size:14px;line-height:1.65}.pros-cons li+li{margin-top:8px}.build{font-size:14px;line-height:1.8;margin:22px 0 0}.build strong{color:var(--brown)}.use{font-size:13px;line-height:1.7;color:var(--muted);margin:13px 0 0}.evidence{font-size:12px;color:var(--muted);line-height:1.6;margin-top:15px}.shared{display:grid;grid-template-columns:1fr 1fr;gap:36px}.shared h3{font-size:19px;line-height:1.4}.shared p,.shared li{font-size:14px;line-height:1.8;color:var(--muted)}.shared ol{padding-left:20px;margin-top:0}.steps{display:grid;grid-template-columns:repeat(5,1fr);list-style:none;padding:0;gap:9px;counter-reset:delivery;margin:28px 0}.steps li{padding:15px;background:#f0e9df;font-size:12px;line-height:1.6;counter-increment:delivery}.steps li:before{content:counter(delivery,decimal-leading-zero);display:block;font-size:11px;font-weight:800;color:var(--pink);margin-bottom:8px}.decision{background:#eee8dc;border-radius:8px;padding:30px;margin-top:26px}.decision label{font-size:14px;font-weight:700;display:block;margin-bottom:10px}.decision select{max-width:100%;width:100%;padding:13px;border:1px solid #b7a58e;background:var(--white);border-radius:5px;color:var(--ink)}.decision-result{font-size:17px;line-height:1.65;margin:20px 0 0}.recommendation{display:grid;grid-template-columns:1.3fr 1fr;gap:45px}.recommendation p{font-size:15px;line-height:1.85;color:var(--muted)}.next{border-left:3px solid var(--pink);padding-left:22px}.next ol{padding-left:18px;font-size:14px;line-height:1.9}.sources{padding:36px 0}.sources summary{cursor:pointer;font-weight:700;font-size:15px}.sources ul{padding-left:18px;font-size:13px;line-height:1.9}.sources p{font-size:12px;line-height:1.8;color:var(--muted)}footer{display:flex;justify-content:space-between;gap:25px;padding:25px 0 35px;border-top:1px solid var(--line);font-size:12px;color:var(--muted)}.print-button{border:1px solid #bba68e;background:transparent;border-radius:4px;padding:10px 15px;color:var(--brown);font-weight:700}.skip{position:absolute;top:-80px;left:20px;background:var(--white);padding:12px;z-index:2}.skip:focus{top:12px}@media(max-width:760px){.wrap{width:calc(100% - 32px)}.masthead{padding:20px 0;flex-wrap:wrap}.nav{gap:17px;font-size:12px}.hero{grid-template-columns:1fr;gap:24px;padding:38px 0}h1{letter-spacing:-1.5px}.hero-aside{padding:23px}.hero-number{font-size:52px;margin:12px 0}.hero-aside h2{font-size:23px}.section-top{display:block}.section-top p{margin-top:10px}.option{grid-template-columns:44px 1fr;gap:13px}.number{font-size:34px}.option h2{font-size:24px}.facts,.pros-cons,.shared,.recommendation{grid-template-columns:1fr}.pros-cons{gap:10px}.facts{gap:15px}.steps{grid-template-columns:1fr}.steps li:before{display:inline;margin-right:10px}.decision{padding:20px}.section{padding:34px 0}footer{flex-wrap:wrap}}@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}}@media print{body{background:#fff;color:#000}.wrap{width:100%}.nav,.print-button,.decision{display:none}.hero{padding:20px 0;gap:25px}.hero-aside{background:#eee;color:#000}.hero-aside p,.hero-aside .kicker,.hero-aside a{color:#222}.section{padding:22px 0}.option{padding:23px 0;break-inside:avoid}.table-scroll{overflow:visible}table{min-width:0;font-size:10px}th,td{padding:9px}tbody th{min-width:0}.section-top h2,h2.section-title{font-size:24px}.sources details{display:block}.sources details:not([open])>*{display:block}.pros-cons>div{border:1px solid #ccc;background:transparent!important}.hero-number{font-size:50px}.source-note,.small{font-size:11px}.steps{grid-template-columns:repeat(5,1fr)}}
+</style>
+</head>
+<body>
+<a class="skip" href="#conteudo">Pular para o conteúdo</a>
+<div class="wrap">
+ <header class="masthead">
+  <div class="brand"><span class="cookie" aria-hidden="true"></span> Cookie Express</div>
+  <nav class="nav" aria-label="Conteúdo"><a href="#comparacao">Comparação</a><a href="#opcoes">Nove opções</a><a href="#componentes">Componentes</a><a href="#recomendacao">Qual escolher</a></nav>
+ </header>
+ <main id="conteudo">
+  <section class="hero" aria-labelledby="titulo">
+   <div>
+    <div class="kicker">Estudo de alternativas · 30 de outubro de 2026</div>
+    <h1 id="titulo">Um celular.<br>Um ESP32.<br><em>Nove caminhos.</em></h1>
+    <p class="lead">Da solução mais simples a uma máquina com computador próprio, VM e acompanhamento pela internet. Compare o que cada escolha acrescenta.</p>
+    <p class="small">Aqui, IHM significa a tela que o cliente usa no celular. São nove propostas para comparar, incluindo as cinco anteriores. Esta página não instala nem altera os sistemas descritos.</p>
+   </div>
+   <aside class="hero-aside" aria-label="Escolha recomendada">
+    <div class="kicker">Minha escolha com equipamento extra</div>
+    <span class="hero-number" aria-hidden="true">06</span>
+    <h2>Um computador pequeno cuida da tela e dos registros.</h2>
+    <p>O ESP32 continua cuidando dos motores e sensores. O computador guarda contas e vendas, funcionando junto à máquina, sem depender de internet.</p>
+    <a href="#opcao-6">Entender essa opção →</a>
+   </aside>
+  </section>
+  <aside class="source-note" aria-label="Base da comparação">
+   <p><strong>O que levei em conta:</strong> a <a href="https://github.com/SergioEPF/Cookie-vending-machine-/blob/main/etapa_2/README.md">etapa 2 do seu projeto</a> descreve ESP32, celular, seis sabores e registro de consumo para cobrança posterior. Nesta revisão, você permitiu acrescentar equipamentos: algumas opções passam a exigir um computador ligado durante todo o período de vendas.</p>
+   <p><strong>O que é uma VM?</strong> É uma máquina virtual: um computador criado por um programa dentro de outro computador. Pode ficar em um PC seu ou em um computador alugado pela internet. Se o computador físico desligar, a VM também para. Ela não substitui o ESP32 que está ligado aos motores. <a href="https://learn.microsoft.com/en-us/windows-server/virtualization/hyper-v/overview">Entenda a ideia na documentação da Microsoft</a>.</p>
+   <p><strong>O GitHub e a pasta de trabalho mostram momentos diferentes.</strong> No GitHub consultado, os arquivos de software ainda têm descrições iniciais. Na pasta atual, já existem a tela de compra e o programa do ESP32. O texto público de hardware cita dois receptores de entrega; o resumo enviado nesta conversa cita um. Essa quantidade precisa ser conferida antes da instalação dos sensores. <a href="https://github.com/SergioEPF/Cookie-vending-machine-/blob/main/etapa_2/hardware/README.md">Ver o documento de hardware</a>.</p>
+  </aside>
+
+  <section id="comparacao" class="section">
+   <div class="section-top"><h2>Compare antes de escolher.</h2><p>Esforço relativo ao projeto que já existe hoje.</p></div>
+   <div class="table-scroll" role="region" aria-label="Comparação das nove opções; deslize para ver as colunas no celular" tabindex="0">
+    <table>
+     <caption>Nove formas de montar o conjunto celular + ESP32</caption>
+     <thead><tr><th scope="col">Opção</th><th scope="col">Vende sem internet?</th><th scope="col">Onde ficam os registros principais?</th><th scope="col">O que mudar?</th><th scope="col">Trabalho adicional</th></tr></thead>
+     <tbody>
+      <tr><th scope="row"><a href="#opcao-1">01 · Arquivo no celular</a></th><td>Sim, com Wi-Fi até a máquina.</td><td>No ESP32. O celular guarda uma cópia de consulta.</td><td>Aproveitar e completar o que existe.</td><td>Menor</td></tr>
+      <tr><th scope="row"><a href="#opcao-2">02 · Página no ESP32</a><br><span class="label green">Mais simples para concluir</span></th><td>Sim, com Wi-Fi até a máquina.</td><td>No ESP32, com cópias de segurança exportáveis.</td><td>Colocar a página dentro da máquina.</td><td>Baixo a médio</td></tr>
+      <tr><th scope="row"><a href="#opcao-3">03 · Aplicativo por Wi-Fi</a></th><td>Sim, com Wi-Fi até a máquina.</td><td>No ESP32; o aplicativo mantém uma cópia organizada.</td><td>Criar e instalar um aplicativo Android.</td><td>Maior</td></tr>
+      <tr><th scope="row"><a href="#opcao-4">04 · Aplicativo por Bluetooth</a></th><td>Sim, com Bluetooth até a máquina.</td><td>No ESP32; o aplicativo mantém uma cópia organizada.</td><td>Criar o aplicativo e uma nova forma de conversar com a máquina.</td><td>Maior</td></tr>
+      <tr><th scope="row"><a href="#opcao-5">05 · Serviço mantido por fornecedor</a></th><td>Não, para novas compras no modelo aqui proposto.</td><td>Cadastros e histórico no serviço; estoque físico confirmado pelo ESP32.</td><td>Criar o sistema de vendas usando um serviço mantido por fornecedor.</td><td>Alto</td></tr>
+      <tr class="recommended-row"><th scope="row"><a href="#opcao-6">06 · Computador pequeno local</a><br><span class="label green">Minha escolha com equipamento extra</span></th><td>Sim, com a rede local funcionando.</td><td>Contas e histórico no computador; estoque físico e entregas no ESP32.</td><td>Acrescentar um Raspberry Pi ou mini PC e uma rede local.</td><td>Médio a alto</td></tr>
+      <tr><th scope="row"><a href="#opcao-7">07 · PC existente com VM local</a></th><td>Sim, com PC, VM e rede local ligados.</td><td>Contas e histórico dentro da VM; entregas no ESP32.</td><td>Preparar uma VM em um computador disponível no local.</td><td>Médio a alto</td></tr>
+      <tr><th scope="row"><a href="#opcao-8">08 · VM alugada pela internet</a></th><td>Não, para novas compras no modelo aqui proposto.</td><td>Contas e histórico na VM; estoque físico confirmado pelo ESP32.</td><td>Alugar e administrar uma VM e conectar a máquina à internet.</td><td>Alto</td></tr>
+      <tr><th scope="row"><a href="#opcao-9">09 · Computador local + cópia na internet</a></th><td>Sim, para contas já autorizadas localmente.</td><td>Registros locais, com cópia e consulta à distância.</td><td>Montar a opção 6 e acrescentar envio posterior dos registros.</td><td>Muito alto</td></tr>
+     </tbody>
+    </table>
+   </div>
+   <p class="small">“Sem internet” não significa “sem conexão com a máquina”. Em qualquer opção, o celular precisa receber a aprovação do ESP32 para concluir uma compra. As avaliações de esforço são estimativas de projeto, não prazos ou orçamentos.</p>
+  </section>
+
+  <div id="opcoes" class="options-heading"><div class="kicker">As nove implementações</div></div>
+
+  <article id="opcao-1" class="option">
+   <div class="number" aria-hidden="true">01</div>
+   <div>
+    <span class="label">Aproveita a versão atual</span>
+    <h2>Arquivo da tela guardado no celular</h2>
+    <p class="summary">O celular abre o arquivo que você copiou para ele e se conecta ao Wi-Fi criado pelo ESP32. A máquina continua tomando as decisões sobre cada compra.</p>
+    <div class="facts">
+     <div><strong>No celular</strong>A tela, nomes e siglas conhecidos e uma cópia do último estoque consultado. A senha é enviada para aprovação a cada login, sem ficar nessa cópia.</div>
+     <div><strong>No ESP32</strong>Cadastros, conferência da senha, estoque e registro das entregas. O histórico completo de vendas ainda precisa ser acrescentado ao programa atual.</div>
+    </div>
+    <div class="pros-cons">
+     <div><h3>Vantagens</h3><ul><li>É o caminho mais próximo do que já está pronto na sua pasta.</li><li>Funciona sem internet e sem outro equipamento.</li><li>Permite trocar a tela copiando um novo arquivo para o celular.</li></ul></div>
+     <div><h3>Desvantagens</h3><ul><li>É fácil abrir uma cópia antiga e testar a versão errada.</li><li>O navegador pode tratar os dados salvos de um arquivo local de formas diferentes.</li><li>Trocar de navegador, apagar seus dados ou trocar de celular pode perder as siglas e a cópia de consulta.</li></ul></div>
+    </div>
+    <p class="build"><strong>Como colocar em prática:</strong> usar a tela atual, salvar a cópia local, atualizar o estoque durante a escolha e antes da compra e exportar os registros importantes para uma cópia de segurança.</p>
+    <p class="use"><strong>Se cair a conexão:</strong> pode mostrar a última consulta, com aviso de que está antiga. Bloqueia novas compras até conversar novamente com a máquina. O funcionamento do pedido já aceito deve continuar sob controle do ESP32.</p>
+    <p class="evidence">Limite do armazenamento de arquivos locais: <a href="https://developer.mozilla.org/en-US/docs/Web/API/Window/localStorage">documentação do navegador</a>.</p>
+   </div>
+  </article>
+
+  <article id="opcao-2" class="option">
+   <div class="number" aria-hidden="true">02</div>
+   <div>
+    <span class="label green">Para finalizar sem outro computador</span>
+    <h2>A própria máquina fornece a tela</h2>
+    <p class="summary">Você conecta o celular ao Wi-Fi do ESP32 e abre o endereço da máquina. Ela envia a página de compra ao navegador. Não é necessário copiar o HTML para cada celular.</p>
+    <div class="facts">
+     <div><strong>No celular</strong>O navegador mostra a página recebida. Pode guardar preferências e uma cópia de consulta, mas compra e login dependem da máquina.</div>
+     <div><strong>No ESP32</strong>A página, os cadastros, o estoque e um histórico de tamanho limitado. É preciso prever exportação do histórico antes que o espaço reservado se esgote.</div>
+    </div>
+    <div class="pros-cons">
+     <div><h3>Vantagens</h3><ul><li>Uma mesma máquina oferece a mesma versão da tela a todos os celulares.</li><li>Continua funcionando sem internet e sem computador ligado.</li><li>Reaproveita a tela e a comunicação por Wi-Fi já desenvolvidas.</li></ul></div>
+     <div><h3>Desvantagens</h3><ul><li>A página ocupa parte da memória da máquina; imagens e efeitos precisam ser leves.</li><li>Trocar a tela exige atualizar os arquivos guardados no ESP32.</li><li>Se o ESP32 estiver desligado, o celular não consegue abrir a página pela primeira vez.</li></ul></div>
+    </div>
+    <p class="build"><strong>Como colocar em prática:</strong> colocar o HTML atual na memória do ESP32, fazer o endereço inicial abrir essa página e manter login, estoque e andamento da compra no mesmo endereço. Preservar o desenho das telas.</p>
+    <p class="use"><strong>Se cair a conexão:</strong> a página aberta informa a perda de contato. Ao reconectar, consulta o número do pedido antes de permitir outro. O ESP32 deve conservar o resultado para evitar uma segunda entrega por engano.</p>
+    <p class="evidence">A Espressif oferece suporte para o ESP32 fornecer páginas: <a href="https://docs.espressif.com/projects/esp-idf/en/stable/esp32/api-reference/protocols/esp_http_server.html">documentação oficial</a>. A escolha desta opção é minha avaliação para o seu projeto.</p>
+   </div>
+  </article>
+
+  <article id="opcao-3" class="option">
+   <div class="number" aria-hidden="true">03</div>
+   <div>
+    <span class="label">Para um celular fixo na máquina</span>
+    <h2>Aplicativo Android conectado por Wi-Fi</h2>
+    <p class="summary">Em vez de abrir um arquivo no navegador, o cliente usa um aplicativo instalado. Ele conversa com o ESP32 pelo mesmo Wi-Fi que o projeto já utiliza.</p>
+    <div class="facts">
+     <div><strong>No celular</strong>As telas e uma cópia dos nomes, consultas e vendas confirmadas ficam na área do aplicativo. Podem existir botões de exportação e recuperação de cópias.</div>
+     <div><strong>No ESP32</strong>A aprovação do login, o estoque real e o resultado de cada entrega. As duas partes conferem os números dos pedidos para não registrar a mesma venda duas vezes.</div>
+    </div>
+    <div class="pros-cons">
+     <div><h3>Vantagens</h3><ul><li>Evita confusão entre arquivos soltos e abas do navegador.</li><li>Permite organizar mais consultas e relatórios no celular, respeitando o espaço disponível.</li><li>Pode ser preparado para manter a tela de compra em destaque no aparelho.</li></ul></div>
+     <div><h3>Desvantagens</h3><ul><li>Exige desenvolver, instalar e manter um aplicativo.</li><li>Desinstalar o aplicativo ou perder o celular pode apagar a cópia guardada nele.</li><li>Manter o aplicativo e o ESP32 de acordo exige mais testes e cuidado com atualizações.</li></ul></div>
+    </div>
+    <p class="build"><strong>Como colocar em prática:</strong> aproveitar o desenho atual, criar o aplicativo e reutilizar as mensagens que o ESP32 já entende. Acrescentar a guarda dos pedidos confirmados e a recuperação após fechar a tela.</p>
+    <p class="use"><strong>Se cair a conexão:</strong> o aplicativo pode abrir e mostrar registros antigos. Para comprar, precisa recuperar o contato com o ESP32. Fechar o aplicativo não deve provocar um novo acionamento do motor.</p>
+    <p class="evidence">O Android permite combinar dados guardados no aparelho com atualizações por conexão: <a href="https://developer.android.com/topic/architecture/data-layer/offline-first">orientações oficiais</a>. Isso precisa ser implementado no aplicativo; não acontece automaticamente.</p>
+   </div>
+  </article>
+
+  <article id="opcao-4" class="option">
+   <div class="number" aria-hidden="true">04</div>
+   <div>
+    <span class="label">Alternativa ao Wi-Fi</span>
+    <h2>Aplicativo Android conectado por Bluetooth</h2>
+    <p class="summary">O celular conversa com a máquina por uma conexão de curta distância, como a usada por um fone sem fio. É necessário um aplicativo próprio e uma placa ESP32 com Bluetooth compatível.</p>
+    <div class="facts">
+     <div><strong>No celular</strong>O aplicativo mostra a compra e guarda uma cópia das consultas e vendas confirmadas. Também precisa pedir as permissões de conexão necessárias.</div>
+     <div><strong>No ESP32</strong>Cadastros, aprovação de acesso, estoque e entregas. O programa recebe pedidos por Bluetooth, em vez da forma usada atualmente pelo Wi-Fi.</div>
+    </div>
+    <div class="pros-cons">
+     <div><h3>Vantagens</h3><ul><li>Dispensa conectar o celular ao Wi-Fi particular da máquina.</li><li>Não precisa de internet nem de um aparelho que distribua Wi-Fi.</li><li>Pode ser adequado para um celular permanentemente próximo da máquina.</li></ul></div>
+     <div><h3>Desvantagens</h3><ul><li>Exige um aplicativo e mudanças maiores no programa do ESP32.</li><li>É preciso testar permissões, reconexão e alcance com o gabinete montado.</li><li>A conexão precisa reconhecer o aparelho autorizado; estar perto não deve bastar para controlar a máquina.</li></ul></div>
+    </div>
+    <p class="build"><strong>Como colocar em prática:</strong> conferir o modelo exato da placa e do celular, criar a troca de mensagens por Bluetooth e transportar por ela o login, os pedidos e as confirmações. Manter as mesmas regras de estoque e entrega.</p>
+    <p class="use"><strong>Se cair a conexão:</strong> bloquear novos pedidos e procurar novamente a mesma máquina. Depois, consultar o pedido já iniciado antes de aceitar uma repetição.</p>
+    <p class="evidence">Compatibilidade e comunicação entre aparelhos: <a href="https://developer.android.com/develop/connectivity/bluetooth/ble/ble-overview">Android</a> e <a href="https://docs.espressif.com/projects/esp-idf/en/stable/esp32/api-reference/bluetooth/index.html">Espressif</a>. A opção pressupõe confirmar a compatibilidade da placa; não depende de Bluetooth no navegador.</p>
+   </div>
+  </article>
+
+  <article id="opcao-5" class="option">
+   <div class="number" aria-hidden="true">05</div>
+   <div>
+    <span class="label">Para acompanhar várias máquinas no futuro</span>
+    <h2>Página e registros em um serviço mantido por fornecedor</h2>
+    <p class="summary">O celular abre uma página na internet. Você usa um serviço que já cuida de parte da estrutura de contas e armazenamento. Ainda é necessário desenvolver a tela e as regras da venda e conectá-las ao ESP32.</p>
+    <div class="facts">
+     <div><strong>No celular e no serviço</strong>A página permite entrar na conta, comprar e consultar registros. O responsável pode acompanhar vendas de outro lugar, com acesso reservado a ele.</div>
+     <div><strong>No ESP32</strong>O estoque físico, o pedido em execução e os resultados de entrega ficam guardados até o serviço confirmar o recebimento. Cada pedido tem um número único.</div>
+    </div>
+    <div class="pros-cons">
+     <div><h3>Vantagens</h3><ul><li>Reúne o histórico de várias máquinas e permite consulta à distância.</li><li>O fornecedor cuida de parte da estrutura, conforme o serviço contratado.</li><li>A página pode ser atualizada em um lugar só, sem copiar arquivos para cada celular.</li></ul></div>
+     <div><h3>Desvantagens</h3><ul><li>Novas compras dependem de internet no celular, na máquina e da disponibilidade do serviço.</li><li>Pode haver cobrança por manter o serviço; valores dependem do fornecedor e do uso.</li><li>Exige mais trabalho para proteger contas, recuperar falhas e evitar pedidos repetidos.</li></ul></div>
+    </div>
+    <p class="build"><strong>Como colocar em prática:</strong> criar o serviço de contas e vendas, fornecer internet ao ESP32 e fazer a máquina buscar pedidos destinados a ela. Guardar cada resultado até sua confirmação. O ESP32 deve verificar a origem e a autorização do pedido.</p>
+    <p class="use"><strong>Se faltar internet:</strong> esta proposta bloqueia novas compras. Um pedido já aceito deve terminar sob controle local e enviar o resultado depois. Vender também sem internet seria uma ampliação separada, com regras próprias.</p>
+    <p class="evidence">Esta é uma proposta de evolução, não um serviço já existente no repositório. Diferentemente da opção 8, você contrata funções já mantidas por um fornecedor, em vez de cuidar de uma VM inteira. Os serviços incluídos dependem do contrato; não há fornecedor nem preço escolhido.</p>
+   </div>
+  </article>
+
+  <article id="opcao-6" class="option">
+   <div class="number" aria-hidden="true">06</div>
+   <div>
+    <span class="label green">Minha escolha com equipamento extra</span>
+    <h2>Um computador pequeno junto à máquina</h2>
+    <p class="summary">Um Raspberry Pi ou mini PC guarda a página de compra, as contas e o histórico. Celular, computador e ESP32 conversam por uma rede local, que pode funcionar sem internet.</p>
+    <div class="facts">
+     <div><strong>O que acrescenta</strong>Computador pequeno, fonte e espaço para guardar os dados. Um roteador, o aparelho que distribui o Wi-Fi, pode formar a rede entre todos. Não é necessário deixar monitor ou teclado conectados.</div>
+     <div><strong>Quem faz cada parte</strong>O computador aprova o login e guarda as vendas. Ele envia pedidos autorizados ao ESP32, que confere estoque, condições da máquina e origem do pedido antes de acionar motores.</div>
+    </div>
+    <div class="pros-cons">
+     <div><h3>Vantagens</h3><ul><li>Oferece mais espaço para histórico, relatórios e cópias de segurança do que o ESP32 sozinho.</li><li>A página pode mudar sem precisar alterar o controle dos motores.</li><li>Permite vender sem internet, com tudo instalado junto à máquina.</li></ul></div>
+     <div><h3>Desvantagens</h3><ul><li>Acrescenta custo de equipamento, alimentação e manutenção.</li><li>O computador e a rede local precisam ficar ligados durante as vendas.</li><li>Falhas no armazenamento ou desligamentos exigem recuperação dos registros.</li></ul></div>
+    </div>
+    <p class="build"><strong>Como colocar em prática:</strong> instalar a página atual no computador, criar ali a guarda das contas e do histórico e adaptar a conversa com o ESP32. Fazer o programa iniciar sozinho, manter cópias em outro lugar e testar a recuperação após desligar.</p>
+    <p class="use"><strong>Se faltar internet:</strong> continua vendendo. Se o computador ou a rede local parar, novas compras são bloqueadas. O ESP32 deve conservar o resultado do pedido já aceito para o computador recuperar depois.</p>
+    <p class="evidence">A documentação do <a href="https://www.raspberrypi.com/documentation/computers/remote-access.html">Raspberry Pi</a> descreve uso em rede e fornecimento de páginas sem monitor. Esta proposta também pode usar um mini PC; a escolha exata depende do orçamento e do equipamento disponível.</p>
+   </div>
+  </article>
+
+  <article id="opcao-7" class="option">
+   <div class="number" aria-hidden="true">07</div>
+   <div>
+    <span class="label">Para aproveitar um PC já disponível</span>
+    <h2>Uma VM no computador do laboratório ou da empresa</h2>
+    <p class="summary">Um computador que já existe no local executa uma máquina virtual reservada para a Cookie Express. O celular abre a página dessa VM pela rede local; ela conversa com o ESP32.</p>
+    <div class="facts">
+     <div><strong>O que acrescenta</strong>Uma VM com espaço de armazenamento e parte da capacidade do PC. É preciso uma rede que permita celular, VM e ESP32 se encontrarem e autorização para manter o computador em uso.</div>
+     <div><strong>Onde ficam os dados</strong>Contas e histórico dentro da VM, com cópias fora do mesmo computador. O ESP32 mantém o estoque físico e os resultados das entregas até a VM confirmar o recebimento.</div>
+    </div>
+    <div class="pros-cons">
+     <div><h3>Vantagens</h3><ul><li>Pode evitar a compra de um computador exclusivo, se já houver um adequado disponível.</li><li>Separa os programas da máquina de cookies dos demais programas instalados no PC.</li><li>Permite testar e preparar cópias do ambiente sem mexer nos motores.</li></ul></div>
+     <div><h3>Desvantagens</h3><ul><li>O PC e a VM precisam ficar ligados; suspensão, reinício e manutenção interrompem novas vendas.</li><li>Outros usos do computador podem disputar sua capacidade.</li><li>É preciso cuidar tanto do PC quanto da VM, das permissões da rede e das cópias.</li></ul></div>
+    </div>
+    <p class="build"><strong>Como colocar em prática:</strong> reservar um PC compatível, criar a VM, colocar nela a página e os registros e permitir o acesso pela rede local. Configurar início automático e combinar quando o PC poderá ser desligado. O mesmo sistema pode funcionar direto no PC se a VM não trouxer benefício.</p>
+    <p class="use"><strong>Se faltar internet:</strong> continua vendendo enquanto a rede local funciona. Se o PC desligar ou a VM parar, novas compras param. Uma cópia da VM guardada no mesmo disco não protege contra a perda desse disco.</p>
+    <p class="evidence">A <a href="https://learn.microsoft.com/en-us/windows-server/virtualization/hyper-v/overview">Microsoft explica o uso de máquinas virtuais</a>. O programa usado para criar a VM depende do computador e das permissões disponíveis; não é uma peça física que se liga ao ESP32.</p>
+   </div>
+  </article>
+
+  <article id="opcao-8" class="option">
+   <div class="number" aria-hidden="true">08</div>
+   <div>
+    <span class="label">VM alugada, acessível pela internet</span>
+    <h2>Um computador virtual contratado de um fornecedor</h2>
+    <p class="summary">Você aluga uma VM que fica nos computadores de um fornecedor. Nela instala a página e o sistema de vendas. O celular e o ESP32 precisam de internet para conversar com esse sistema.</p>
+    <div class="facts">
+     <div><strong>O que acrescenta</strong>Uma contratação recorrente e internet no local da máquina. O fornecedor mantém o computador físico; a configuração, os programas, as atualizações e a recuperação do seu sistema continuam precisando de um responsável.</div>
+     <div><strong>Onde ficam os dados</strong>Contas e histórico na VM, com cópias separadas. O ESP32 confere cada pedido autorizado e guarda a confirmação física da entrega até receber confirmação da VM.</div>
+    </div>
+    <div class="pros-cons">
+     <div><h3>Vantagens</h3><ul><li>Dispensa deixar um PC seu ligado para guardar a página e as contas.</li><li>Permite acompanhar várias máquinas de qualquer lugar com acesso autorizado.</li><li>Dá mais liberdade para escolher e mudar os programas usados.</li></ul></div>
+     <div><h3>Desvantagens</h3><ul><li>Tem cobrança recorrente; cópias, armazenamento e outros serviços podem gerar despesas adicionais.</li><li>Neste modelo, faltar internet ou parar a VM impede novas compras.</li><li>Exige cuidar das atualizações, acessos e restauração dos dados; alugar não deixa tudo pronto.</li></ul></div>
+    </div>
+    <p class="build"><strong>Como colocar em prática:</strong> contratar a VM, instalar o sistema, proteger o acesso e configurar cópias. O ESP32 se conecta ao sistema para buscar seus pedidos e devolver resultados. Cada máquina e venda precisam ter identificação própria.</p>
+    <p class="use"><strong>Se faltar internet:</strong> novas compras param nesta proposta. O ESP32 termina ou registra a falha de um pedido já aceito e informa o resultado depois. Continuar vendendo sem internet exige a parte local descrita na opção 9.</p>
+    <p class="evidence">A documentação do <a href="https://docs.aws.amazon.com/lightsail/latest/userguide/amazon-lightsail-faq-instances.html">Amazon Lightsail</a> ilustra uma VM alugada, e a de <a href="https://docs.aws.amazon.com/lightsail/latest/userguide/understanding-snapshots-in-amazon-lightsail.html">cópias de recuperação</a> explica a guarda do estado dos dados. São exemplos para entender a opção, não uma indicação de fornecedor ou de plano.</p>
+   </div>
+  </article>
+
+  <article id="opcao-9" class="option">
+   <div class="number" aria-hidden="true">09</div>
+   <div>
+    <span class="label">Para vender localmente e acompanhar de longe</span>
+    <h2>Computador local com cópia dos registros pela internet</h2>
+    <p class="summary">A compra funciona no computador pequeno da opção 6. Quando há internet, ele envia os registros para uma VM alugada ou outro serviço. A consulta à distância acompanha uma cópia do que aconteceu na máquina.</p>
+    <div class="facts">
+     <div><strong>O que acrescenta</strong>Computador local, rede, internet para as atualizações à distância e um serviço remoto. A tela de compra permanece disponível localmente, sem precisar baixar arquivos da internet.</div>
+     <div><strong>Onde ficam os dados</strong>A máquina mantém os pedidos, as contas autorizadas e as entregas. A cópia à distância recebe as vendas com números únicos; o estoque físico confirmado pelo ESP32 não é substituído por uma consulta antiga.</div>
+    </div>
+    <div class="pros-cons">
+     <div><h3>Vantagens</h3><ul><li>Continua vendendo sem internet para contas que já podem comprar localmente.</li><li>Oferece consulta de vendas de outro lugar quando a conexão está disponível.</li><li>Evita depender do serviço externo para cada cookie entregue.</li></ul></div>
+     <div><h3>Desvantagens</h3><ul><li>Combina despesas e manutenção de equipamentos locais e do serviço externo.</li><li>Precisa impedir vendas duplicadas e resolver diferenças entre registros de lugares distintos.</li><li>Cadastros e bloqueios feitos de longe só chegam à máquina quando a conexão volta.</li></ul></div>
+    </div>
+    <p class="build"><strong>Como colocar em prática:</strong> primeiro concluir e testar a opção 6. Depois acrescentar envio dos registros, confirmação de recebimento e nova tentativa quando a internet voltar. Definir uma única regra para contas e alterações; sem conexão, permitir apenas contas já autorizadas localmente.</p>
+    <p class="use"><strong>Se faltar internet:</strong> as vendas locais continuam e ficam guardadas. A tela de consulta à distância mostra até quando os dados foram recebidos. Se o computador local ou sua rede falhar, novas compras param; esta opção não cria uma troca automática para outro equipamento.</p>
+    <p class="evidence">Combinar operação local e atualização posterior é um desenho possível, ilustrado na <a href="https://docs.aws.amazon.com/greengrass/">documentação da AWS sobre equipamentos que operam localmente</a>. A proposta não exige usar esse produto. É uma evolução a desenvolver e testar, não um recurso já pronto no projeto.</p>
+   </div>
+  </article>
+
+  <section id="componentes" class="section" aria-labelledby="extras">
+   <div class="section-top"><h2 id="extras">Outras peças que podem ajudar.</h2><p>Escolha conforme a opção. Não precisa comprar tudo.</p></div>
+   <div class="table-scroll" role="region" aria-label="Componentes adicionais e seus limites" tabindex="0">
+    <table>
+     <caption>Complementos para os registros, a rede e a recuperação</caption>
+     <thead><tr><th scope="col">Componente</th><th scope="col">O que resolve</th><th scope="col">Limite e cuidado</th></tr></thead>
+     <tbody>
+      <tr><th scope="row">Roteador próprio</th><td>Cria uma rede comum para celular, ESP32 e computador local nas opções 6, 7 e 9.</td><td>Precisa ficar ligado e bem configurado. Wi-Fi funcionando não significa que há internet.</td></tr>
+      <tr><th scope="row">Relógio com pilha</th><td>Ajuda a manter data e hora das compras mesmo sem internet. Um exemplo é o DS3231.</td><td>Precisa acertar o horário e integrar a leitura ao programa. Não guarda o histórico de vendas. <a href="https://www.analog.com/en/products/ds3231.html">Ver o componente</a>.</td></tr>
+      <tr><th scope="row">Armazenamento extra e cópia separada</th><td>Um cartão adequado no ESP32 ou uma unidade de armazenamento no computador pode ampliar o histórico.</td><td>É preciso adaptar o programa, tratar gravações interrompidas e manter outra cópia. Mais espaço sozinho não torna os dados confiáveis.</td></tr>
+      <tr><th scope="row">Nobreak ou alimentação de reserva</th><td>Pode manter os registros e o computador ativos por tempo suficiente para encerrar o trabalho com cuidado.</td><td>Deve ser dimensionado para os aparelhos ligados. Alimentar também os motores exige considerar seu consumo; não há autonomia garantida nesta comparação.</td></tr>
+     </tbody>
+    </table>
+   </div>
+   <p class="small">A escolha dos modelos depende da placa, do espaço no gabinete e do orçamento. Esses complementos não substituem os sensores de entrega e manutenção já previstos.</p>
+  </section>
+
+  <section class="section" aria-labelledby="custos">
+   <div class="section-top"><h2 id="custos">O que custa manter funcionando?</h2><p>Comparação qualitativa, sem cotação de preços.</p></div>
+   <div class="table-scroll" role="region" aria-label="Custos e equipamentos que precisam permanecer ligados" tabindex="0">
+    <table>
+     <caption>Compra inicial, despesas recorrentes e dependências</caption>
+     <thead><tr><th scope="col">Opção</th><th scope="col">Compra ou preparação inicial</th><th scope="col">Despesas durante o uso</th><th scope="col">O que precisa continuar ligado?</th></tr></thead>
+     <tbody>
+      <tr><th scope="row">1 e 2 · Página local</th><td>Aproveitam celular e ESP32.</td><td>Energia, manutenção e guarda de cópias.</td><td>Celular e ESP32.</td></tr>
+      <tr><th scope="row">3 e 4 · Aplicativo</th><td>Desenvolver e instalar o aplicativo.</td><td>Manutenção do aplicativo e dos aparelhos.</td><td>Celular e ESP32.</td></tr>
+      <tr><th scope="row">5 · Serviço de fornecedor</th><td>Desenvolver a integração e configurar o serviço.</td><td>Internet e eventuais cobranças por uso.</td><td>Celular, ESP32, conexão e serviço contratado.</td></tr>
+      <tr><th scope="row">6 · Computador pequeno local</th><td>Computador, armazenamento, fonte e rede.</td><td>Energia, peças, atualizações e cópias.</td><td>Celular, ESP32, computador e rede local.</td></tr>
+      <tr><th scope="row">7 · PC com VM local</th><td>Preparar o PC e reservar espaço para a VM; pode exigir licenças.</td><td>Energia, manutenção do PC, da VM e das cópias.</td><td>Celular, ESP32, PC, VM e rede local.</td></tr>
+      <tr><th scope="row">8 · VM alugada</th><td>Configurar a VM e o sistema de vendas.</td><td>Aluguel, internet e possíveis cobranças por cópias e uso.</td><td>Celular, ESP32, conexão e VM no fornecedor.</td></tr>
+      <tr><th scope="row">9 · Local com cópia pela internet</th><td>Equipamentos da opção 6 e envio para o serviço externo.</td><td>Manutenção local, internet e eventual contratação externa.</td><td>Parte local para vender; parte externa para atualizar a consulta à distância.</td></tr>
+     </tbody>
+    </table>
+   </div>
+   <p class="small">Não há promessa de plano gratuito permanente nem de equipamento mais barato. Os valores dependem do que você já tem, do fornecedor, do armazenamento necessário e do volume de uso.</p>
+  </section>
+
+  <section class="section" aria-labelledby="regras">
+   <div class="section-top"><h2 id="regras">O que todas precisam ter.</h2><p>A tela muda. A confirmação da entrega continua na máquina.</p></div>
+   <ol class="steps" aria-label="Etapas de uma compra"><li>O cliente escolhe até três cookies.</li><li>O acesso é aprovado e o ESP32 confere a autorização e o estoque.</li><li>O motor do sabor escolhido é acionado.</li><li>O sensor confirma a passagem do cookie.</li><li>A máquina atualiza estoque e registra o que entregou.</li></ol>
+   <div class="shared">
+    <div><h3>Estoque atualizado em cada compra</h3><p>Uma conferência por dia é insuficiente: o primeiro pedido já pode mudar as quantidades. A tela pode atualizar a consulta a cada 30 segundos durante a escolha, mas o ESP32 precisa conferir novamente ao receber cada pedido.</p><p>O celular pode guardar a última consulta. Essa cópia ajuda a mostrar informações; sozinha, não autoriza uma compra.</p></div>
+    <div><h3>Registro confiável para cobrar depois</h3><p>Guardar quem comprou, quais cookies foram realmente entregues, o valor e o número da venda. Se duas de três unidades forem entregues, registrar duas e a falha da terceira.</p><p>Como o projeto prevê cobrança posterior, também é preciso manter cópias de segurança e combinar como acertar data e hora sem depender de internet. A tela só mostra 100% quando todas as unidades forem confirmadas.</p></div>
+   </div>
+   <p class="small">Também fazem parte de qualquer implementação: impedir vendas durante manutenção, reservar cada pedido para evitar disputa de estoque, limitar o tempo de espera por entrega, separar acesso de cliente e responsável e recuperar um pedido após falta de energia. São requisitos a completar; a comparação não afirma que todos já funcionam.</p>
+   <p class="small">Nas opções com outro computador, a aprovação da conta pode acontecer nele. O ESP32 só aceita pedidos de uma origem autorizada e conserva a decisão final sobre estoque físico, motores e sensores. Depois de uma interrupção, é necessário consultar o pedido anterior antes de repetir qualquer acionamento.</p>
+  </section>
+
+  <section id="recomendacao" class="section">
+   <div class="section-top"><h2>Qual eu escolheria no seu lugar?</h2><p>Recomendação baseada no estágio atual.</p></div>
+   <div class="recommendation">
+    <div><p><strong>Com equipamento extra, eu escolheria a opção 6.</strong> Um computador pequeno dá mais espaço para contas, histórico de consumo e relatórios, enquanto o ESP32 cuida dos motores e sensores. A compra continua funcionando sem internet, desde que a parte local esteja ligada.</p><p><strong>Para concluir com menos mudanças, a opção 2 continua adequada.</strong> Se já houver um PC que pode ficar ligado, a opção 7 é uma forma de testar sem comprar outro de imediato. A VM alugada da opção 8 faz sentido se você aceitar depender de internet e puder cuidar do sistema.</p><p><strong>Para vender sem internet e acompanhar de longe, a opção 9 é a evolução.</strong> Eu a acrescentaria depois de validar a operação local. Em todas essas escolhas, o desenho atual da tela pode ser preservado.</p></div>
+    <div class="next"><h3>Uma sequência possível com equipamento extra</h3><ol><li>Validar o ESP32, os sensores e a entrega de um pedido.</li><li>Montar a página e os registros em um computador local; uma VM pode servir para os primeiros testes.</li><li>Completar contas, permissões do responsável e histórico por pessoa.</li><li>Automatizar cópias e testar recuperação de conexão e falta de energia.</li><li>Se houver necessidade, acrescentar a consulta pela internet.</li></ol></div>
+   </div>
+   <div class="decision">
+    <label for="priority">Explore a indicação conforme sua prioridade</label>
+    <select id="priority"><option value="local">Ter histórico completo e vender sem internet, com equipamento extra</option><option value="finish">Terminar o protótipo sem acrescentar um computador</option><option value="test">Fazer o menor número de mudanças para testar agora</option><option value="dedicated">Ter um aplicativo em um celular fixo</option><option value="bluetooth">Evitar a conexão pelo Wi-Fi da máquina</option><option value="remote">Usar um serviço de fornecedor para acompanhar de longe</option><option value="existing">Aproveitar um PC disponível e testar com VM</option><option value="vm">Administrar minha própria VM alugada pela internet</option><option value="continuity">Vender sem internet e enviar os registros quando ela voltar</option></select>
+    <p id="decision-result" class="decision-result" role="status">Opção 6 — um computador pequeno guarda a página, as contas e o histórico. É a minha escolha com equipamento extra.</p>
+    <noscript><p class="small">Com equipamento extra, a recomendação é a opção 6. Sem outro computador, considere a opção 2. Todas as comparações acima continuam disponíveis sem recursos interativos.</p></noscript>
+   </div>
+  </section>
+  <section class="sources" aria-label="Fontes e limites da leitura">
+   <details open>
+    <summary>O que foi lido e o que ainda precisa ser confirmado</summary>
+    <p>Consulta em 30/10/2026: lista de arquivos da versão principal do GitHub, apresentação geral, etapas 1 a 4, descrição de software e documento de hardware da etapa 2. As etapas 3 e 4 e as descrições de software consultadas ainda têm textos iniciais. Também considerei os arquivos locais <code>main/main.c</code>, <code>servidor/ihm/index.html</code> e <code>servidor/ihm/README.md</code>, já analisados nesta conversa.</p>
+    <ul>
+     <li><a href="https://github.com/SergioEPF/Cookie-vending-machine-">Repositório do projeto</a> · objetivo e organização dos documentos.</li>
+     <li><a href="https://github.com/SergioEPF/Cookie-vending-machine-/blob/main/etapa_2/README.md">Etapa 2</a> · funcionamento previsto, cadastro e cobrança posterior.</li>
+     <li><a href="https://github.com/SergioEPF/Cookie-vending-machine-/blob/main/etapa_2/hardware/README.md">Hardware da etapa 2</a> · escolha do ESP32, motores e sensores.</li>
+     <li><a href="https://developer.mozilla.org/en-US/docs/Web/API/Window/localStorage">Dados guardados no navegador</a> · limites ao abrir arquivos diretamente.</li>
+     <li><a href="https://docs.espressif.com/projects/esp-idf/en/stable/esp32/api-reference/protocols/esp_http_server.html">Páginas fornecidas pelo ESP32</a> · capacidade usada na proposta 2.</li>
+     <li><a href="https://developer.android.com/topic/architecture/data-layer/offline-first">Dados locais em aplicativos Android</a> · base para a proposta 3.</li>
+     <li><a href="https://developer.android.com/develop/connectivity/bluetooth/ble/ble-overview">Bluetooth no Android</a> e <a href="https://docs.espressif.com/projects/esp-idf/en/stable/esp32/api-reference/bluetooth/index.html">no ESP32</a> · base para a proposta 4.</li>
+     <li><a href="https://www.raspberrypi.com/documentation/computers/remote-access.html">Raspberry Pi em uma rede local</a> · computador pequeno e páginas locais, opção 6.</li>
+     <li><a href="https://learn.microsoft.com/en-us/windows-server/virtualization/hyper-v/overview">Máquinas virtuais, Microsoft</a> · ideia de VM e uso de um computador físico, opção 7.</li>
+     <li><a href="https://docs.aws.amazon.com/lightsail/latest/userguide/amazon-lightsail-faq-instances.html">VM alugada, exemplo do Lightsail</a> e <a href="https://docs.aws.amazon.com/lightsail/latest/userguide/understanding-snapshots-in-amazon-lightsail.html">cópias de recuperação</a> · referência para entender a opção 8, sem escolher um fornecedor.</li>
+     <li><a href="https://docs.aws.amazon.com/greengrass/">Operação local com atualização pela internet</a> · exemplo do conceito usado na proposta 9, sem exigir esse produto.</li>
+     <li><a href="https://www.analog.com/en/products/ds3231.html">Relógio com alimentação de reserva, DS3231</a> · exemplo de componente para manter data e hora.</li>
+    </ul>
+    <p>As nove alternativas e as recomendações são propostas elaboradas para este projeto. Os complementos foram pesquisados nesta revisão, em 30/10/2026. Não são nove sistemas prontos, nem resultados de testes físicos. O programa local ainda aciona apenas o primeiro motor e usa uma confirmação simulada pela entrada de texto. O histórico completo e a proteção das funções administrativas ainda precisam ser concluídos. As propostas preservam o desenvolvimento do ESP32 no ambiente já escolhido pelo projeto.</p>
+   </details>
+  </section>
+ </main>
+ <footer><span>Cookie Express · Comparação para decisão de projeto</span><button class="print-button" type="button" id="print">Imprimir ou salvar em PDF</button></footer>
+</div>
+<script>
+'use strict';
+const suggestions={
+ local:['opcao-6','Opção 6 — um computador pequeno guarda a página, as contas e o histórico. É a minha escolha com equipamento extra.'],
+ finish:['opcao-2','Opção 2 — a máquina fornece a página. É o caminho para concluir sem acrescentar um computador.'],
+ test:['opcao-1','Opção 1 — aproveite o arquivo no celular para validar o conjunto com menos mudanças agora.'],
+ dedicated:['opcao-3','Opção 3 — um aplicativo por Wi-Fi oferece mais controle sobre o celular, com mais trabalho de desenvolvimento.'],
+ bluetooth:['opcao-4','Opção 4 — Bluetooth evita o Wi-Fi da máquina, mas exige aplicativo e confirmação da compatibilidade da placa.'],
+ remote:['opcao-5','Opção 5 — um fornecedor mantém parte da estrutura na internet. Ainda é preciso criar a tela, as regras e a integração.'],
+ existing:['opcao-7','Opção 7 — aproveite um PC disponível com uma VM local. O PC, a VM e a rede precisam ficar ligados.'],
+ vm:['opcao-8','Opção 8 — alugue e administre uma VM para a página e os registros. Novas compras dependem de internet neste modelo.'],
+ continuity:['opcao-9','Opção 9 — a compra funciona localmente e envia os registros depois. Dá mais continuidade, com mais custo e trabalho.']
+};
+document.getElementById('priority').addEventListener('change',event=>{
+ const suggestion=suggestions[event.target.value];
+ const output=document.getElementById('decision-result');
+ output.replaceChildren(document.createTextNode(suggestion[1]+' '));
+ const link=document.createElement('a');link.href='#'+suggestion[0];link.textContent='Ver detalhes';output.appendChild(link);
+});
+document.getElementById('print').addEventListener('click',()=>window.print());
+</script>
+</body>
+</html>

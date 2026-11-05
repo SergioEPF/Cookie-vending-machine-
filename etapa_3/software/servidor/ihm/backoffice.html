@@ -1,0 +1,132 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="theme-color" content="#633924">
+<title>Cookie Express · Backoffice</title>
+<style>
+:root{font-family:Arial,Helvetica,sans-serif;color:#35251d;background:#f6f1eb;--brown:#633924;--pink:#ac064a;--line:#ddccbd}*{box-sizing:border-box}body{margin:0}main{max-width:1100px;margin:auto;padding:28px 20px}header,.toolbar{display:flex;align-items:center;justify-content:space-between;gap:14px;flex-wrap:wrap}header{padding-bottom:24px;border-bottom:1px solid var(--line)}.brand{color:var(--pink);font-weight:800;font-size:19px}h1{color:var(--brown);margin:6px 0;font-size:28px}h2{font-size:20px;color:var(--brown);margin:0 0 18px}p{line-height:1.5}.muted{color:#79685c;font-size:14px}.badge{padding:9px 13px;border-radius:24px;background:#eadfd4;font-size:13px}.badge.ok{background:#e5f1e3;color:#286331}.panel{background:#fffcf8;border:1px solid var(--line);border-radius:18px;padding:24px;margin-top:22px}#login{max-width:440px;margin:36px auto}label{display:block;font-size:14px;font-weight:700;margin-bottom:8px}input{font:inherit;width:100%;border:1px solid #bba18e;border-radius:9px;background:white;padding:12px;color:inherit;margin-bottom:18px}input:focus,button:focus-visible,a:focus-visible{outline:3px solid #ac064a77;outline-offset:2px}button{font:inherit;font-weight:700;border:0;border-radius:10px;padding:12px 18px;color:white;background:var(--brown);cursor:pointer}button:disabled{opacity:.5;cursor:wait}.secondary{background:#eadfd4;color:var(--brown)}a{color:var(--brown)}.toolbar{margin-top:22px}.summary{display:flex;gap:12px;flex-wrap:wrap;margin:18px 0}.summary span{padding:12px 18px;border-radius:12px;background:#efe7dd}.scroll{overflow-x:auto}table{width:100%;border-collapse:collapse;text-align:left;font-size:14px}th{font-size:12px;color:#79685c;text-transform:uppercase;letter-spacing:.5px}th,td{padding:14px 9px;border-bottom:1px solid var(--line)}td small{display:block;color:#79685c;margin-top:5px}td input{width:90px;margin:0;padding:9px}td button{padding:10px;font-size:13px;white-space:nowrap}.actions{display:flex;gap:7px;align-items:center;flex-wrap:wrap}.empty{text-align:center;padding:28px;color:#79685c}#message{min-height:24px;color:#ad2547;white-space:pre-line}#message.success{color:#286331}[hidden]{display:none!important}@media(max-width:600px){main{padding:20px 12px}.panel{padding:16px}h1{font-size:24px}th,td{padding:12px 7px}.actions{min-width:205px}}
+</style>
+</head>
+<body>
+<main>
+<header><div><div class="brand">Docce Luna · Cookie Express</div><h1>Backoffice</h1><span class="muted">Estoque e vendas da máquina</span></div><div><span id="connection" class="badge" role="status">Verificando conexão…</span></div></header>
+<p id="message" role="status" aria-live="polite"></p>
+<section id="login" class="panel"><h2>Acesso do responsável</h2><p class="muted">Entre com sua conta administrativa.</p><form id="login-form"><label for="name">Nome ou sigla</label><input id="name" name="name" required maxlength="63" autocomplete="username"><label for="password">Senha</label><input id="password" name="password" type="password" required maxlength="100" autocomplete="current-password"><button type="submit">Entrar</button></form><p class="muted"><a id="ihm-link" href="/">Abrir IHM de clientes</a></p></section>
+<div id="dashboard" hidden>
+<div class="toolbar"><span id="account" class="muted"></span><div class="actions"><button id="refresh" class="secondary">Atualizar</button><button id="logout" class="secondary">Sair</button></div></div>
+<section id="maintenance-panel" class="panel" hidden style="border-color:#d3a052;background:#fff5e5"><h2>Máquina em manutenção</h2><p id="maintenance-text" role="alert"></p><button id="maintenance-reset" type="button">Confirmar manutenção e liberar compras</button><p class="muted">A liberação não aciona motores. Confira a máquina e libere a chave antes de confirmar.</p></section>
+<section class="panel"><h2>Estoque físico</h2><p id="stock-time" class="muted">Aguardando leitura do ESP32.</p><div class="scroll"><table><thead><tr><th>Slot / sabor</th><th>Disponível</th><th>Capacidade</th><th>Alterar quantidade</th></tr></thead><tbody id="stock-body"></tbody></table></div><p class="muted">Somar repõe unidades. Definir substitui a quantidade atual. Alterações ficam bloqueadas durante pedidos. Os seis compartimentos têm acionamento independente.</p></section>
+<section class="panel"><div class="toolbar" style="margin-top:0"><h2>Vendas entregues</h2><span class="muted">Últimos 30 registros</span></div><div id="sales-summary" class="summary"></div><p id="sales-time" class="muted"></p><div class="scroll"><table><thead><tr><th>Registro no servidor</th><th>Cliente</th><th>Itens</th><th>Unidades</th></tr></thead><tbody id="sales-body"></tbody></table></div><p class="muted">As vendas aparecem após a confirmação de entrega no ESP32 e o envio ao servidor.</p></section>
+</div>
+</main>
+<script>
+'use strict';
+// A pagina pode vir do PC; estoque, contas e vendas sao acessados pela API do ESP.
+const API_BASE='http://192.168.4.1';
+const $=id=>document.getElementById(id);
+const names=['Chocolate','Chocolate Branco','Red Velvet','Baunilha',"M&M’s",'Integral'];
+const escapeHtml=value=>String(value??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+let token='',busy=false,active=false,sessionGeneration=0,maintenance=false,limitActive=false;
+$('ihm-link').href=location.protocol==='http:'||location.protocol==='https:'?new URL('/',location.href).href:API_BASE+'/';
+function message(value,success=false){$('message').textContent=value;$('message').classList.toggle('success',success)}
+function setBusy(value){busy=value;document.querySelectorAll('button').forEach(button=>button.disabled=value);$('maintenance-reset').disabled=value||!active||limitActive||!maintenance;}
+async function request(path,{method='GET',body,auth=token}={}){
+ const controller=new AbortController(),timeout=setTimeout(()=>controller.abort(),20000);
+ try{
+  const response=await fetch(API_BASE+path,{method,headers:{...(auth?{Authorization:'Bearer '+auth}:{}),...(body?{'Content-Type':'application/json'}:{})},body:body?JSON.stringify(body):undefined,signal:controller.signal,cache:'no-store'});
+  const data=await response.json();
+  if(!response.ok){const error=Error(data.erro||'Erro HTTP '+response.status);error.status=response.status;throw error}
+  return data;
+ }finally{clearTimeout(timeout)}
+}
+function showLogin(){sessionGeneration++;active=false;token='';$('dashboard').hidden=true;$('login').hidden=false;$('stock-body').textContent='';$('sales-body').textContent='';$('password').value=''}
+async function status(){
+ try{
+  const data=await request('/api/status',{auth:''});
+  maintenance=data.manutencao===true;limitActive=data.fim_curso_acionado===true;
+  $('maintenance-panel').hidden=!maintenance;
+  $('maintenance-text').textContent=limitActive?'A chave de fim de curso está acionada. Os motores foram parados e novas compras estão bloqueadas. Verifique a máquina e libere a chave.':'A chave foi liberada. Após conferir a máquina, confirme a manutenção para voltar a aceitar compras.';
+  $('maintenance-reset').disabled=busy||!active||limitActive||!maintenance;
+  const ready=data.online===true&&data.banco_online===true&&!maintenance;
+  $('connection').classList.toggle('ok',ready);
+  $('connection').textContent=maintenance?'Máquina em manutenção':!data.online?'ESP indisponível':data.falha_persistencia?'Falha ao gravar na máquina':data.venda_pendente?'ESP conectado · venda aguardando envio':ready?'ESP e banco conectados':'ESP conectado · banco indisponível';
+ }catch{$('connection').classList.remove('ok');$('connection').textContent='ESP sem conexão';$('maintenance-reset').disabled=true;}
+}
+function renderStock(data){
+ if(!Array.isArray(data.itens)||data.itens.length!==6||new Set(data.itens.map(i=>i.slot)).size!==6||data.itens.some(i=>!Number.isInteger(i.slot)||i.slot<1||i.slot>6||!Number.isInteger(i.quantidade)||!Number.isInteger(i.capacidade)||i.quantidade<0||i.quantidade>i.capacidade))throw Error('Estoque inválido recebido do ESP32');
+ $('stock-body').innerHTML=[...data.itens].sort((a,b)=>a.slot-b.slot).map(item=>`<tr><td><b>${item.slot} · ${escapeHtml(item.sabor)}</b></td><td>${item.quantidade}</td><td>${item.capacidade}</td><td><div class="actions"><input id="qty-${item.slot}" type="number" min="0" max="${item.capacidade}" step="1" value="0" aria-label="Quantidade para ${escapeHtml(item.sabor)}"><button data-slot="${item.slot}" data-operation="reposicao">Somar</button><button class="secondary" data-slot="${item.slot}" data-operation="ajuste">Definir</button></div></td></tr>`).join('');
+ $('stock-time').textContent='Lido do ESP32 em '+new Date().toLocaleString('pt-BR');
+}
+function renderSales(data){
+ if(!Array.isArray(data.vendas))throw Error('Histórico inválido recebido do servidor');
+ $('sales-body').innerHTML=data.vendas.length?data.vendas.map(sale=>`<tr><td>${escapeHtml(new Date(sale.registrado_em*1000).toLocaleString('pt-BR'))}<small>${escapeHtml(sale.evento_id)}</small></td><td>${escapeHtml(sale.usuario)}</td><td>${names.map((name,i)=>Number(sale['q'+(i+1)])>0?escapeHtml(name)+' × '+Number(sale['q'+(i+1)]):'').filter(Boolean).join('<br>')}</td><td>${Number(sale.total)}</td></tr>`).join(''):'<tr><td colspan="4" class="empty">Nenhuma venda registrada.</td></tr>';
+ $('sales-summary').innerHTML=`<span><b>${data.vendas.length}</b> vendas nesta lista</span><span><b>${data.vendas.reduce((sum,sale)=>sum+Number(sale.total),0)}</b> cookies nesta lista</span>`;
+ $('sales-time').textContent='Histórico consultado em '+new Date().toLocaleString('pt-BR');
+}
+async function refresh(){
+ if(busy||!active)return;
+ const generation=sessionGeneration;
+ setBusy(true);message('');
+ try{
+  // Sequencial para reduzir conexoes e uso de RAM no ESP32.
+  const inventory=await request('/api/estoque');
+  if(generation!==sessionGeneration)return;
+  renderStock(inventory);
+  const sales=await request('/api/vendas');
+  if(generation!==sessionGeneration)return;
+  renderSales(sales);
+  await status();
+ }catch(error){
+  if(error.status===401||error.status===403)showLogin();
+  message(error.message+'. Dados anteriores podem estar desatualizados.');
+ }finally{setBusy(false)}
+}
+$('login-form').addEventListener('submit',async event=>{
+ event.preventDefault();if(busy)return;setBusy(true);message('');
+ try{
+  const data=await request('/api/auth/login',{method:'POST',body:{nome:$('name').value.trim(),senha:$('password').value},auth:''});
+  if(data.usuario?.role!=='admin'){
+   if(data.token)await request('/api/auth/logout',{method:'POST',body:{},auth:data.token}).catch(()=>{});
+   throw Error('Esta conta não tem acesso administrativo');
+  }
+  if(typeof data.token!=='string'||!data.token)throw Error('Sessão inválida');
+  token=data.token;active=true;sessionGeneration++;$('password').value='';
+  $('account').textContent='Conectado como '+data.usuario.nome;
+  $('login').hidden=true;$('dashboard').hidden=false;
+ }catch(error){message(error.message)}finally{setBusy(false)}
+ if(active)await refresh();
+});
+$('stock-body').addEventListener('click',async event=>{
+ const button=event.target.closest('button[data-slot]');if(!button||busy||!active)return;
+ const input=$('qty-'+button.dataset.slot),quantity=Number(input.value);
+ if(!input.reportValidity()||input.value===''||!Number.isInteger(quantity)||quantity<0||(button.dataset.operation==='reposicao'&&quantity===0))return message('Informe uma quantidade inteira válida; para somar, use pelo menos 1.');
+ setBusy(true);message('');let changed=false;
+ try{
+  await request('/api/estoque/'+button.dataset.operation,{method:'POST',body:{slot:Number(button.dataset.slot),quantidade:quantity}});changed=true;
+ }catch(error){if(error.status===401||error.status===403)showLogin();message(error.message)}finally{setBusy(false)}
+ if(changed){await refresh();if(!$('message').textContent)message('Estoque atualizado no ESP32.',true)}
+});
+$('refresh').addEventListener('click',refresh);
+$('maintenance-reset').addEventListener('click',async()=>{
+ if(busy||!active||limitActive||!maintenance)return;
+ setBusy(true);message('');
+ try{
+  await request('/api/manutencao/liberar',{method:'POST',body:{}});
+  await status();
+  message(maintenance?'A máquina permanece em manutenção. Confira a chave.':'Manutenção confirmada. Bloqueio de manutenção removido.',!maintenance);
+ }catch(error){
+  if(error.status===401||error.status===403)showLogin();
+  message(error.message);await status();
+ }finally{setBusy(false)}
+});
+$('logout').addEventListener('click',async()=>{
+ if(busy)return;setBusy(true);
+ try{await request('/api/auth/logout',{method:'POST',body:{}})}catch{}finally{showLogin();message('Sessão encerrada nesta página.');setBusy(false)}
+});
+status();setInterval(()=>{if(!document.hidden&&!busy){if(active)refresh();else status()}},15000);
+document.addEventListener('visibilitychange',()=>{if(!document.hidden&&!busy){if(active)refresh();else status()}});
+</script>
+</body>
+</html>

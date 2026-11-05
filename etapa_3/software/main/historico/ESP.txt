@@ -1,0 +1,738 @@
+#include <WiFi.h>
+#include <WebServer.h>
+
+// ======================================================
+// CONFIGURACAO DA REDE WI-FI CRIADA PELO ESP32
+// ======================================================
+
+const char* WIFI_SSID = "COOKIE_EXPRESS";
+const char* WIFI_PASSWORD = "cookie123";
+
+// Servidor HTTP na porta 80
+WebServer server(80);
+
+
+// ======================================================
+// VARIAVEIS DO PEDIDO
+// ======================================================
+
+bool pedidoAtivo = false;
+
+int totalCookiesPedido = 0;
+int cookiesEntregues = 0;
+
+String statusPedido = "ocioso";
+String mensagemSensor = "";
+
+unsigned long instantePedido = 0;
+
+
+// ======================================================
+// CABECALHOS PARA PERMITIR ACESSO PELO HTML DO CELULAR
+// ======================================================
+
+void adicionarCabecalhosCORS()
+{
+  server.sendHeader(
+    "Access-Control-Allow-Origin",
+    "*"
+  );
+
+  server.sendHeader(
+    "Access-Control-Allow-Methods",
+    "GET, POST, OPTIONS"
+  );
+
+  server.sendHeader(
+    "Access-Control-Allow-Headers",
+    "Content-Type"
+  );
+
+  // Ajuda navegadores modernos quando acessam
+  // um dispositivo da rede local
+  server.sendHeader(
+    "Access-Control-Allow-Private-Network",
+    "true"
+  );
+}
+
+
+// ======================================================
+// ENVIA RESPOSTA JSON
+// ======================================================
+
+void enviarJSON(int codigo, String json)
+{
+  adicionarCabecalhosCORS();
+
+  server.send(
+    codigo,
+    "application/json",
+    json
+  );
+}
+
+
+// ======================================================
+// TRATA REQUISICAO OPTIONS
+//
+// O navegador pode enviar OPTIONS antes de um POST.
+// ======================================================
+
+void responderOPTIONS()
+{
+  adicionarCabecalhosCORS();
+
+  server.send(
+    204,
+    "text/plain",
+    ""
+  );
+}
+
+
+// ======================================================
+// FUNCAO SIMPLES PARA EXTRAIR UM NUMERO DE UM JSON
+//
+// Exemplo:
+//
+// {
+//   "total_cookies": 3
+// }
+//
+// Retorna 3.
+// ======================================================
+
+int extrairInteiroJSON(
+  const String& json,
+  const char* chave
+)
+{
+  String procura = "\"";
+  procura += chave;
+  procura += "\"";
+
+  int posicao = json.indexOf(procura);
+
+  if (posicao < 0)
+  {
+    return -1;
+  }
+
+
+  int doisPontos = json.indexOf(
+    ':',
+    posicao
+  );
+
+  if (doisPontos < 0)
+  {
+    return -1;
+  }
+
+
+  int inicio = doisPontos + 1;
+
+
+  // Procura o primeiro numero
+  while (
+    inicio < json.length() &&
+    !isDigit(json[inicio])
+  )
+  {
+    inicio++;
+  }
+
+
+  if (inicio >= json.length())
+  {
+    return -1;
+  }
+
+
+  int fim = inicio;
+
+
+  while (
+    fim < json.length() &&
+    isDigit(json[fim])
+  )
+  {
+    fim++;
+  }
+
+
+  return json
+    .substring(inicio, fim)
+    .toInt();
+}
+
+
+// ======================================================
+// GET /
+//
+// Apenas para testar se o servidor esta funcionando.
+// ======================================================
+
+void handleRoot()
+{
+  adicionarCabecalhosCORS();
+
+  server.send(
+    200,
+    "text/plain",
+    "Cookie Express - ESP32 online!"
+  );
+}
+
+
+// ======================================================
+// GET /api/status
+//
+// Status geral do ESP.
+// ======================================================
+
+void handleStatus()
+{
+  String json = "{";
+
+  json += "\"online\":true,";
+  json += "\"pedido_ativo\":";
+
+  json += pedidoAtivo
+    ? "true"
+    : "false";
+
+  json += "}";
+
+
+  enviarJSON(
+    200,
+    json
+  );
+}
+
+
+// ======================================================
+// POST /api/pedido
+//
+// A IHM envia o pedido para este endereco.
+// ======================================================
+
+void handleNovoPedido()
+{
+  Serial.println();
+  Serial.println("==============================");
+  Serial.println("NOVO PEDIDO RECEBIDO");
+  Serial.println("==============================");
+
+
+  // Corpo JSON enviado pelo HTML
+  String body = server.arg("plain");
+
+
+  Serial.println("JSON recebido:");
+  Serial.println(body);
+
+
+  // Procura:
+  //
+  // "total_cookies": 3
+
+  int total = extrairInteiroJSON(
+    body,
+    "total_cookies"
+  );
+
+
+  // Valida quantidade
+  if (
+    total < 1 ||
+    total > 3
+  )
+  {
+    enviarJSON(
+      400,
+      "{\"ok\":false,\"erro\":\"Quantidade invalida\"}"
+    );
+
+    Serial.println(
+      "ERRO: quantidade invalida!"
+    );
+
+    return;
+  }
+
+
+  // Salva novo pedido
+
+  totalCookiesPedido = total;
+
+  cookiesEntregues = 0;
+
+  pedidoAtivo = true;
+
+  statusPedido = "recebido";
+
+  mensagemSensor = "";
+
+  instantePedido = millis();
+
+
+  Serial.print(
+    "Total de cookies: "
+  );
+
+  Serial.println(
+    totalCookiesPedido
+  );
+
+
+  Serial.println();
+  Serial.println(
+    "Digite D no Monitor Serial"
+  );
+
+  Serial.println(
+    "para simular o sensor detectando"
+  );
+
+  Serial.println(
+    "um cookie."
+  );
+
+
+  String json = "{";
+
+  json += "\"ok\":true,";
+
+  json += "\"status\":\"recebido\",";
+
+  json += "\"total_cookies\":";
+
+  json += totalCookiesPedido;
+
+  json += "}";
+
+
+  enviarJSON(
+    200,
+    json
+  );
+}
+
+
+// ======================================================
+// GET /api/pedido/status
+//
+// A IHM consulta este endpoint a cada ~700 ms.
+// ======================================================
+
+void handleStatusPedido()
+{
+  String json = "{";
+
+
+  json += "\"status\":\"";
+  json += statusPedido;
+  json += "\",";
+
+
+  json += "\"sensor\":\"";
+  json += mensagemSensor;
+  json += "\",";
+
+
+  json += "\"cookies_entregues\":";
+  json += cookiesEntregues;
+  json += ",";
+
+
+  json += "\"total_cookies\":";
+  json += totalCookiesPedido;
+
+
+  json += "}";
+
+
+  enviarJSON(
+    200,
+    json
+  );
+}
+
+
+// ======================================================
+// SIMULA DETECCAO DO SENSOR
+//
+// Por enquanto vamos usar o Monitor Serial.
+//
+// Digite:
+//
+// D
+//
+// Cada D representa um cookie passando no sensor.
+// ======================================================
+
+void registrarCookieEntregue()
+{
+  if (!pedidoAtivo)
+  {
+    Serial.println(
+      "Nenhum pedido ativo."
+    );
+
+    return;
+  }
+
+
+  if (
+    cookiesEntregues >=
+    totalCookiesPedido
+  )
+  {
+    Serial.println(
+      "Todos os cookies ja foram entregues."
+    );
+
+    return;
+  }
+
+
+  cookiesEntregues++;
+
+
+  mensagemSensor =
+    "ok cookie entregue";
+
+
+  Serial.println();
+  Serial.println(
+    ">>> SENSOR: COOKIE DETECTADO <<<"
+  );
+
+
+  Serial.print(
+    "Entregues: "
+  );
+
+  Serial.print(
+    cookiesEntregues
+  );
+
+  Serial.print(
+    "/"
+  );
+
+  Serial.println(
+    totalCookiesPedido
+  );
+
+
+  // Se ainda faltam cookies
+  if (
+    cookiesEntregues <
+    totalCookiesPedido
+  )
+  {
+    statusPedido =
+      "liberando";
+  }
+
+
+  // Todos entregues
+  else
+  {
+    statusPedido =
+      "entregue";
+
+
+    Serial.println();
+    Serial.println(
+      "PEDIDO CONCLUIDO!"
+    );
+
+    Serial.println(
+      "IHM agora pode mostrar 100%."
+    );
+  }
+}
+
+
+// ======================================================
+// REINICIA ESTADO DO PEDIDO
+// ======================================================
+
+void resetarPedido()
+{
+  pedidoAtivo = false;
+
+  totalCookiesPedido = 0;
+
+  cookiesEntregues = 0;
+
+  statusPedido = "ocioso";
+
+  mensagemSensor = "";
+
+  Serial.println();
+  Serial.println(
+    "Pedido resetado."
+  );
+}
+
+
+// ======================================================
+// SETUP
+// ======================================================
+
+void setup()
+{
+  Serial.begin(115200);
+
+  delay(1000);
+
+
+  Serial.println();
+  Serial.println();
+  Serial.println(
+    "================================"
+  );
+
+  Serial.println(
+    " COOKIE EXPRESS - ESP32"
+  );
+
+  Serial.println(
+    "================================"
+  );
+
+
+  // ----------------------------------------------
+  // Inicia ESP como Access Point
+  // ----------------------------------------------
+
+  Serial.println(
+    "Criando rede Wi-Fi..."
+  );
+
+
+  WiFi.mode(
+    WIFI_AP
+  );
+
+
+  bool resultado =
+    WiFi.softAP(
+      WIFI_SSID,
+      WIFI_PASSWORD
+    );
+
+
+  if (!resultado)
+  {
+    Serial.println(
+      "ERRO ao criar rede Wi-Fi!"
+    );
+
+    return;
+  }
+
+
+  Serial.println(
+    "Rede criada!"
+  );
+
+
+  Serial.print(
+    "SSID: "
+  );
+
+  Serial.println(
+    WIFI_SSID
+  );
+
+
+  Serial.print(
+    "Senha: "
+  );
+
+  Serial.println(
+    WIFI_PASSWORD
+  );
+
+
+  Serial.print(
+    "IP do ESP32: "
+  );
+
+  Serial.println(
+    WiFi.softAPIP()
+  );
+
+
+  // ----------------------------------------------
+  // ROTAS HTTP
+  // ----------------------------------------------
+
+
+  // Teste
+  server.on(
+    "/",
+    HTTP_GET,
+    handleRoot
+  );
+
+
+  // Status geral
+  server.on(
+    "/api/status",
+    HTTP_GET,
+    handleStatus
+  );
+
+
+  // Receber novo pedido
+  server.on(
+    "/api/pedido",
+    HTTP_POST,
+    handleNovoPedido
+  );
+
+
+  // Preflight CORS
+  server.on(
+    "/api/pedido",
+    HTTP_OPTIONS,
+    responderOPTIONS
+  );
+
+
+  // Status do pedido
+  server.on(
+    "/api/pedido/status",
+    HTTP_GET,
+    handleStatusPedido
+  );
+
+
+  server.on(
+    "/api/pedido/status",
+    HTTP_OPTIONS,
+    responderOPTIONS
+  );
+
+
+  // Rota inexistente
+  server.onNotFound(
+    []()
+    {
+      adicionarCabecalhosCORS();
+
+      server.send(
+        404,
+        "application/json",
+        "{\"erro\":\"Endpoint nao encontrado\"}"
+      );
+    }
+  );
+
+
+  // Inicia servidor
+  server.begin();
+
+
+  Serial.println();
+  Serial.println(
+    "Servidor HTTP iniciado!"
+  );
+
+  Serial.println();
+
+  Serial.println(
+    "Abra no navegador:"
+  );
+
+  Serial.println(
+    "http://192.168.4.1"
+  );
+
+  Serial.println();
+
+  Serial.println(
+    "Monitor Serial:"
+  );
+
+  Serial.println(
+    "D = cookie detectado"
+  );
+
+  Serial.println(
+    "R = resetar pedido"
+  );
+}
+
+
+// ======================================================
+// LOOP
+// ======================================================
+
+void loop()
+{
+  // Processa requisicoes HTTP
+  server.handleClient();
+
+
+  // ----------------------------------------------
+  // Simula que a maquina comecou
+  // a preparar o pedido
+  // ----------------------------------------------
+
+  if (
+    pedidoAtivo &&
+    statusPedido == "recebido"
+  )
+  {
+    if (
+      millis() - instantePedido >
+      1200
+    )
+    {
+      statusPedido =
+        "separando";
+    }
+  }
+
+
+  // ----------------------------------------------
+  // MONITOR SERIAL
+  // ----------------------------------------------
+
+  if (
+    Serial.available()
+  )
+  {
+    char comando =
+      Serial.read();
+
+
+    // Simula sensor
+    if (
+      comando == 'd' ||
+      comando == 'D'
+    )
+    {
+      registrarCookieEntregue();
+    }
+
+
+    // Reseta
+    else if (
+      comando == 'r' ||
+      comando == 'R'
+    )
+    {
+      resetarPedido();
+    }
+  }
+}

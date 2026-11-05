@@ -1,0 +1,66 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1180 870" role="img" aria-labelledby="real-title real-desc">
+<title id="real-title">Comunicação com a máquina ESP32</title>
+<desc id="real-desc">O PC e o celular entram no Wi-Fi do ESP. O navegador baixa as telas do Python no PC, usa a API do ESP e o ESP acessa contas e vendas no Python. Motores, IR e fim de curso ligam-se ao ESP por GPIO.</desc>
+<defs><marker id="real-head" markerWidth="9" markerHeight="9" refX="7" refY="4" orient="auto-start-reverse"><path d="M0 0 8 4 0 8" fill="none" stroke="#14664c" stroke-width="1.4"/></marker></defs>
+<style>
+.r-bg{fill:#faf9f4}.r-box{fill:#fff;stroke:#b8cdbf;stroke-width:2}.r-core{fill:#e8f0e8;stroke:#14664c;stroke-width:2}
+.r-title{font:700 23px Arial,sans-serif;fill:#202d29}.r-text{font:16px Arial,sans-serif;fill:#344e42}.r-label{font:700 15px Arial,sans-serif;fill:#14664c}.r-small{font:14px Arial,sans-serif;fill:#56665e}
+.r-line{fill:none;stroke:#14664c;stroke-width:2.4;marker-end:url(#real-head)}.r-both{marker-start:url(#real-head)}.r-dash{stroke-dasharray:7 6}
+</style>
+<rect class="r-bg" width="1180" height="870" rx="16"/>
+<text class="r-title" x="40" y="40">Operação com ESP · rede COOKIE_EXPRESS</text>
+<text class="r-text" x="40" y="70">PC e celular conectados ao AP do ESP32. O IPv4 do PC é atribuído por DHCP.</text>
+<rect class="r-box" x="40" y="130" width="320" height="180" rx="14"/>
+<text class="r-title" x="60" y="165">Navegador</text>
+<text class="r-text" x="60" y="197">Celular ou PC · IHM / backoffice</text>
+<text class="r-text" x="60" y="225">Token de sessão em memória</text>
+<text class="r-text" x="60" y="253">Cache local de perfis e estoque</text>
+<text class="r-small" x="60" y="282">O navegador não recebe X-ESP-Key.</text>
+<rect class="r-box" x="820" y="130" width="320" height="180" rx="14"/>
+<text class="r-title" x="840" y="165">PC · Python + SQLite</text>
+<text class="r-text" x="840" y="197">server.py · HTTP TCP 8080</text>
+<text class="r-text" x="840" y="225">HTMLs públicos; API interna com chave</text>
+<text class="r-text" x="840" y="253">Contas, sessões, vendas e estoque</text>
+<text class="r-small" x="840" y="282">servidor/data · dados persistentes</text>
+<path class="r-line r-both" d="M365 200 H812"/>
+<text class="r-label" x="405" y="163">1 · Carregar as páginas · TCP 8080</text>
+<text class="r-small" x="405" y="183">GET / · /backoffice · /guia</text>
+<text class="r-small" x="405" y="226">URL no celular: http://IP_DO_PC:8080/</text>
+<rect class="r-core" x="430" y="440" width="320" height="190" rx="14"/>
+<text class="r-title" x="450" y="475">ESP32 · API + controle</text>
+<text class="r-text" x="450" y="505">192.168.4.1 · HTTP TCP 80</text>
+<text class="r-text" x="450" y="533">api.c → controller.c → acionamento.c</text>
+<text class="r-text" x="450" y="561">Pedidos, estoque e manutenção</text>
+<text class="r-small" x="450" y="591">NVS: estoque, bloqueio e venda pendente</text>
+<text class="r-small" x="450" y="614">Teste atual: D / BOOT confirma a unidade.</text>
+<path class="r-line r-both" d="M200 315 V328 H382 V510 H422"/>
+<text class="r-label" x="40" y="358">2 · API JSON do ESP · TCP 80</text>
+<text class="r-small" x="40" y="383">Login, pedido, status e estoque</text>
+<text class="r-small" x="40" y="408">Authorization: Bearer nas ações protegidas</text>
+<text class="r-small" x="40" y="433">CORS permite a origem da página do PC.</text>
+<path class="r-line r-both" d="M758 510 H1152 V328 H980 V315"/>
+<text class="r-label" x="792" y="358">3 · ESP ↔ banco · TCP 8080</text>
+<text class="r-small" x="792" y="383">X-ESP-Key + Bearer quando necessário</text>
+<text class="r-small" x="792" y="408">Login/sessão/vendas; envio do estoque</text>
+<text class="r-small" x="792" y="433">Sincronização: espera de 5 s por ciclo</text>
+<path class="r-line r-both r-dash" d="M700 438 V340 H780 V268 H812"/>
+<text class="r-label" x="438" y="358">UDP 8081 · descoberta do PC</text>
+<text class="r-small" x="438" y="383">Broadcast + nonce + HMAC-SHA256</text>
+<text class="r-small" x="438" y="408">O endereço fica em cache no backend.</text>
+<path class="r-line" d="M490 634 V666 H200 V694"/>
+<path class="r-line r-both" d="M590 634 V694"/>
+<path class="r-line" d="M980 694 V666 H690 V634"/>
+<rect class="r-box" x="40" y="700" width="320" height="120" rx="12"/>
+<text class="r-title" x="60" y="732">6 motores</text>
+<text class="r-text" x="60" y="760">GPIO18 / 19 / 21 / 22 / 23 / 25</text>
+<text class="r-small" x="60" y="788">Um por vez · 3 s/unidade · via potência</text>
+<rect class="r-box" x="430" y="700" width="320" height="120" rx="12"/>
+<text class="r-title" x="450" y="732">Barreira infravermelha</text>
+<text class="r-text" x="450" y="760">TX26: 38 kHz · RX27: entrada</text>
+<text class="r-small" x="450" y="788">100 ms ligado / 200 ms desligado</text>
+<rect class="r-box" x="820" y="700" width="320" height="120" rx="12"/>
+<text class="r-title" x="840" y="732">Fim de curso</text>
+<text class="r-text" x="840" y="760">GPIO32 · fecha para GND ao acionar</text>
+<text class="r-small" x="840" y="788">Para motores e bloqueia novas compras</text>
+<text class="r-small" x="40" y="850">Setas duplas: troca de dados. Tracejado: descoberta. GPIOs de motor comandam drivers, não alimentam motores.</text>
+</svg>

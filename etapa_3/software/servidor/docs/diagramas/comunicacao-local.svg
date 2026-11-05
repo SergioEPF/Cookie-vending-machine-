@@ -1,0 +1,39 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1180 420" role="img" aria-labelledby="demo-title demo-desc">
+<title id="demo-title">Comunicação na demonstração local sem ESP</title>
+<desc id="demo-desc">Navegador, simulador Python e SQLite temporário executam no mesmo PC. As telas usam a API de demonstração em localhost 8082, sem Wi-Fi do ESP nem GPIO.</desc>
+<defs><marker id="demo-head" markerWidth="9" markerHeight="9" refX="7" refY="4" orient="auto-start-reverse"><path d="M0 0 8 4 0 8" fill="none" stroke="#83551d" stroke-width="1.4"/></marker></defs>
+<style>
+.d-bg{fill:#faf9f4}.d-box{fill:#fff;stroke:#cdbb9f;stroke-width:2}.d-core{fill:#fff0cc;stroke:#a87934;stroke-width:2}
+.d-title{font:700 23px Arial,sans-serif;fill:#202d29}.d-text{font:16px Arial,sans-serif;fill:#513414}.d-small{font:14px Arial,sans-serif;fill:#6c5c48}
+.d-line{fill:none;stroke:#83551d;stroke-width:2.4;marker-start:url(#demo-head);marker-end:url(#demo-head)}
+</style>
+<rect class="d-bg" width="1180" height="420" rx="16"/>
+<text class="d-title" x="40" y="40">Demonstração sem ESP · tudo neste PC</text>
+<text class="d-text" x="40" y="70">Iniciar: powershell -ExecutionPolicy Bypass -File servidor/testes/demonstracao/iniciar.ps1</text>
+<rect class="d-box" x="40" y="130" width="300" height="175" rx="14"/>
+<text class="d-title" x="60" y="167">Navegador no PC</text>
+<text class="d-text" x="60" y="200">http://127.0.0.1:8082/</text>
+<text class="d-text" x="60" y="228">IHM e backoffice reais</text>
+<text class="d-small" x="60" y="258">API_BASE aponta para a origem local.</text>
+<text class="d-small" x="60" y="284">Banner identifica a demonstração.</text>
+<path class="d-line" d="M347 214 H432"/>
+<text class="d-small" x="354" y="184">HTTP</text>
+<text class="d-small" x="350" y="244">TCP 8082</text>
+<rect class="d-core" x="440" y="130" width="320" height="175" rx="14"/>
+<text class="d-title" x="460" y="167">Simulador Python</text>
+<text class="d-text" x="460" y="200">servidor/testes/demonstracao/demo.py</text>
+<text class="d-text" x="460" y="228">Serve HTML e replica a API do ESP</text>
+<text class="d-small" x="460" y="258">Entrega automática: 3 s por cookie</text>
+<text class="d-small" x="460" y="284">/simulador aciona/solta a chave virtual.</text>
+<path class="d-line" d="M767 214 H852"/>
+<text class="d-small" x="783" y="184">SQLite</text>
+<text class="d-small" x="777" y="244">arquivo local</text>
+<rect class="d-box" x="860" y="130" width="280" height="175" rx="14"/>
+<text class="d-title" x="880" y="167">Banco temporário</text>
+<text class="d-text" x="880" y="200">Contas e sessões de teste</text>
+<text class="d-text" x="880" y="228">Estoque e vendas simulados</text>
+<text class="d-small" x="880" y="258">Novo processo = dados iniciais.</text>
+<text class="d-small" x="880" y="284">Não usa servidor/data.</text>
+<text class="d-text" x="40" y="353">Cliente: teste / teste123 · Backoffice: admin / admin123 · Senhas exclusivas da demonstração.</text>
+<text class="d-small" x="40" y="386">Sem ESP, descoberta UDP, GPIOs ou motores físicos. Escuta somente em 127.0.0.1; não atende o celular.</text>
+</svg>

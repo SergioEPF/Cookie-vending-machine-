@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="pt-BR">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Simulador local · Cookie Express</title>
+<style>
+body{font:16px/1.6 Arial,sans-serif;background:#f6f1eb;color:#35251d;margin:0}
+main{max-width:650px;margin:40px auto;padding:24px;background:#fffcf8;border-radius:18px}
+button{font:inherit;background:#633924;color:#fff;border:0;border-radius:10px;padding:12px 18px;margin:5px;cursor:pointer}
+a{color:#633924}#status{padding:16px;background:#fff0cc;border-radius:10px}
+button:focus-visible,a:focus-visible{outline:3px solid #ac064a;outline-offset:3px}
+@media(max-width:700px){main{margin:16px}}
+</style>
+<main>
+<h1>Simulador local</h1>
+<p>Teste a IHM sem conectar o ESP. Cada cookie é entregue automaticamente após 3 segundos, sem apertar D ou BOOT.</p>
+<p><a href="/" target="_blank" rel="noopener">Abrir IHM</a> · <a href="/backoffice" target="_blank" rel="noopener">Abrir backoffice</a></p>
+<p>Cliente: <b>teste / teste123</b><br>Administrador: <b>admin / admin123</b></p>
+<h2>Fim de curso</h2>
+<p id="status" role="status" aria-live="polite">Consultando…</p>
+<button id="activate">Acionar chave</button>
+<button id="release">Soltar chave</button>
+<p>Acionar a chave interrompe o pedido e bloqueia as compras. Soltar a chave mantém o bloqueio. Depois, entre no backoffice e confirme a manutenção para liberar as compras.</p>
+<p>As telas atualizam o estado periodicamente; na IHM, você também pode usar “Verificar disponibilidade”. Os dados deste simulador são separados dos dados reais e são apagados ao encerrar o processo.</p>
+</main>
+<script>
+const message=document.getElementById('status');
+async function request(path,options){const r=await fetch(path,options);const data=await r.json();if(!r.ok)throw Error(data.erro||'Falha na simulação');return data;}
+async function update(){try{const d=await request('/api/status');message.textContent=(d.fim_curso_acionado?'Chave acionada. ':'Chave solta. ')+(d.manutencao?'Compras bloqueadas por manutenção.':'Compras liberadas.');}catch(e){message.textContent=e.message;}}
+async function setSwitch(acionado){document.querySelectorAll('button').forEach(b=>b.disabled=true);try{await request('/api/demo/fim-curso',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({acionado})});await update();}catch(e){message.textContent=e.message;}finally{document.querySelectorAll('button').forEach(b=>b.disabled=false);}}
+document.getElementById('activate').onclick=()=>setSwitch(true);
+document.getElementById('release').onclick=()=>setSwitch(false);
+update();setInterval(update,3000);
+</script>
+</html>

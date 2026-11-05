@@ -1,0 +1,3898 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+  <meta name="theme-color" content="#f7f1ea" />
+  <title>Docce Luna — Cookie Express</title>
+
+<style>
+:root{
+  --bg:#f6efe7;
+  --surface:#fffdf9;
+  --surface-2:#fff;
+  --brown:#73391f;
+  --brown-2:#6b321c;
+  --text:#15120f;
+  --muted:#625c56;
+  --line:#decec1;
+  --line-strong:#98614a;
+  --green:#49a247;
+  --green-soft:#edf8ec;
+  --pink:#b40e52;
+  --disabled:#e9e0d7;
+  --shadow:0 26px 42px rgba(84,48,27,.20);
+}
+
+*{
+  box-sizing:border-box;
+}
+
+html,
+body{
+  margin:0;
+  min-height:100%;
+  font-family:Inter,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;
+  background:radial-gradient(
+    circle at top,
+    #4a2112 0,
+    #25130d 42%,
+    #17100d 100%
+  );
+  color:var(--text);
+}
+
+button,
+input{
+  font:inherit;
+}
+
+button{
+  border:0;
+}
+
+body{
+  padding:22px 14px;
+}
+
+.phone-shell{
+  width:min(100%,430px);
+  margin:0 auto;
+  background:var(--bg);
+  padding:20px 14px 24px;
+  box-shadow:0 34px 70px rgba(0,0,0,.32);
+}
+
+.app-card{
+  min-height:calc(100svh - 88px);
+  background:var(--surface);
+  border:1.5px solid #d7c6b6;
+  border-radius:28px;
+  padding:22px 22px 18px;
+  display:flex;
+  flex-direction:column;
+  box-shadow:var(--shadow);
+}
+
+/* =========================
+   CABEÇALHO
+========================= */
+
+.brand-header{
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap:12px;
+  min-height:48px;
+}
+
+.brand{
+  display:flex;
+  align-items:center;
+  gap:10px;
+  min-width:0;
+}
+
+.brand-logo{
+  width:48px;
+  height:48px;
+  object-fit:cover;
+  border-radius:50%;
+}
+
+.brand-name{
+  font-size:17px;
+  font-weight:800;
+  color:var(--pink);
+  white-space:nowrap;
+}
+
+.brand-logo-inline{
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  background:#fff3e8;
+  border:1px solid #e6cdb9;
+  font-size:25px;
+  line-height:1;
+}
+
+.online-pill{
+  display:flex;
+  align-items:center;
+  gap:7px;
+  color:var(--green);
+  background:var(--green-soft);
+  padding:8px 11px;
+  border-radius:999px;
+  font-size:12px;
+  font-weight:700;
+  white-space:nowrap;
+}
+
+.online-pill span{
+  width:8px;
+  height:8px;
+  border-radius:50%;
+  background:var(--green);
+}
+
+.online-pill b{
+  font:inherit;
+  font-weight:700;
+}
+
+.online-pill.connecting{
+  color:#9a6c51;
+  background:#f7eee6;
+}
+
+.online-pill.connecting span{
+  background:#c58a60;
+}
+
+.online-pill.offline{
+  color:#a43b35;
+  background:#fff0ef;
+}
+
+.online-pill.offline span{
+  background:#c4473d;
+}
+
+.online-pill.online{
+  color:var(--green);
+  background:var(--green-soft);
+}
+
+.online-pill.online span{
+  background:var(--green);
+}
+
+.divider{
+  height:1px;
+  background:#d9c9bb;
+  margin:18px 0 24px;
+}
+
+/* =========================
+   TELAS
+========================= */
+
+.screen{
+  display:none;
+  flex:1;
+  min-height:0;
+}
+
+.screen.active{
+  display:flex;
+  flex-direction:column;
+  animation:screen-in .22s ease-out;
+}
+
+@keyframes screen-in{
+  from{
+    opacity:.35;
+    transform:translateY(6px);
+  }
+
+  to{
+    opacity:1;
+    transform:none;
+  }
+}
+
+.login-content{
+  flex:1;
+}
+
+.eyebrow,
+.step-row>span,
+.identity-card>span,
+.final-label{
+  letter-spacing:.16em;
+  font-size:10px;
+  font-weight:800;
+  color:#9a6c51;
+}
+
+.eyebrow{
+  margin:17px 0 10px;
+}
+
+h1{
+  font-size:35px;
+  line-height:1.05;
+  margin:0 0 16px;
+  letter-spacing:-.04em;
+}
+
+h2{
+  font-size:29px;
+  line-height:1.04;
+  color:var(--brown);
+  margin:24px 0 10px;
+  letter-spacing:-.045em;
+}
+
+p{
+  margin:0;
+}
+
+.lead{
+  color:var(--muted);
+  font-size:16px;
+  line-height:1.45;
+}
+
+.lead.compact{
+  font-size:15px;
+}
+
+/* =========================
+   LOGIN
+========================= */
+
+.login-form{
+  margin-top:30px;
+  display:grid;
+  gap:18px;
+}
+
+.login-form label>span{
+  display:block;
+  font-size:13px;
+  font-weight:800;
+  margin-bottom:8px;
+}
+
+.input-wrap{
+  height:55px;
+  border:1.5px solid #d8c5b6;
+  border-radius:13px;
+  display:flex;
+  align-items:center;
+  padding:0 14px;
+  gap:12px;
+  background:white;
+}
+
+.field-icon{
+  color:var(--brown);
+  font-size:20px;
+  line-height:1;
+}
+
+.field-icon.lock{
+  font-size:16px;
+}
+
+.input-wrap input{
+  border:0;
+  outline:0;
+  width:100%;
+  font-size:15px;
+  background:transparent;
+  color:#27221e;
+}
+
+.input-wrap input::placeholder{
+  color:#aca098;
+}
+
+.screen-bottom{
+  margin-top:26px;
+}
+
+/* =========================
+   BOTÕES
+========================= */
+
+.primary-button{
+  width:100%;
+  min-height:56px;
+  margin-top:20px;
+  border-radius:14px;
+  background:var(--brown);
+  color:white;
+  font-weight:500;
+  font-size:17px;
+  box-shadow:0 10px 20px rgba(115,57,31,.14);
+  cursor:pointer;
+  transition:.18s ease;
+}
+
+.primary-button span{
+  font-size:23px;
+  margin-left:10px;
+}
+
+.primary-button:hover{
+  transform:translateY(-1px);
+  background:var(--brown-2);
+}
+
+.primary-button:active{
+  transform:translateY(1px);
+}
+
+.primary-button:disabled{
+  background:var(--disabled);
+  color:#b7aaa0;
+  box-shadow:none;
+  cursor:not-allowed;
+  transform:none;
+}
+
+.text-button{
+  background:transparent;
+  color:var(--brown);
+  font-size:16px;
+  padding:16px 10px 6px;
+  cursor:pointer;
+}
+
+.text-button.exit{
+  margin-top:8px;
+}
+
+/* =========================
+   ETAPAS
+========================= */
+
+.step-row{
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap:14px;
+}
+
+.step-bars{
+  display:flex;
+  gap:5px;
+}
+
+.step-bars i{
+  display:block;
+  width:30px;
+  height:6px;
+  background:#ddd2c6;
+  border-radius:99px;
+}
+
+.step-bars i.done{
+  background:var(--brown);
+}
+
+/* =========================
+   SELEÇÃO DE COOKIES
+========================= */
+
+.selection-limit{
+  margin-top:4px;
+  color:#4f4944;
+  font-size:14px;
+  display:flex;
+  align-items:center;
+  gap:6px;
+  flex-wrap:wrap;
+}
+
+.selection-limit #selection-count{
+  margin-left:auto;
+  border:1px solid #d8c7b8;
+  border-radius:999px;
+  padding:4px 8px;
+  font-size:11px;
+  font-weight:800;
+  color:var(--brown);
+  background:#fff;
+}
+
+.selection-limit #selection-count.full{
+  color:#fff;
+  background:var(--brown);
+  border-color:var(--brown);
+}
+
+.cookie-grid{
+  display:grid;
+  grid-template-columns:repeat(2,minmax(0,1fr));
+  gap:12px;
+  margin-top:25px;
+}
+
+.cookie-card{
+  position:relative;
+  min-height:155px;
+  background:#fff;
+  border:1.5px solid #d8c7b8;
+  border-radius:17px;
+  padding:14px 8px 12px;
+  display:flex;
+  align-items:center;
+  flex-direction:column;
+  justify-content:center;
+  cursor:pointer;
+  transition:.16s ease;
+  color:var(--text);
+}
+
+.cookie-card strong{
+  font-size:14px;
+  margin-top:10px;
+  text-align:center;
+}
+
+.cookie-card small{
+  font-size:12px;
+  color:#645d57;
+  margin-top:4px;
+}
+
+.cookie-card.selected{
+  border:2px solid var(--green);
+  box-shadow:0 8px 20px rgba(73,162,71,.11);
+}
+
+.cookie-card.limit-reached:not(.selected){
+  opacity:.48;
+}
+
+.selected-check{
+  display:none;
+  position:absolute;
+  right:9px;
+  top:9px;
+  width:24px;
+  height:24px;
+  border-radius:50%;
+  background:var(--green);
+  color:white;
+  align-items:center;
+  justify-content:center;
+  font-size:15px;
+}
+
+.cookie-card.selected .selected-check{
+  display:flex;
+}
+
+.cookie-card.sold-out{
+  cursor:not-allowed;
+}
+
+.cookie-card.sold-out strong{
+  color:var(--pink);
+  font-size:12px;
+}
+
+/* =========================
+   DESENHO DOS COOKIES
+========================= */
+
+.cookie{
+  position:relative;
+  display:block;
+  width:72px;
+  height:72px;
+  border-radius:50%;
+  background:#6f371f;
+}
+
+.cookie.mini{
+  width:48px;
+  height:48px;
+}
+
+.cookie b{
+  position:absolute;
+  width:7px;
+  height:7px;
+  border-radius:50%;
+  background:#2b2107;
+}
+
+.cookie b:nth-child(1){
+  left:23%;
+  top:24%;
+}
+
+.cookie b:nth-child(2){
+  left:61%;
+  top:18%;
+}
+
+.cookie b:nth-child(3){
+  left:29%;
+  top:64%;
+}
+
+.cookie b:nth-child(4){
+  left:54%;
+  top:55%;
+}
+
+.cookie b:nth-child(5){
+  left:71%;
+  top:62%;
+}
+
+.cookie.white{
+  background:#f2bb71;
+}
+
+.cookie.white b{
+  background:#fff4d8;
+}
+
+.cookie.red{
+  background:#a93026;
+}
+
+.cookie.red b{
+  background:#f7cd80;
+}
+
+.cookie.vanilla{
+  background:#f0b769;
+}
+
+.cookie.vanilla b{
+  background:#b66e39;
+}
+
+.cookie.mm{
+  background:#f2bb71;
+}
+
+.cookie.mm b:nth-child(1){
+  background:#2f5dab;
+}
+
+.cookie.mm b:nth-child(2){
+  background:#b52e36;
+}
+
+.cookie.mm b:nth-child(3){
+  background:#c22c8b;
+}
+
+.cookie.mm b:nth-child(4){
+  background:#46a05d;
+}
+
+.cookie.mm b:nth-child(5){
+  background:#ffd52c;
+}
+
+.cookie.mm b:nth-child(6){
+  display:block;
+  left:41%;
+  top:46%;
+  background:#e76b30;
+}
+
+.cookie.dark{
+  background:#96643e;
+}
+
+/* =========================
+   PEDIDO
+========================= */
+
+.identity-card,
+.order-card,
+.progress-card,
+.final-order-card{
+  border:1.4px solid var(--line-strong);
+  border-radius:17px;
+  background:#fff;
+}
+
+.identity-card{
+  padding:17px 18px;
+  margin-top:28px;
+}
+
+.identity-card strong{
+  display:block;
+  margin-top:10px;
+  font-size:18px;
+}
+
+.identity-card p{
+  margin-top:4px;
+  color:var(--muted);
+  font-size:15px;
+}
+
+.order-card{
+  margin-top:18px;
+  padding:14px 18px 17px;
+}
+
+.order-item{
+  display:grid;
+  grid-template-columns:58px 1fr auto;
+  align-items:center;
+  gap:12px;
+  padding:12px 0;
+}
+
+.order-item+.order-item{
+  border-top:1px solid #ebded2;
+}
+
+.order-item .cookie{
+  width:58px;
+  height:58px;
+}
+
+.order-item-info strong{
+  display:block;
+  font-size:17px;
+}
+
+.order-item-info span{
+  display:block;
+  color:var(--brown);
+  font-weight:700;
+  margin-top:5px;
+  font-size:13px;
+}
+
+.qty-control{
+  display:flex;
+  align-items:center;
+  gap:10px;
+}
+
+.qty-button{
+  width:35px;
+  height:35px;
+  border-radius:9px;
+  background:#fffaf5;
+  color:#baaea4;
+  font-size:20px;
+}
+
+.qty-button.plus{
+  background:var(--brown);
+  color:#fff;
+}
+
+.qty-button:disabled{
+  background:#eee6de!important;
+  color:#b9aca1!important;
+  cursor:not-allowed!important;
+}
+
+.qty-count{
+  font-weight:800;
+}
+
+.order-summary{
+  border-top:1px solid #dccbbe;
+  margin-top:10px;
+  padding-top:14px;
+}
+
+.order-summary>div{
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  color:#625c56;
+  font-size:14px;
+}
+
+.order-summary .total{
+  margin-top:8px;
+  color:#111;
+  font-size:18px;
+}
+
+/* =========================
+   PROGRESSO
+========================= */
+
+.progress-card{
+  margin-top:28px;
+  padding:16px;
+}
+
+.progress-card-top,
+.mini-cookie-row,
+.progress-labels{
+  display:flex;
+  align-items:center;
+}
+
+.progress-card-top{
+  justify-content:space-between;
+  gap:10px;
+  font-size:12px;
+  color:#5b5652;
+}
+
+.mini-cookie-row{
+  gap:10px;
+  color:#111;
+}
+
+.mini-cookie-row strong{
+  font-size:14px;
+}
+
+.progress-labels{
+  justify-content:space-between;
+  margin-top:20px;
+  color:#56504b;
+  font-size:14px;
+}
+
+.progress-labels strong{
+  font-size:25px;
+  color:var(--green);
+}
+
+.progress-track{
+  height:11px;
+  border-radius:99px;
+  background:#ded3c8;
+  margin-top:8px;
+  overflow:hidden;
+}
+
+.progress-track span{
+  display:block;
+  height:100%;
+  background:var(--green);
+  border-radius:inherit;
+  transition:width .65s ease;
+}
+
+/* =========================
+   SENSOR
+========================= */
+
+.sensor-feedback{
+  display:flex;
+  gap:10px;
+  align-items:flex-start;
+  margin-top:16px;
+  padding:12px;
+  border-radius:12px;
+  background:#f7f2ed;
+  border:1px solid #e4d8cd;
+  text-align:left;
+}
+
+.sensor-feedback .sensor-dot{
+  width:10px;
+  height:10px;
+  border-radius:50%;
+  background:#b68a70;
+  margin-top:4px;
+  flex:none;
+}
+
+.sensor-feedback strong{
+  display:block;
+  font-size:12px;
+  color:#4e4038;
+}
+
+.sensor-feedback small{
+  display:block;
+  margin-top:3px;
+  font-size:11px;
+  line-height:1.35;
+  color:#7e7168;
+}
+
+.sensor-feedback.ok{
+  background:#edf8ec;
+  border-color:#cce7ca;
+}
+
+.sensor-feedback.ok .sensor-dot{
+  background:var(--green);
+}
+
+.sensor-feedback.ok strong{
+  color:#377b36;
+}
+
+.sensor-feedback.error{
+  background:#fff2f0;
+  border-color:#efc9c4;
+}
+
+.sensor-feedback.error .sensor-dot{
+  background:#bf4a42;
+}
+
+.sensor-feedback.error strong{
+  color:#9c3933;
+}
+
+/* =========================
+   STATUS
+========================= */
+
+.status-list{
+  margin-top:31px;
+}
+
+.status{
+  display:grid;
+  grid-template-columns:44px 1fr;
+  gap:14px;
+  position:relative;
+  min-height:82px;
+}
+
+.status:not(:last-child)::after{
+  content:"";
+  position:absolute;
+  left:21px;
+  top:44px;
+  width:1px;
+  height:39px;
+  background:#d7c6b8;
+}
+
+.status-icon{
+  width:44px;
+  height:44px;
+  border-radius:50%;
+  border:1.8px solid #1f1915;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+}
+
+.status-icon i{
+  width:11px;
+  height:11px;
+  border-radius:50%;
+  background:var(--brown);
+}
+
+.status.done .status-icon{
+  background:var(--green-soft);
+  border-color:transparent;
+  color:var(--green);
+  font-size:20px;
+}
+
+.status div{
+  padding-top:6px;
+}
+
+.status strong{
+  display:block;
+  color:var(--brown);
+  font-size:16px;
+}
+
+.status small{
+  display:block;
+  margin-top:5px;
+  color:#8c8076;
+  font-size:12px;
+}
+
+.status.done strong{
+  color:var(--green);
+}
+
+.status.pending .status-icon{
+  border-color:#a9a19a;
+}
+
+.status.pending .status-icon i{
+  background:#fff;
+}
+
+.progress-note{
+  margin-top:auto;
+  padding-top:24px;
+  text-align:center;
+  color:#9c887a;
+  font-size:12px;
+  line-height:1.45;
+}
+
+/* =========================
+   SUCESSO
+========================= */
+
+#screen-success{
+  align-items:stretch;
+  text-align:center;
+}
+
+.success-mark{
+  width:88px;
+  height:88px;
+  border-radius:50%;
+  background:var(--green);
+  box-shadow:0 0 0 18px #eef8ec;
+  margin:38px auto 18px;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  color:white;
+  font-size:42px;
+}
+
+.success-title{
+  font-size:34px;
+  margin-top:18px;
+}
+
+.success-main{
+  font-size:17px;
+  line-height:1.55;
+  color:#615b56;
+}
+
+.success-main strong{
+  font-size:18px;
+}
+
+.final-order-card{
+  text-align:left;
+  margin-top:28px;
+  padding:18px;
+}
+
+.final-label{
+  display:block;
+}
+
+.final-order-item{
+  display:grid;
+  grid-template-columns:70px 1fr;
+  align-items:center;
+  gap:15px;
+  padding:15px 0;
+}
+
+.final-order-item .cookie{
+  width:70px;
+  height:70px;
+}
+
+.final-order-item strong{
+  display:block;
+  font-size:18px;
+}
+
+.final-order-item span{
+  display:block;
+  color:#5f5853;
+  margin-top:6px;
+  font-size:14px;
+}
+
+.final-total{
+  border-top:1px solid #eadfd5;
+  padding-top:17px;
+  display:flex;
+  justify-content:space-between;
+  font-size:18px;
+}
+
+.thanks{
+  font-size:14px;
+  color:#66605b;
+  margin-top:25px;
+}
+
+/* =========================
+   RESPONSIVO
+========================= */
+
+@media (max-width:380px){
+
+  body{
+    padding:0;
+  }
+
+  .phone-shell{
+    padding:10px 8px;
+    box-shadow:none;
+  }
+
+  .app-card{
+    padding:18px 16px 15px;
+    border-radius:22px;
+    min-height:100svh;
+  }
+
+  .brand-name{
+    font-size:15px;
+  }
+
+  .brand-logo{
+    width:43px;
+    height:43px;
+  }
+
+  .online-pill{
+    font-size:10px;
+    padding:7px 9px;
+  }
+
+  h2{
+    font-size:26px;
+  }
+
+  .cookie-grid{
+    gap:9px;
+  }
+
+  .cookie-card{
+    min-height:146px;
+  }
+
+  .step-bars i{
+    width:24px;
+  }
+
+  .order-item{
+    grid-template-columns:52px 1fr;
+  }
+
+  .qty-control{
+    grid-column:2;
+    justify-self:end;
+  }
+
+  .progress-card-top{
+    align-items:flex-start;
+    flex-direction:column;
+  }
+
+  .screen-bottom{
+    margin-top:22px;
+  }
+}
+
+@media (min-width:431px){
+
+  body{
+    padding-top:32px;
+    padding-bottom:32px;
+  }
+}
+</style>
+</head>
+
+<body>
+
+<main class="phone-shell" aria-live="polite">
+
+  <section class="app-card">
+
+    <!-- ======================
+         CABEÇALHO
+    ======================= -->
+
+    <header class="brand-header">
+
+      <div class="brand">
+
+        <span
+          class="brand-logo brand-logo-inline"
+          aria-label="Logo Docce Luna"
+        >
+          🍪
+        </span>
+
+        <span class="brand-name">
+          Docce Luna
+        </span>
+
+      </div>
+
+      <div
+        class="online-pill connecting"
+        id="machine-status"
+      >
+
+        <span></span>
+
+        <b id="machine-status-text">
+          Aguardando ESP
+        </b>
+
+      </div>
+
+    </header>
+
+    <div class="divider"></div>
+
+
+    <!-- ======================
+         LOGIN
+    ======================= -->
+
+    <section
+      class="screen active"
+      id="screen-login"
+      data-screen="login"
+    >
+
+      <div class="login-content">
+
+        <p class="eyebrow">
+          ACESSO À MÁQUINA
+        </p>
+
+        <h1>
+          Bem-vindo!
+        </h1>
+
+        <p class="lead">
+          Entre na sua conta para comprar seu cookie.
+        </p>
+
+
+        <form
+          id="login-form"
+          class="login-form"
+        >
+
+          <label>
+
+            <span>
+              Nome ou matrícula
+            </span>
+
+            <div class="input-wrap">
+
+              <span
+                class="field-icon"
+                aria-hidden="true"
+              >
+                ○
+              </span>
+
+              <input
+                id="user-name"
+                type="text"
+                placeholder="Nome ou matrícula"
+                value="Marina Costa"
+                autocomplete="name"
+              />
+
+            </div>
+
+          </label>
+
+
+          <label>
+
+            <span>
+              Senha
+            </span>
+
+            <div class="input-wrap">
+
+              <span
+                class="field-icon lock"
+                aria-hidden="true"
+              >
+                ▢
+              </span>
+
+              <input
+                id="user-password"
+                type="password"
+                placeholder="••••••••"
+                value="12345678"
+                autocomplete="current-password"
+              />
+
+            </div>
+
+          </label>
+
+        </form>
+
+      </div>
+
+
+      <button
+        class="primary-button screen-bottom"
+        type="submit"
+        form="login-form"
+      >
+        Entrar
+        <span>→</span>
+      </button>
+
+    </section>
+
+
+    <!-- ======================
+         ESCOLHA
+    ======================= -->
+
+    <section
+      class="screen"
+      id="screen-choose"
+      data-screen="choose"
+    >
+
+      <div class="step-row">
+
+        <span>
+          ETAPA 1 DE 4
+        </span>
+
+        <div
+          class="step-bars"
+          aria-label="Etapa 1 de 4"
+        >
+
+          <i class="done"></i>
+          <i></i>
+          <i></i>
+          <i></i>
+
+        </div>
+
+      </div>
+
+
+      <h2>
+        Escolha seu cookie
+      </h2>
+
+      <p class="lead compact">
+        Todos os sabores por apenas R$ 8,00
+      </p>
+
+      <p class="selection-limit">
+
+        <strong>
+          Mínimo:
+        </strong>
+
+        1
+
+        <strong>
+          Máximo:
+        </strong>
+
+        3 cookies no pedido
+
+        <span id="selection-count">
+          0/3
+        </span>
+
+      </p>
+
+
+      <div
+        class="cookie-grid"
+        id="cookie-grid"
+      >
+
+
+        <!-- CHOCOLATE -->
+
+        <button
+          class="cookie-card"
+          data-cookie="Chocolate"
+          data-price="9.90"
+          type="button"
+        >
+
+          <span class="selected-check">
+            ✓
+          </span>
+
+          <span class="cookie chocolate">
+            <b></b>
+            <b></b>
+            <b></b>
+            <b></b>
+            <b></b>
+          </span>
+
+          <strong>
+            Chocolate
+          </strong>
+
+          <small>
+            R$ 9,90
+          </small>
+
+        </button>
+
+
+        <!-- CHOCOLATE BRANCO -->
+
+        <button
+          class="cookie-card"
+          data-cookie="Chocolate Branco"
+          data-price="9.90"
+          type="button"
+        >
+
+          <span class="selected-check">
+            ✓
+          </span>
+
+          <span class="cookie white">
+            <b></b>
+            <b></b>
+            <b></b>
+            <b></b>
+            <b></b>
+          </span>
+
+          <strong>
+            Chocolate Branco
+          </strong>
+
+          <small>
+            R$ 9,90
+          </small>
+
+        </button>
+
+
+        <!-- RED VELVET -->
+
+        <button
+          class="cookie-card"
+          data-cookie="Red Velvet"
+          data-price="9.90"
+          type="button"
+        >
+
+          <span class="selected-check">
+            ✓
+          </span>
+
+          <span class="cookie red">
+            <b></b>
+            <b></b>
+            <b></b>
+            <b></b>
+            <b></b>
+          </span>
+
+          <strong>
+            Red Velvet
+          </strong>
+
+          <small>
+            R$ 9,90
+          </small>
+
+        </button>
+
+
+        <!-- BAUNILHA -->
+
+        <button
+          class="cookie-card"
+          data-cookie="Baunilha"
+          data-price="9.90"
+          type="button"
+        >
+
+          <span class="selected-check">
+            ✓
+          </span>
+
+          <span class="cookie vanilla">
+            <b></b>
+            <b></b>
+            <b></b>
+            <b></b>
+            <b></b>
+          </span>
+
+          <strong>
+            Baunilha
+          </strong>
+
+          <small>
+            R$ 9,90
+          </small>
+
+        </button>
+
+
+        <!-- M&Ms -->
+
+        <button
+          class="cookie-card"
+          data-cookie="M&M's"
+          data-price="9.90"
+          type="button"
+        >
+
+          <span class="selected-check">
+            ✓
+          </span>
+
+          <span class="cookie mm">
+            <b></b>
+            <b></b>
+            <b></b>
+            <b></b>
+            <b></b>
+            <b></b>
+          </span>
+
+          <strong>
+            M&amp;M's
+          </strong>
+
+          <small>
+            R$ 9,90
+          </small>
+
+        </button>
+
+
+        <!-- ESGOTADO -->
+
+        <button
+          class="cookie-card sold-out"
+          type="button"
+          disabled
+        >
+
+          <span class="cookie dark">
+            <b></b>
+            <b></b>
+            <b></b>
+            <b></b>
+            <b></b>
+          </span>
+
+          <strong>
+            ESGOTADO
+          </strong>
+
+          <small>
+            –
+          </small>
+
+        </button>
+
+      </div>
+
+
+      <button
+        class="primary-button"
+        id="continue-button"
+        type="button"
+        disabled
+      >
+
+        Continuar
+        <span>→</span>
+
+      </button>
+
+    </section>
+
+
+    <!-- ======================
+         CONFIRMAÇÃO
+    ======================= -->
+
+    <section
+      class="screen"
+      id="screen-confirm"
+      data-screen="confirm"
+    >
+
+      <div class="step-row">
+
+        <span>
+          ETAPA 2 DE 4
+        </span>
+
+        <div
+          class="step-bars"
+          aria-label="Etapa 2 de 4"
+        >
+
+          <i class="done"></i>
+          <i class="done"></i>
+          <i></i>
+          <i></i>
+
+        </div>
+
+      </div>
+
+
+      <h2>
+        Confirme seu pedido
+      </h2>
+
+
+      <div class="identity-card">
+
+        <span>
+          COMPRANDO COMO
+        </span>
+
+        <strong id="buyer-name">
+          Marina Costa
+        </strong>
+
+        <p id="buyer-id">
+          Matrícula 202312345
+        </p>
+
+      </div>
+
+
+      <div class="order-card">
+
+        <div id="order-items"></div>
+
+        <div class="order-summary">
+
+          <div>
+
+            <span>
+              Subtotal
+            </span>
+
+            <span id="subtotal">
+              R$ 0,00
+            </span>
+
+          </div>
+
+
+          <div class="total">
+
+            <strong>
+              Total
+            </strong>
+
+            <strong id="total">
+              R$ 0,00
+            </strong>
+
+          </div>
+
+        </div>
+
+      </div>
+
+
+      <button
+        class="primary-button"
+        id="confirm-button"
+        type="button"
+      >
+
+        Confirmar pedido
+        <span>→</span>
+
+      </button>
+
+
+      <button
+        class="text-button"
+        id="back-button"
+        type="button"
+      >
+        Voltar e alterar
+      </button>
+
+    </section>
+
+
+    <!-- ======================
+         PREPARAÇÃO
+    ======================= -->
+
+    <section
+      class="screen"
+      id="screen-progress"
+      data-screen="progress"
+    >
+
+      <div class="step-row">
+
+        <span>
+          ETAPA 3 DE 4
+        </span>
+
+        <div
+          class="step-bars"
+          aria-label="Etapa 3 de 4"
+        >
+
+          <i class="done"></i>
+          <i class="done"></i>
+          <i class="done"></i>
+          <i></i>
+
+        </div>
+
+      </div>
+
+
+      <h2>
+        Preparando seu pedido
+      </h2>
+
+      <p class="lead compact">
+        Aguarde enquanto a máquina prepara e confirma a entrega do seu pedido.
+      </p>
+
+
+      <div class="progress-card">
+
+        <div class="progress-card-top">
+
+          <div class="mini-cookie-row">
+
+            <span class="cookie mini chocolate">
+              <b></b>
+              <b></b>
+              <b></b>
+              <b></b>
+              <b></b>
+            </span>
+
+            <strong id="progress-cookie-name">
+              Chocolate
+            </strong>
+
+          </div>
+
+
+          <strong>
+            Pedido #0482
+          </strong>
+
+        </div>
+
+
+        <div class="progress-labels">
+
+          <span>
+            Progresso do pedido
+          </span>
+
+          <strong id="progress-percent">
+            36%
+          </strong>
+
+        </div>
+
+
+        <div class="progress-track">
+
+          <span
+            id="progress-fill"
+            style="width:36%"
+          ></span>
+
+        </div>
+
+
+        <div
+          class="sensor-feedback"
+          id="sensor-feedback"
+        >
+
+          <span class="sensor-dot"></span>
+
+          <div>
+
+            <strong id="sensor-title">
+              Aguardando o ESP32
+            </strong>
+
+            <small id="sensor-message">
+              O pedido ainda não foi confirmado pela máquina.
+            </small>
+
+          </div>
+
+        </div>
+
+      </div>
+
+
+      <div class="status-list">
+
+
+        <div
+          class="status done"
+          id="status-1"
+        >
+
+          <span class="status-icon">
+            ✓
+          </span>
+
+          <div>
+
+            <strong>
+              Pedido recebido
+            </strong>
+
+            <small>
+              Seu pedido foi registrado.
+            </small>
+
+          </div>
+
+        </div>
+
+
+        <div
+          class="status current"
+          id="status-2"
+        >
+
+          <span class="status-icon">
+            <i></i>
+          </span>
+
+          <div>
+
+            <strong>
+              Separando cookie
+            </strong>
+
+            <small>
+              Estamos separando seu cookie.
+            </small>
+
+          </div>
+
+        </div>
+
+
+        <div
+          class="status"
+          id="status-3"
+        >
+
+          <span class="status-icon">
+            <i></i>
+          </span>
+
+          <div>
+
+            <strong>
+              Liberando na bandeja
+            </strong>
+
+            <small>
+              Quase pronto!
+            </small>
+
+          </div>
+
+        </div>
+
+      </div>
+
+
+      <p class="progress-note">
+        A tela só chegará a 100% quando o ESP32 confirmar,
+        pelos sensores, que todos os cookies do pedido foram entregues.
+      </p>
+
+    </section>
+
+
+    <!-- ======================
+         SUCESSO
+    ======================= -->
+
+    <section
+      class="screen"
+      id="screen-success"
+      data-screen="success"
+    >
+
+      <div class="success-mark">
+        ✓
+      </div>
+
+
+      <h2 class="success-title">
+        Parabéns!
+      </h2>
+
+
+      <p class="success-main">
+
+        <strong>
+          Seu cookie está pronto.
+        </strong>
+
+        <br>
+
+        Retire seu pedido na bandeja.
+
+      </p>
+
+
+      <div class="final-order-card">
+
+        <span class="final-label">
+          SEU PEDIDO
+        </span>
+
+        <div id="final-items"></div>
+
+
+        <div class="final-total">
+
+          <strong>
+            Total
+          </strong>
+
+          <strong id="final-total">
+            R$ 0,00
+          </strong>
+
+        </div>
+
+      </div>
+
+
+      <p class="thanks">
+        Obrigado por usar a Cookie Express!
+      </p>
+
+
+      <button
+        class="primary-button"
+        id="new-order-button"
+        type="button"
+      >
+
+        Fazer novo pedido
+        <span>→</span>
+
+      </button>
+
+
+      <button
+        class="text-button exit"
+        id="exit-button"
+        type="button"
+      >
+        ⇥&nbsp; Sair
+      </button>
+
+    </section>
+
+  </section>
+
+</main>
+
+
+<script>
+
+/* =========================================================
+   CONFIGURAÇÕES
+========================================================= */
+
+const CONFIG = {
+
+  /*
+    IP do ESP32.
+
+    Se a IHM estiver hospedada no próprio ESP:
+    ESP32_BASE_URL: ''
+
+    Se estiver no celular:
+    ESP32_BASE_URL: 'http://192.168.4.1'
+  */
+
+  ESP32_BASE_URL: 'http://192.168.4.1',
+
+
+  /*
+    Intervalo entre consultas de status ao ESP.
+  */
+
+  POLL_INTERVAL_MS: 700,
+
+
+  /*
+    TRUE  = testa sem ESP32
+    FALSE = usa ESP32 real
+  */
+
+  SIMULAR_ESP32: true
+};
+
+
+/*
+  LIMITE TOTAL DE COOKIES DO PEDIDO.
+
+  Importante:
+  é 3 cookies no pedido inteiro,
+  e NÃO 3 cookies por sabor.
+*/
+
+const MAX_COOKIES = 3;
+
+
+/* =========================================================
+   ELEMENTOS DA INTERFACE
+========================================================= */
+
+const screens = [
+  ...document.querySelectorAll('.screen')
+];
+
+const cards = [
+  ...document.querySelectorAll(
+    '.cookie-card[data-cookie]'
+  )
+];
+
+const continueButton =
+  document.getElementById(
+    'continue-button'
+  );
+
+const orderItems =
+  document.getElementById(
+    'order-items'
+  );
+
+const finalItems =
+  document.getElementById(
+    'final-items'
+  );
+
+const subtotalEl =
+  document.getElementById(
+    'subtotal'
+  );
+
+const totalEl =
+  document.getElementById(
+    'total'
+  );
+
+const finalTotalEl =
+  document.getElementById(
+    'final-total'
+  );
+
+const selectionCountEl =
+  document.getElementById(
+    'selection-count'
+  );
+
+const machineStatus =
+  document.getElementById(
+    'machine-status'
+  );
+
+const machineStatusText =
+  document.getElementById(
+    'machine-status-text'
+  );
+
+const sensorFeedback =
+  document.getElementById(
+    'sensor-feedback'
+  );
+
+const sensorTitle =
+  document.getElementById(
+    'sensor-title'
+  );
+
+const sensorMessage =
+  document.getElementById(
+    'sensor-message'
+  );
+
+const confirmButton =
+  document.getElementById(
+    'confirm-button'
+  );
+
+
+/* =========================================================
+   VARIÁVEIS
+========================================================= */
+
+let selected = [];
+
+let pollTimer = null;
+
+let mockTimer = null;
+
+let orderInProgress = false;
+
+
+/* =========================================================
+   FUNÇÕES AUXILIARES
+========================================================= */
+
+const money = value =>
+  value.toLocaleString(
+    'pt-BR',
+    {
+      style:'currency',
+      currency:'BRL'
+    }
+  );
+
+
+/*
+  Soma a quantidade TOTAL de cookies.
+*/
+
+const totalCookies = () =>
+  selected.reduce(
+    (sum,item) =>
+      sum + item.qty,
+    0
+  );
+
+
+/*
+  Troca de tela.
+*/
+
+function showScreen(name){
+
+  screens.forEach(
+    screen => {
+
+      screen.classList.toggle(
+        'active',
+        screen.dataset.screen === name
+      );
+
+    }
+  );
+
+  window.scrollTo({
+    top:0,
+    behavior:'smooth'
+  });
+}
+
+
+/*
+  Retorna a classe de estilo
+  correspondente ao sabor.
+*/
+
+function cookieClass(name){
+
+  return ({
+
+    'Chocolate':
+      'chocolate',
+
+    'Chocolate Branco':
+      'white',
+
+    'Red Velvet':
+      'red',
+
+    'Baunilha':
+      'vanilla',
+
+    "M&M's":
+      'mm'
+
+  })[name] || 'chocolate';
+
+}
+
+
+/*
+  Gotas/chips desenhados no cookie.
+*/
+
+function chips(){
+
+  return `
+    <b></b>
+    <b></b>
+    <b></b>
+    <b></b>
+    <b></b>
+    <b></b>
+  `;
+
+}
+
+
+/* =========================================================
+   STATUS DO ESP32
+========================================================= */
+
+function setMachineConnection(
+  state,
+  text
+){
+
+  machineStatus.classList.remove(
+    'online',
+    'offline',
+    'connecting'
+  );
+
+  machineStatus.classList.add(
+    state
+  );
+
+  machineStatusText.textContent =
+    text;
+
+}
+
+
+/* =========================================================
+   STATUS DO SENSOR
+========================================================= */
+
+function setSensorFeedback(
+  state,
+  title,
+  message
+){
+
+  sensorFeedback.classList.remove(
+    'waiting',
+    'ok',
+    'error'
+  );
+
+  sensorFeedback.classList.add(
+    state
+  );
+
+  sensorTitle.textContent =
+    title;
+
+  sensorMessage.textContent =
+    message;
+
+}
+
+
+/* =========================================================
+   SELEÇÃO DE COOKIES
+========================================================= */
+
+function syncSelection(){
+
+  const count =
+    totalCookies();
+
+
+  cards.forEach(card => {
+
+    const item =
+      selected.find(
+        item =>
+          item.name ===
+          card.dataset.cookie
+      );
+
+
+    card.classList.toggle(
+      'selected',
+      Boolean(item)
+    );
+
+
+    /*
+      Se já chegamos a 3 cookies,
+      os sabores ainda não selecionados
+      ficam visualmente bloqueados.
+    */
+
+    card.classList.toggle(
+      'limit-reached',
+
+      count >= MAX_COOKIES &&
+      !item
+    );
+
+  });
+
+
+  selectionCountEl.textContent =
+    `${count}/${MAX_COOKIES}`;
+
+
+  selectionCountEl.classList.toggle(
+    'full',
+    count === MAX_COOKIES
+  );
+
+
+  /*
+    Só permite continuar
+    se existir pelo menos 1 cookie.
+  */
+
+  continueButton.disabled =
+    count === 0;
+
+}
+
+
+/*
+  Clique nos sabores.
+*/
+
+cards.forEach(card => {
+
+  card.addEventListener(
+    'click',
+    () => {
+
+      const name =
+        card.dataset.cookie;
+
+
+      const found =
+        selected.findIndex(
+          item =>
+            item.name === name
+        );
+
+
+      /*
+        Se clicar novamente em um sabor
+        já selecionado, remove o sabor.
+      */
+
+      if(found >= 0){
+
+        selected.splice(
+          found,
+          1
+        );
+
+      }
+
+      /*
+        Se ainda houver espaço no pedido,
+        adiciona 1 unidade.
+      */
+
+      else if(
+        totalCookies() <
+        MAX_COOKIES
+      ){
+
+        selected.push({
+
+          name:name,
+
+          price:Number(
+            card.dataset.price
+          ),
+
+          qty:1
+
+        });
+
+      }
+
+
+      syncSelection();
+
+    }
+  );
+
+});
+
+
+/* =========================================================
+   TELA DE CONFIRMAÇÃO
+========================================================= */
+
+function renderOrder(){
+
+  const count =
+    totalCookies();
+
+
+  const total =
+    selected.reduce(
+
+      (sum,item) =>
+        sum +
+        item.price *
+        item.qty,
+
+      0
+
+    );
+
+
+  orderItems.innerHTML =
+    selected.map(
+      (item,index) => {
+
+        /*
+          Se o total já for 3,
+          botão + fica bloqueado.
+        */
+
+        const plusDisabled =
+          count >= MAX_COOKIES
+          ? 'disabled'
+          : '';
+
+
+        return `
+
+          <div class="order-item">
+
+            <span
+              class="cookie ${cookieClass(item.name)}"
+            >
+              ${chips()}
+            </span>
+
+
+            <div class="order-item-info">
+
+              <strong>
+                ${item.name}
+              </strong>
+
+              <span>
+                ${money(item.price)} cada
+              </span>
+
+            </div>
+
+
+            <div class="qty-control">
+
+              <button
+                type="button"
+                class="qty-button"
+                data-action="minus"
+                data-index="${index}"
+              >
+                −
+              </button>
+
+
+              <span class="qty-count">
+                ${item.qty}
+              </span>
+
+
+              <button
+                type="button"
+                class="qty-button plus"
+                data-action="plus"
+                data-index="${index}"
+                ${plusDisabled}
+              >
+                +
+              </button>
+
+            </div>
+
+          </div>
+
+        `;
+
+      }
+
+    ).join('');
+
+
+  subtotalEl.textContent =
+    money(total);
+
+  totalEl.textContent =
+    money(total);
+
+  finalTotalEl.textContent =
+    money(total);
+
+
+  /*
+    Botões + e - das quantidades.
+  */
+
+  orderItems
+    .querySelectorAll(
+      '.qty-button'
+    )
+    .forEach(
+      button => {
+
+        button.addEventListener(
+          'click',
+          () => {
+
+            const index =
+              Number(
+                button.dataset.index
+              );
+
+
+            const item =
+              selected[index];
+
+
+            if(!item){
+              return;
+            }
+
+
+            /*
+              BOTÃO +
+            */
+
+            if(
+              button.dataset.action ===
+              'plus'
+            ){
+
+              /*
+                IMPORTANTE:
+
+                máximo de 3 cookies
+                no pedido INTEIRO.
+              */
+
+              if(
+                totalCookies() <
+                MAX_COOKIES
+              ){
+
+                item.qty += 1;
+
+              }
+
+            }
+
+
+            /*
+              BOTÃO -
+            */
+
+            else if(
+              item.qty > 1
+            ){
+
+              item.qty -= 1;
+
+            }
+
+
+            syncSelection();
+
+            renderOrder();
+
+          }
+        );
+
+      }
+
+    );
+
+}
+
+
+/* =========================================================
+   RESUMO FINAL
+========================================================= */
+
+function renderFinal(){
+
+  finalItems.innerHTML =
+    selected.map(
+      item => `
+
+        <div class="final-order-item">
+
+          <span
+            class="cookie ${cookieClass(item.name)}"
+          >
+            ${chips()}
+          </span>
+
+
+          <div>
+
+            <strong>
+              ${item.name}
+            </strong>
+
+            <span>
+
+              ${item.qty}
+
+              ${
+                item.qty === 1
+                ? 'unidade'
+                : 'unidades'
+              }
+
+              ·
+
+              ${money(item.price)}
+              cada
+
+            </span>
+
+          </div>
+
+        </div>
+
+      `
+
+    ).join('');
+
+}
+
+
+/* =========================================================
+   LOGIN
+========================================================= */
+
+document
+  .getElementById(
+    'login-form'
+  )
+  .addEventListener(
+    'submit',
+    event => {
+
+      event.preventDefault();
+
+
+      const name =
+        document
+          .getElementById(
+            'user-name'
+          )
+          .value
+          .trim()
+        ||
+        'Marina Costa';
+
+
+      document
+        .getElementById(
+          'buyer-name'
+        )
+        .textContent =
+          name;
+
+
+      /*
+        Por enquanto este login
+        é apenas visual.
+
+        Depois podemos conectar
+        ao cadastro real de usuários.
+      */
+
+      showScreen(
+        'choose'
+      );
+
+    }
+  );
+
+
+/* =========================================================
+   BOTÃO CONTINUAR
+========================================================= */
+
+continueButton.addEventListener(
+  'click',
+  () => {
+
+    renderOrder();
+
+    showScreen(
+      'confirm'
+    );
+
+  }
+);
+
+
+/* =========================================================
+   VOLTAR
+========================================================= */
+
+document
+  .getElementById(
+    'back-button'
+  )
+  .addEventListener(
+    'click',
+    () => {
+
+      showScreen(
+        'choose'
+      );
+
+    }
+  );
+
+
+/* =========================================================
+   CONFIRMAR PEDIDO
+========================================================= */
+
+confirmButton.addEventListener(
+  'click',
+  async () => {
+
+    /*
+      Não permite novo pedido
+      durante um pedido em andamento.
+    */
+
+    if(
+      orderInProgress ||
+      totalCookies() === 0
+    ){
+      return;
+    }
+
+
+    renderFinal();
+
+
+    showScreen(
+      'progress'
+    );
+
+
+    await startOrder();
+
+  }
+);
+
+
+/* =========================================================
+   PROGRESSO
+========================================================= */
+
+function setProgress(
+  percent,
+  stage,
+  delivered = 0,
+  total = totalCookies()
+){
+
+  document
+    .getElementById(
+      'progress-percent'
+    )
+    .textContent =
+      `${percent}%`;
+
+
+  document
+    .getElementById(
+      'progress-fill'
+    )
+    .style.width =
+      `${percent}%`;
+
+
+  const first =
+    selected[0];
+
+
+  if(first){
+
+    document
+      .getElementById(
+        'progress-cookie-name'
+      )
+      .textContent =
+
+      selected.length === 1
+
+      ? first.name
+
+      : `${total} cookies`;
+
+  }
+
+
+  const s1 =
+    document.getElementById(
+      'status-1'
+    );
+
+  const s2 =
+    document.getElementById(
+      'status-2'
+    );
+
+  const s3 =
+    document.getElementById(
+      'status-3'
+    );
+
+
+  [
+    s1,
+    s2,
+    s3
+  ].forEach(
+    status => {
+
+      status.classList.remove(
+        'done',
+        'current',
+        'pending'
+      );
+
+    }
+  );
+
+
+  /*
+    Pedido recebido
+    sempre concluído
+    durante o progresso.
+  */
+
+  s1.classList.add(
+    'done'
+  );
+
+
+  /*
+    ETAPA 1:
+    separando cookies
+  */
+
+  if(stage === 1){
+
+    s2.classList.add(
+      'current'
+    );
+
+    s3.classList.add(
+      'pending'
+    );
+
+  }
+
+
+  /*
+    ETAPA 2:
+    liberando na bandeja
+  */
+
+  else if(stage === 2){
+
+    s2.classList.add(
+      'done'
+    );
+
+    s3.classList.add(
+      'current'
+    );
+
+  }
+
+
+  /*
+    ETAPA 3:
+    tudo entregue
+  */
+
+  else if(stage === 3){
+
+    s2.classList.add(
+      'done'
+    );
+
+    s3.classList.add(
+      'done'
+    );
+
+  }
+
+
+  const releaseText =
+    s3.querySelector(
+      'small'
+    );
+
+
+  /*
+    Mostra quantos cookies
+    já passaram pelo sensor.
+  */
+
+  if(
+    stage >= 2 &&
+    total > 1
+  ){
+
+    releaseText.textContent =
+      `${delivered} de ${total} cookies confirmados pelo sensor.`;
+
+  }
+
+  else if(
+    stage === 3
+  ){
+
+    releaseText.textContent =
+      'Entrega confirmada pelo sensor.';
+
+  }
+
+  else{
+
+    releaseText.textContent =
+      'Quase pronto!';
+
+  }
+
+}
+
+
+/* =========================================================
+   PAYLOAD DO PEDIDO
+========================================================= */
+
+function orderPayload(){
+
+  return {
+
+    usuario:
+      document
+        .getElementById(
+          'buyer-name'
+        )
+        .textContent,
+
+
+    total_cookies:
+      totalCookies(),
+
+
+    itens:
+      selected.map(
+        item => ({
+
+          sabor:
+            item.name,
+
+          quantidade:
+            item.qty
+
+        })
+      )
+
+  };
+
+}
+
+
+/* =========================================================
+   ENVIA PEDIDO AO ESP32
+========================================================= */
+
+async function startOrder(){
+
+  stopOrderPolling();
+
+
+  orderInProgress =
+    true;
+
+
+  confirmButton.disabled =
+    true;
+
+
+  setProgress(
+    20,
+    1,
+    0,
+    totalCookies()
+  );
+
+
+  setSensorFeedback(
+    'waiting',
+    'Enviando pedido ao ESP32',
+    'Aguardando a máquina aceitar o pedido.'
+  );
+
+
+  setMachineConnection(
+    'connecting',
+    'Conectando ao ESP'
+  );
+
+
+  /*
+    MODO DE SIMULAÇÃO.
+  */
+
+  if(
+    CONFIG.SIMULAR_ESP32
+  ){
+
+    startMockOrder();
+
+    return;
+
+  }
+
+
+  /*
+    ESP32 REAL.
+  */
+
+  try{
+
+    const response =
+      await fetch(
+
+        `${CONFIG.ESP32_BASE_URL}/api/pedido`,
+
+        {
+
+          method:'POST',
+
+          headers:{
+            'Content-Type':
+              'application/json'
+          },
+
+          body:
+            JSON.stringify(
+              orderPayload()
+            )
+
+        }
+
+      );
+
+
+    if(!response.ok){
+
+      throw new Error(
+        `ESP32 respondeu HTTP ${response.status}`
+      );
+
+    }
+
+
+    setMachineConnection(
+      'online',
+      'Máquina online'
+    );
+
+
+    setProgress(
+      36,
+      1,
+      0,
+      totalCookies()
+    );
+
+
+    setSensorFeedback(
+      'waiting',
+      'Pedido recebido pela máquina',
+      'Aguardando o início da separação.'
+    );
+
+
+    schedulePoll(
+      0
+    );
+
+  }
+
+  catch(error){
+
+    orderInProgress =
+      false;
+
+
+    confirmButton.disabled =
+      false;
+
+
+    setMachineConnection(
+      'offline',
+      'ESP desconectado'
+    );
+
+
+    setSensorFeedback(
+      'error',
+      'Falha de comunicação',
+      `${error.message}. O pedido não será marcado como entregue.`
+    );
+
+  }
+
+}
+
+
+/* =========================================================
+   AGENDAMENTO DE CONSULTA
+========================================================= */
+
+function schedulePoll(
+  delay =
+    CONFIG.POLL_INTERVAL_MS
+){
+
+  clearTimeout(
+    pollTimer
+  );
+
+
+  pollTimer =
+    setTimeout(
+      readEspStatus,
+      delay
+    );
+
+}
+
+
+/* =========================================================
+   CONSULTA STATUS DO ESP32
+========================================================= */
+
+async function readEspStatus(){
+
+  if(
+    !orderInProgress
+  ){
+    return;
+  }
+
+
+  try{
+
+    const response =
+      await fetch(
+
+        `${CONFIG.ESP32_BASE_URL}/api/pedido/status`,
+
+        {
+
+          method:'GET',
+
+          cache:'no-store'
+
+        }
+
+      );
+
+
+    if(!response.ok){
+
+      throw new Error(
+        `HTTP ${response.status}`
+      );
+
+    }
+
+
+    const data =
+      await response.json();
+
+
+    setMachineConnection(
+      'online',
+      'Máquina online'
+    );
+
+
+    applyEspStatus(
+      data
+    );
+
+
+    /*
+      Continua consultando
+      enquanto o pedido
+      estiver em andamento.
+    */
+
+    if(
+      orderInProgress
+    ){
+
+      schedulePoll();
+
+    }
+
+  }
+
+  catch(error){
+
+    setMachineConnection(
+      'offline',
+      'Sem comunicação'
+    );
+
+
+    setSensorFeedback(
+      'error',
+      'Comunicação interrompida',
+      'Tentando reconectar ao ESP32. A IHM não avançará para 100% sem confirmação.'
+    );
+
+
+    /*
+      Tenta novamente.
+    */
+
+    schedulePoll(
+      1200
+    );
+
+  }
+
+}
+
+
+/* =========================================================
+   PROCESSA RESPOSTA DO ESP32
+========================================================= */
+
+function applyEspStatus(data){
+
+  const status =
+    String(
+      data.status || ''
+    )
+    .toLowerCase();
+
+
+  const sensor =
+    String(
+      data.sensor ||
+      data.mensagem ||
+      ''
+    )
+    .toLowerCase();
+
+
+  /*
+    Quantidade esperada
+    segundo a IHM.
+  */
+
+  const expected =
+    totalCookies();
+
+
+  /*
+    Quantidade já confirmada
+    pelos sensores.
+  */
+
+  const delivered =
+    Number(
+
+      data.cookies_entregues
+      ??
+      data.entregues
+      ??
+      0
+
+    );
+
+
+  /*
+    Total informado pelo ESP.
+  */
+
+  const reportedTotal =
+    Number(
+
+      data.total_cookies
+      ??
+      data.total
+      ??
+      expected
+
+    );
+
+
+  /*
+    Verifica se o ESP informou
+    explicitamente que houve
+    confirmação do sensor.
+  */
+
+  const sensorSaysDelivered =
+
+    data.cookie_entregue === true
+
+    ||
+
+    sensor.includes(
+      'ok cookie entregue'
+    )
+
+    ||
+
+    sensor.includes(
+      'cookie entregue'
+    );
+
+
+  /* =========================
+     ERRO
+  ========================= */
+
+  if(
+    status === 'erro'
+  ){
+
+    const msg =
+      data.mensagem
+      ||
+      'A máquina informou uma falha durante a preparação.';
+
+
+    setSensorFeedback(
+      'error',
+      'Erro na máquina',
+      msg
+    );
+
+
+    setProgress(
+
+      Math.min(
+        99,
+        Number(
+          data.progresso
+        )
+        ||
+        36
+      ),
+
+      2,
+
+      delivered,
+
+      expected
+
+    );
+
+
+    return;
+
+  }
+
+
+  /* =========================
+     PEDIDO RECEBIDO
+  ========================= */
+
+  if(
+    status === 'recebido'
+  ){
+
+    setProgress(
+      36,
+      1,
+      delivered,
+      expected
+    );
+
+
+    setSensorFeedback(
+      'waiting',
+      'Pedido recebido',
+      data.mensagem ||
+      'Aguardando separação.'
+    );
+
+
+    return;
+
+  }
+
+
+  /* =========================
+     PREPARANDO
+  ========================= */
+
+  if(
+    status === 'preparando'
+    ||
+    status === 'separando'
+  ){
+
+    setProgress(
+      50,
+      1,
+      delivered,
+      expected
+    );
+
+
+    setSensorFeedback(
+      'waiting',
+      'Separando cookies',
+      data.mensagem ||
+      'Motores em operação.'
+    );
+
+
+    return;
+
+  }
+
+
+  /* =========================
+     COOKIE(S) PASSANDO PELO SENSOR
+  ========================= */
+
+  if(
+
+    status === 'liberando'
+
+    ||
+
+    sensorSaysDelivered
+
+    ||
+
+    delivered > 0
+
+  ){
+
+    /*
+      Garante que não ultrapasse
+      o total esperado.
+    */
+
+    const safeDelivered =
+      Math.min(
+        delivered,
+        expected
+      );
+
+
+    /*
+      A porcentagem pode avançar
+      entre 66 e 99%.
+
+      100% é reservado
+      exclusivamente para quando
+      TODOS os cookies forem
+      confirmados pelo sensor.
+    */
+
+    const partialPercent =
+      Math.min(
+
+        99,
+
+        66 +
+
+        Math.floor(
+
+          33 *
+          (
+            safeDelivered /
+            expected
+          )
+
+        )
+
+      );
+
+
+    setProgress(
+      partialPercent,
+      2,
+      safeDelivered,
+      expected
+    );
+
+
+    if(
+      safeDelivered > 0
+    ){
+
+      setSensorFeedback(
+
+        'ok',
+
+        'Sensor detectou entrega',
+
+        `${safeDelivered} de ${expected} cookies confirmados.`
+
+      );
+
+    }
+
+    else{
+
+      setSensorFeedback(
+
+        'waiting',
+
+        'Liberando na bandeja',
+
+        data.mensagem
+        ||
+        'Aguardando confirmação do sensor de passagem.'
+
+      );
+
+    }
+
+  }
+
+
+  /*
+    =====================================
+    REGRA MAIS IMPORTANTE DA IHM
+    =====================================
+
+    A tela NÃO pode chegar a 100%
+    apenas porque passou algum tempo.
+
+    Ela só finaliza quando:
+
+    1. A quantidade entregue
+       for igual ao total do pedido.
+
+    2. O ESP32 confirmar que
+       o sensor detectou a entrega.
+  */
+
+
+  const allDelivered =
+
+    delivered >= expected
+
+    &&
+
+    reportedTotal >= expected;
+
+
+  /*
+    A contagem sozinha
+    não é suficiente.
+
+    Precisamos também do
+    sinal de confirmação
+    vindo do sensor.
+  */
+
+  if(
+    allDelivered
+    &&
+    sensorSaysDelivered
+  ){
+
+    finishOrder(
+      delivered,
+      expected
+    );
+
+  }
+
+}
+
+
+/* =========================================================
+   FINALIZAÇÃO DO PEDIDO
+========================================================= */
+
+function finishOrder(
+  delivered,
+  total
+){
+
+  orderInProgress =
+    false;
+
+
+  stopOrderPolling();
+
+
+  /*
+    AGORA SIM:
+    100%
+  */
+
+  setProgress(
+    100,
+    3,
+    delivered,
+    total
+  );
+
+
+  setSensorFeedback(
+
+    'ok',
+
+    'Entrega confirmada',
+
+    `OK cookie entregue — ${delivered} de ${total} cookies detectados.`
+
+  );
+
+
+  /*
+    Pequeno atraso para o usuário
+    conseguir visualizar o 100%.
+  */
+
+  setTimeout(
+    () => {
+
+      showScreen(
+        'success'
+      );
+
+    },
+
+    650
+
+  );
+
+}
+
+
+/* =========================================================
+   PARA CONSULTAS / TIMERS
+========================================================= */
+
+function stopOrderPolling(){
+
+  clearTimeout(
+    pollTimer
+  );
+
+
+  clearTimeout(
+    mockTimer
+  );
+
+
+  pollTimer =
+    null;
+
+
+  mockTimer =
+    null;
+
+}
+
+
+/* =========================================================
+   SIMULAÇÃO DO ESP32
+========================================================= */
+
+/*
+  Esta função existe apenas
+  para testar a interface
+  sem o hardware conectado.
+*/
+
+function startMockOrder(){
+
+  setMachineConnection(
+    'online',
+    'ESP simulado'
+  );
+
+
+  setProgress(
+    36,
+    1,
+    0,
+    totalCookies()
+  );
+
+
+  setSensorFeedback(
+
+    'waiting',
+
+    'Pedido recebido',
+
+    'Modo de simulação ativado.'
+
+  );
+
+
+  const expected =
+    totalCookies();
+
+
+  let delivered =
+    0;
+
+
+  /*
+    Simula o início
+    da liberação.
+  */
+
+  mockTimer =
+    setTimeout(
+
+      () => {
+
+        if(
+          !orderInProgress
+        ){
+          return;
+        }
+
+
+        setProgress(
+          66,
+          2,
+          delivered,
+          expected
+        );
+
+
+        setSensorFeedback(
+
+          'waiting',
+
+          'Liberando na bandeja',
+
+          'Aguardando o sensor detectar os cookies.'
+
+        );
+
+
+        /*
+          Simula uma detecção
+          de sensor por cookie.
+        */
+
+        const confirmOne =
+          () => {
+
+            if(
+              !orderInProgress
+            ){
+              return;
+            }
+
+
+            delivered += 1;
+
+
+            /*
+              Simula exatamente
+              a resposta que
+              esperamos receber
+              do ESP32 real.
+            */
+
+            applyEspStatus({
+
+              status:
+                delivered >= expected
+                ? 'entregue'
+                : 'liberando',
+
+
+              sensor:
+                'ok cookie entregue',
+
+
+              cookies_entregues:
+                delivered,
+
+
+              total_cookies:
+                expected
+
+            });
+
+
+            /*
+              Se ainda faltarem cookies,
+              aguarda e simula
+              o próximo.
+            */
+
+            if(
+              delivered < expected
+            ){
+
+              mockTimer =
+                setTimeout(
+                  confirmOne,
+                  1100
+                );
+
+            }
+
+          };
+
+
+        mockTimer =
+          setTimeout(
+            confirmOne,
+            1100
+          );
+
+      },
+
+      1200
+
+    );
+
+}
+
+
+/* =========================================================
+   NOVO PEDIDO
+========================================================= */
+
+document
+  .getElementById(
+    'new-order-button'
+  )
+  .addEventListener(
+    'click',
+    () => {
+
+      stopOrderPolling();
+
+
+      orderInProgress =
+        false;
+
+
+      selected =
+        [];
+
+
+      confirmButton.disabled =
+        false;
+
+
+      syncSelection();
+
+
+      showScreen(
+        'choose'
+      );
+
+    }
+  );
+
+
+/* =========================================================
+   SAIR
+========================================================= */
+
+document
+  .getElementById(
+    'exit-button'
+  )
+  .addEventListener(
+    'click',
+    () => {
+
+      stopOrderPolling();
+
+
+      orderInProgress =
+        false;
+
+
+      selected =
+        [];
+
+
+      confirmButton.disabled =
+        false;
+
+
+      syncSelection();
+
+
+      showScreen(
+        'login'
+      );
+
+    }
+  );
+
+
+/* =========================================================
+   INICIALIZAÇÃO
+========================================================= */
+
+syncSelection();
+
+
+setMachineConnection(
+
+  CONFIG.SIMULAR_ESP32
+    ? 'online'
+    : 'connecting',
+
+  CONFIG.SIMULAR_ESP32
+    ? 'ESP simulado'
+    : 'Aguardando ESP'
+
+);
+
+</script>
+
+</body>
+</html>

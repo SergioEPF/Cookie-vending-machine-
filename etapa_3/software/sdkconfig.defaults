@@ -1,0 +1,4 @@
+# Valores iniciais do servidor HTTP do ESP, em bytes.
+# sdkconfig é a configuração efetiva; estes padrões não substituem opções já salvas.
+CONFIG_HTTPD_MAX_REQ_HDR_LEN=1024
+CONFIG_HTTPD_MAX_URI_LEN=512
