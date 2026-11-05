@@ -75,9 +75,12 @@ Foi realizada a montagem física de seis conjuntos de motores responsáveis pelo
   <br>
   <em>Figura 4 — Instalação dos seis motores responsáveis pelo acionamento dos mecanismos de distribuição dos cookies.</em>
 </p>
-<img width="1280" height="922" alt="image" src="https://github.com/user-attachments/assets/ce77f973-a7b2-4e10-9d93-659b24ec106d" />
-<img width="1352" height="1199" alt="image" src="https://github.com/user-attachments/assets/98102b71-5bbc-4ad0-bb49-7e5db96fa568" />
-<img width="1566" height="1382" alt="image" src="https://github.com/user-attachments/assets/70f1376d-9366-442d-8c47-9f810b666a84" />
+
+| Figura 1 | Figura 2 | Figura 3 |
+|:---:|:---:|:---:|
+| <img src="https://github.com/user-attachments/assets/ce77f973-a7b2-4e10-9d93-659b24ec106d" width="300" alt="Imagem 1"> | <img src="https://github.com/user-attachments/assets/98102b71-5bbc-4ad0-bb49-7e5db96fa568" width="300" alt="Imagem 2"> | <img src="https://github.com/user-attachments/assets/70f1376d-9366-442d-8c47-9f810b666a84" width="300" alt="Imagem 3"> |
+| *Etapa 1 — Primeira imagem.* | *Etapa 2 — Segunda imagem.* | *Etapa 3 — Terceira imagem.* |
+
 
 
 
