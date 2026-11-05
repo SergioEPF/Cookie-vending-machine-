@@ -119,6 +119,19 @@ O projeto também contempla o desenvolvimento de uma placa eletrônica de contro
 
 **Situação:** desenvolvimento da placa documentado por imagens; firmware e validações elétricas ainda precisam de evidências.
 
+### 5.1 Desenvolvimento e montagem da placa eletrônica
+
+Foi desenvolvida uma placa de circuito impresso (PCB) para integrar os componentes eletrônicos responsáveis pelo controle dos mecanismos de distribuição da máquina de cookies.
+
+O projeto foi realizado no **Altium Designer**, incluindo o posicionamento dos componentes, o roteamento das trilhas e a definição das conexões elétricas necessárias para o funcionamento do sistema.
+
+Após a etapa de desenvolvimento do layout, a placa foi fabricada e os componentes eletrônicos foram soldados, permitindo avançar para a integração com os motores, sensores e demais dispositivos da máquina.
+
+**Testes previstos:** verificação de continuidade elétrica, identificação de possíveis curtos-circuitos, medição das tensões de alimentação, testes dos acionamentos e validação das conexões com os sensores.
+
+**Situação:** layout desenvolvido e placa montada com os componentes soldados. Resultados dos testes elétricos e funcionais a serem documentados.
+
+
 ## 6. Projetar painel/interface com o usuário
 
 Desenvolver a interface responsável pela interação entre o consumidor e a máquina, apresentando produtos disponíveis, preços, informações de pagamento e andamento da distribuição.
