@@ -69,6 +69,14 @@ Foi realizada a montagem física de seis conjuntos de motores responsáveis pelo
 
 **Situação:** motores instalados e fotografados; instalação dos sensores e resultados de testes ainda precisam ser confirmados.
 
+<!-- Imagem centralizada da instalação dos motores -->
+<p align="center">
+  <img src="https://github.com/user-attachments/assets/4d05a471-b0d8-4a11-a1ac-18b8778a721d" width="700" alt="Instalação dos motores e mecanismos de distribuição">
+  <br>
+  <em>Figura 4 — Instalação dos seis motores responsáveis pelo acionamento dos mecanismos de distribuição dos cookies.</em>
+</p>
+
+
 ## 5. Firmware do controle do mecanismo
 
 Desenvolver o firmware responsável por comandar os motores, interpretar os sinais dos sensores e finalizar cada ciclo de distribuição.
