@@ -7,7 +7,7 @@ A etapa 3 do projeto apresenta a construção da estrutura física e o desenvolv
 
 Foi desenvolvido um gabinete para acomodar os seis compartimentos de armazenamento e distribuição dos cookies. A estrutura possui divisórias individuais, espirais para movimentação dos produtos e áreas destinadas à interface e aos componentes eletrônicos. 
 
-A estrutura foi projetada no Onshape, uma plataforma de modelagem 3D. As Figuras 1 e 2 mostram o modelo com os formatos e os encaixes das peças de MDF. As peças foram cortadas em uma máquina automatizada de corte a laser, conforme mostra a Figura 3.
+A estrutura foi projetada no Onshape, uma plataforma de modelagem 3D. A **Figura 1** e a **Figura 2** mostram o modelo com os formatos e os encaixes das peças de MDF. As peças foram cortadas em uma máquina automatizada de corte a laser, conforme mostra a **Figura 3**.
 
 <!-- Tabela com as três etapas de construção da máquina -->
 <table>
@@ -40,7 +40,7 @@ A estrutura foi projetada no Onshape, uma plataforma de modelagem 3D. As Figuras
 </table>
 
 
-A Figura 4 apresenta as etapas de corte das peças em MDF e a montagem inicial da estrutura. Na Figura 5, observa-se a aplicação da primeira demão de tinta branca, utilizada como preparação para o acabamento. Por fim, a Figura 6 apresenta o gabinete montado e com a pintura finalizada, incluindo a instalação das espirais responsáveis pela movimentação e distribuição dos cookies.
+A **Figura 4** apresenta as etapas de corte das peças em MDF e a montagem inicial da estrutura. Na **Figura 5**, observa-se a aplicação da primeira demão de tinta branca, utilizada como preparação para o acabamento. Por fim, a **Figura 6** apresenta o gabinete montado e com a pintura finalizada, incluindo a instalação das espirais responsáveis pela movimentação e distribuição dos cookies.
 
 **Testes realizados:** Foram realizados testes para verificar a estabilidade da estrutura, o alinhamento das espirais, o encaixe adequado dos produtos nos compartimentos e o funcionamento mecânico do sistema de distribuição, visando garantir a correta movimentação e liberação dos cookies.
 
@@ -129,9 +129,9 @@ A Figura 7 reúne em um diagrama as conexões entre o navegador, o ESP32, o serv
 
 Foi realizada a montagem física de seis conjuntos de motores responsáveis pelo acionamento individual das espirais de distribuição dos cookies, conforme apresentado na **Figura 4**. Além disso, foram instalados sensores para garantir a segurança da operação e monitorar a entrega dos produtos.
 
-Na porta de reposição, foi instalada uma **chave de fim de curso**, apresentada na **Figura 5**, responsável por identificar sua abertura. Quando a porta está aberta, o sistema deve bloquear o acionamento dos motores e impedir que o usuário solicite novos cookies, garantindo maior segurança durante as atividades de reposição dos produtos.
+Na porta de reposição, foi instalada uma chave de fim de curso, apresentada na **Figura 5**, responsável por identificar sua abertura. Quando a porta está aberta, o sistema deve bloquear o acionamento dos motores e impedir que o usuário solicite novos cookies, garantindo maior segurança durante as atividades de reposição dos produtos.
 
-Também foram instalados um **emissor e um receptor infravermelho**, posicionados na saída de distribuição dos cookies. A **Figura 6** apresenta o emissor, enquanto a **Figura 7** mostra o receptor. Esses sensores formam uma barreira óptica que permite detectar a passagem do produto durante a queda, possibilitando ao sistema identificar a entrega do cookie.
+Também foram instalados um emissor e um receptor infravermelho, posicionados na saída de distribuição dos cookies. A **Figura 6** apresenta o emissor, enquanto a **Figura 7** mostra o receptor. Esses sensores formam uma barreira óptica que permite detectar a passagem do produto durante a queda, possibilitando ao sistema identificar a entrega do cookie.
 
 
 <!-- Figura 4 - Motores instalados -->
