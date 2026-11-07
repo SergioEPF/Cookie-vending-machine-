@@ -127,11 +127,11 @@ A Figura 7 reúne em um diagrama as conexões entre o navegador, o ESP32, o serv
 
 ## 4. Instalar motores e sensores
 
-Foi realizada a montagem física de seis conjuntos de motores responsáveis pelo acionamento individual das espirais de distribuição dos cookies, conforme apresentado na **Figura 4**. Além disso, foram instalados sensores para garantir a segurança da operação e monitorar a entrega dos produtos.
+Foi realizada a montagem física de seis conjuntos de motores responsáveis pelo acionamento individual das espirais de distribuição dos cookies, conforme apresentado na **Figura 8**. Além disso, foram instalados sensores para garantir a segurança da operação e monitorar a entrega dos produtos.
 
-Na porta de reposição, foi instalada uma chave de fim de curso, apresentada na **Figura 5**, responsável por identificar sua abertura. Quando a porta está aberta, o sistema deve bloquear o acionamento dos motores e impedir que o usuário solicite novos cookies, garantindo maior segurança durante as atividades de reposição dos produtos.
+Na porta de reposição, foi instalada uma chave de fim de curso, apresentada na **Figura 9**, responsável por identificar sua abertura. Quando a porta está aberta, o sistema deve bloquear o acionamento dos motores e impedir que o usuário solicite novos cookies, garantindo maior segurança durante as atividades de reposição dos produtos.
 
-Também foram instalados um emissor e um receptor infravermelho, posicionados na saída de distribuição dos cookies. A **Figura 6** apresenta o emissor, enquanto a **Figura 7** mostra o receptor. Esses sensores formam uma barreira óptica que permite detectar a passagem do produto durante a queda, possibilitando ao sistema identificar a entrega do cookie.
+Também foram instalados um emissor e um receptor infravermelho, posicionados na saída de distribuição dos cookies. A **Figura 10** apresenta o emissor, enquanto a **Figura 11** mostra o receptor. Esses sensores formam uma barreira óptica que permite detectar a passagem do produto durante a queda, possibilitando ao sistema identificar a entrega do cookie.
 
 
 <!-- Figura 4 - Motores instalados -->
@@ -139,7 +139,7 @@ Também foram instalados um emissor e um receptor infravermelho, posicionados na
   <img src="https://github.com/user-attachments/assets/9159dc15-d98a-4ba7-9ad3-1e0cdb0594c7"
        width="700" alt="Figura 4">
   <br>
-  <em>Figura 4 - Motores instalados.</em>
+  <em>Figura 8 - Motores instalados.</em>
 </p>
 
 <!-- Tabela com as Figuras 5, 6 e 7 lado a lado -->
@@ -166,13 +166,13 @@ Também foram instalados um emissor e um receptor infravermelho, posicionados na
   <!-- Linha das legendas -->
   <tr>
     <td align="center">
-      <em>Figura 5 - Chave de fim de curso.</em>
+      <em>Figura 9 - Chave de fim de curso.</em>
     </td>
     <td align="center">
-      <em>Figura 6 - Emissor infravermelho.</em>
+      <em>Figura 10 - Emissor infravermelho.</em>
     </td>
     <td align="center">
-      <em>Figura 7 - Receptor infravermelho.</em>
+      <em>Figura 11 - Receptor infravermelho.</em>
     </td>
   </tr>
 </table>
@@ -209,9 +209,9 @@ O mecanismo também possui uma chave de fim de curso conectada ao GPIO32, utiliz
 
 Foi desenvolvida uma placa de circuito impresso (PCB) para integrar os componentes eletrônicos responsáveis pelo controle dos mecanismos de distribuição da máquina de cookies.
 
-O projeto foi realizado no **Altium Designer**, iniciando pela elaboração do **esquemático elétrico**, apresentado na **Figura 8**, no qual foram definidas as conexões entre os componentes eletrônicos. Em seguida, foi desenvolvido o **layout da PCB**, apresentado na **Figura 9**, incluindo o posicionamento dos componentes, o roteamento das trilhas e a organização das conexões elétricas necessárias para o funcionamento do sistema.
+O projeto foi realizado no Altium Designer, iniciando pela elaboração do esquemático elétrico, apresentado na **Figura 12**, no qual foram definidas as conexões entre os componentes eletrônicos. Em seguida, foi desenvolvido o layout da PCB, apresentado na **Figura 13**, incluindo o posicionamento dos componentes, o roteamento das trilhas e a organização das conexões elétricas necessárias para o funcionamento do sistema.
 
-Após a finalização do projeto, foi realizada a fabricação da placa de circuito impresso. A **Figura 10** apresenta a placa fabricada, ainda sem a montagem dos componentes eletrônicos. Posteriormente, foi realizada a soldagem dos componentes, resultando na placa montada, conforme apresentado na **Figura 11* e 12*.
+Após a finalização do projeto, foi realizada a fabricação da placa de circuito impresso. A **Figura 14** apresenta a placa fabricada, ainda sem a montagem dos componentes eletrônicos. Posteriormente, foi realizada a soldagem dos componentes, resultando na placa montada, conforme apresentado na **Figura 15** e na **Figura 16**.
 
 Com a conclusão dessa etapa, a placa ficou preparada para a integração com os motores, sensores e demais dispositivos eletrônicos da máquina de cookies.
 
@@ -236,13 +236,13 @@ Com a conclusão dessa etapa, a placa ficou preparada para a integração com os
   <!-- Linha das legendas -->
   <tr>
     <td align="center">
-      <em>Figura 8 - Esquemático da placa.</em>
+      <em>Figura 12 - Esquemático da placa.</em>
     </td>
     <td align="center">
-      <em>Figura 9 - Layout da placa.</em>
+      <em>Figura 13 - Layout da placa.</em>
     </td>
     <td align="center">
-      <em>Figura 10 - Placa não montada.</em>
+      <em>Figura 14 - Placa não montada.</em>
     </td>
   </tr>
 </table>
@@ -257,7 +257,7 @@ Com a conclusão dessa etapa, a placa ficou preparada para a integração com os
         width="350"
         alt="Esquemático elétrico da PCB">
       <br>
-      <em>Figura 11 - Esquemático elétrico da PCB.</em>
+      <em>Figura 15 - Esquemático elétrico da PCB.</em>
     </td>
     <td align="center" width="50%">
       <img
@@ -265,7 +265,7 @@ Com a conclusão dessa etapa, a placa ficou preparada para a integração com os
         width="350"
         alt="Layout da placa de circuito impresso">
       <br>
-      <em>Figura 12 - Layout da PCB no Altium Designer.</em>
+      <em>Figura 16 - Layout da PCB no Altium Designer.</em>
     </td>
   </tr>
 </table>
