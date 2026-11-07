@@ -7,7 +7,7 @@ A etapa 3 do projeto apresenta a construção da estrutura física e o desenvolv
 
 Foi desenvolvido um gabinete para acomodar os seis compartimentos de armazenamento e distribuição dos cookies. A estrutura possui divisórias individuais, espirais para movimentação dos produtos e áreas destinadas à interface e aos componentes eletrônicos. 
 
-A estrutura foi projetada no Onshape, uma plataforma de modelagem 3D. As Figuras 1 e 2 mostram o modelo com as dimensões, os formatos e os encaixes das peças de MDF. As peças foram cortadas em uma máquina automatizada de corte a laser, conforme mostra a Figura 3.
+A estrutura foi projetada no Onshape, uma plataforma de modelagem 3D. As Figuras 1 e 2 mostram o modelo com os formatos e os encaixes das peças de MDF. As peças foram cortadas em uma máquina automatizada de corte a laser, conforme mostra a Figura 3.
 
 <!-- Tabela com as três etapas de construção da máquina -->
 <table>
@@ -22,9 +22,8 @@ A estrutura foi projetada no Onshape, uma plataforma de modelagem 3D. As Figuras
            width="350" alt="Vista posterior da estrutura">
     </td>
     <td align="center" width="33%">
-      <img src="https://github.com/user-attachments/assets/9852b0da-3e48-4849-b797-1bd041af14e2"
-           width="350" alt="Estrutura final da máquina de cookies">
-    </td>
+      <img src="https://github.com/user-attachments/assets/77d941f4-d249-4eea-b919-4d8a56a55b9d" 
+           width="350" alt="Máquina de corte">
   </tr>
   <!-- Linha das legendas -->
   <tr>
@@ -35,13 +34,13 @@ A estrutura foi projetada no Onshape, uma plataforma de modelagem 3D. As Figuras
       <em>Figura 2 - Vista posterior da estrutura.</em>
     </td>
     <td align="center">
-      <em>Figura 3 - Estrutura com pintura final, seis compartimentos e espirais instalados.</em>
+      <em>Figura 3 - Máquina de corte a laser.</em>
     </td>
   </tr>
 </table>
 
 
-A **primeira figura** apresenta as etapas de corte das peças em MDF, realizado por meio de uma máquina de corte a laser, e a montagem inicial da estrutura. Na **segunda figura**, observa-se a aplicação da primeira demão de tinta branca, utilizada como preparação para o acabamento. Por fim, a **terceira figura** apresenta o gabinete montado e com a pintura finalizada, incluindo a instalação das espirais responsáveis pela movimentação e distribuição dos cookies.
+A Figura 4 apresenta as etapas de corte das peças em MDF e a montagem inicial da estrutura. Na Figura 5, observa-se a aplicação da primeira demão de tinta branca, utilizada como preparação para o acabamento. Por fim, a Figura 6 apresenta o gabinete montado e com a pintura finalizada, incluindo a instalação das espirais responsáveis pela movimentação e distribuição dos cookies.
 
 **Testes realizados:** Foram realizados testes para verificar a estabilidade da estrutura, o alinhamento das espirais, o encaixe adequado dos produtos nos compartimentos e o funcionamento mecânico do sistema de distribuição, visando garantir a correta movimentação e liberação dos cookies.
 
@@ -65,19 +64,16 @@ A **primeira figura** apresenta as etapas de corte das peças em MDF, realizado 
   <!-- Linha das legendas -->
   <tr>
     <td align="center">
-      <em>Figura 1 - Estrutura em MDF cru após montagem.</em>
+      <em>Figura 4 - Estrutura em MDF cru após montagem.</em>
     </td>
     <td align="center">
-      <em>Figura 2 - Estrutura após primeira pintura.</em>
+      <em>Figura 5 - Estrutura após primeira pintura.</em>
     </td>
     <td align="center">
-      <em>Figura 3 - Estrutura com pintura final, seis compartimentos e espirais instalados.</em>
+      <em>Figura 6 - Estrutura com pintura final, seis compartimentos e espirais instalados.</em>
     </td>
   </tr>
 </table>
-
-    
-
 
 
 
@@ -115,6 +111,8 @@ Além da interface do cliente, o sistema contará com uma página de administra�
 
 ### Fluxo da rede implementada 
 
+A Figura 7 reúne em um diagrama as conexões entre o navegador, o ESP32, o servidor Python e o banco de dados SQLite.
+
 <p align="center">
   <img
     src="https://github.com/user-attachments/assets/4055f01c-def4-4ad1-9195-b1eb9e94ea70"
@@ -122,8 +120,9 @@ Além da interface do cliente, o sistema contará com uma página de administra�
     width="400"
     height="600"
   />
+  <br>
+  <em>Figura 7 - Fluxograma da rede .</em>
 </p>
-
 
 
 ## 4. Instalar motores e sensores
