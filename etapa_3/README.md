@@ -5,7 +5,41 @@ A etapa 3 do projeto apresenta a construção da estrutura física e o desenvolv
 
 ## 1. Estrutura
 
-Foi desenvolvido um gabinete para acomodar os seis compartimentos de armazenamento e distribuição dos cookies. A estrutura possui divisórias individuais, espirais para movimentação dos produtos e áreas destinadas à interface e aos componentes eletrônicos.
+Foi desenvolvido um gabinete para acomodar os seis compartimentos de armazenamento e distribuição dos cookies. A estrutura possui divisórias individuais, espirais para movimentação dos produtos e áreas destinadas à interface e aos componentes eletrônicos. 
+
+A estrutura foi projetada no Onshape, uma plataforma de modelagem 3D. As Figuras 1 e 2 mostram o modelo com as dimensões, os formatos e os encaixes das peças de MDF. As peças foram cortadas em uma máquina automatizada de corte a laser, conforme mostra a Figura 3.
+
+<!-- Tabela com as três etapas de construção da máquina -->
+<table>
+  <!-- Linha das imagens -->
+  <tr>
+    <td align="center" width="33%">
+      <img src="https://github.com/user-attachments/assets/23c1094d-9c4d-4278-a813-2aa9df7ad096"
+           width="350" alt="Vista frontal da estrutura">
+    </td>
+    <td align="center" width="33%">
+      <img src="https://github.com/user-attachments/assets/4abdc7e9-effe-4eaf-a132-79334c30bd56"
+           width="350" alt="Vista posterior da estrutura">
+    </td>
+    <td align="center" width="33%">
+      <img src="https://github.com/user-attachments/assets/9852b0da-3e48-4849-b797-1bd041af14e2"
+           width="350" alt="Estrutura final da máquina de cookies">
+    </td>
+  </tr>
+  <!-- Linha das legendas -->
+  <tr>
+    <td align="center">
+      <em>Figura 1 - Vista frontal da estrutura.</em>
+    </td>
+    <td align="center">
+      <em>Figura 2 - Vista posterior da estrutura.</em>
+    </td>
+    <td align="center">
+      <em>Figura 3 - Estrutura com pintura final, seis compartimentos e espirais instalados.</em>
+    </td>
+  </tr>
+</table>
+
 
 A **primeira figura** apresenta as etapas de corte das peças em MDF, realizado por meio de uma máquina de corte a laser, e a montagem inicial da estrutura. Na **segunda figura**, observa-se a aplicação da primeira demão de tinta branca, utilizada como preparação para o acabamento. Por fim, a **terceira figura** apresenta o gabinete montado e com a pintura finalizada, incluindo a instalação das espirais responsáveis pela movimentação e distribuição dos cookies.
 
