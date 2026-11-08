@@ -263,7 +263,7 @@ O GIF abaixo mostra o funcionamento da máquina, desde o abastecimento dos compa
     alt="Demonstração do sistema de pedidos"
     />
   <br>
-  <em>Figura 18 - Demonstração do processo completo de compra.</em>
+  <em>Figura 19 - Demonstração do processo completo de compra.</em>
 </p>
 
 A única falha observada nos testes da máquina completa ocorreu na detecção da queda dos cookies. Nos compartimentos das extremidades, os sensores registraram a passagem dos cookies de forma consistente. Nos compartimentos centrais, algumas entregas não foram registradas, mesmo quando o cookie caiu. Uma possível causa é que, durante a queda, o cookie nem sempre bloqueia completamente o sinal entre o transmissor e o receptor.
@@ -282,9 +282,8 @@ Na próxima etapa, a equipe fará ajustes técnicos para melhorar a detecção d
 - [3] [Espressif — Datasheet da série ESP32](https://documentation.espressif.com/esp32_datasheet_en.html).
 - [4] [Espressif — Guia de programação ESP-IDF para ESP32](https://docs.espressif.com/projects/esp-idf/en/stable/esp32/).
 - [5] [onsemi — Datasheet do transistor Darlington TIP122](https://www.onsemi.com/pdf/datasheet/tip120-d.pdf).
-- [6] [Texas Instruments — Documentação técnica do regulador LM2596](https://www.ti.com/product/LM2596).
-- [7] [Python Software Foundation — Documentação do módulo sqlite3](https://docs.python.org/3/library/sqlite3.html).
-- [8] [SQLite — Documentação do banco de dados](https://www.sqlite.org/docs.html).
-- [9] [IETF — RFC 9110: Semântica do HTTP](https://www.rfc-editor.org/rfc/rfc9110).
+- [6] [Python Software Foundation — Documentação do módulo sqlite3](https://docs.python.org/3/library/sqlite3.html).
+- [7] [SQLite — Documentação do banco de dados](https://www.sqlite.org/docs.html).
+- [8] [IETF — RFC 9110: Semântica do HTTP](https://www.rfc-editor.org/rfc/rfc9110).
 
 
