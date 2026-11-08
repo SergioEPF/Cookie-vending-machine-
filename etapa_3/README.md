@@ -278,7 +278,15 @@ Na próxima etapa, a equipe fará ajustes técnicos para melhorar a detecção d
 
 ## Referências (links/datasheets/livros)
 
-
-- [nRF Connect SDK](https://developer.nordicsemi.com/nRF_Connect_SDK/doc/2.4.2/nrf/getting_started/modifying.html#configure-application>)
+## Referências
+- [1] [Onshape — Exportação de arquivos DXF e DWG](https://cad.onshape.com/help/Content/File/exporting_files.htm).
+- [2] [Altium — Documentação do Altium Designer](https://www.altium.com/documentation/altium-designer).
+- [3] [Espressif — Datasheet da série ESP32](https://documentation.espressif.com/esp32_datasheet_en.html).
+- [4] [Espressif — Guia de programação ESP-IDF para ESP32](https://docs.espressif.com/projects/esp-idf/en/stable/esp32/).
+- [5] [onsemi — Datasheet do transistor Darlington TIP122](https://www.onsemi.com/pdf/datasheet/tip120-d.pdf).
+- [6] [Texas Instruments — Documentação técnica do regulador LM2596](https://www.ti.com/product/LM2596).
+- [7] [Python Software Foundation — Documentação do módulo sqlite3](https://docs.python.org/3/library/sqlite3.html).
+- [8] [SQLite — Documentação do banco de dados](https://www.sqlite.org/docs.html).
+- [9] [IETF — RFC 9110: Semântica do HTTP](https://www.rfc-editor.org/rfc/rfc9110).
 
 
