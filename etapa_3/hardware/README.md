@@ -4,14 +4,20 @@
 Inicialmente, foi realizada a seleção dos componentes eletrônicos necessários para o funcionamento da máquina de cookies, considerando os requisitos de alimentação, acionamento dos motores e monitoramento dos sensores. Entre os componentes selecionados estão o microcontrolador ESP32, transistores, resistores, sensores infravermelhos, conversores de tensão e conectores. Os principais componentes utilizados, juntamente com suas especificações e respectivas funções, são apresentados na **Tabela 1 – Componentes eletrônicos utilizados e suas funções**.
 
 
+
 <!-- Tabela 1 - Imagem centralizada com legenda -->
 <p align="center">
-  <!-- Imagem da tabela de componentes -->
+  <!-- Imagem da tabela de componentes eletrônicos -->
   <img
-    src="https://github.com/user-attachments/assets/b270f0c8-de30-4c31-9ffb-d7a577bc1e76"
+    src="https://github.com/user-attachments/assets/2db97949-5026-4d27-af0c-da1e504f0a20"
     width="900"
     alt="Tabela de componentes eletrônicos"
   >
+
+  <!-- Legenda da tabela -->
+  <br>
+  <em>Tabela 1 - Componentes eletrônicos utilizados e suas funções.</em>
+</p>
 
   <!-- Legenda abaixo da imagem -->
   <br>
