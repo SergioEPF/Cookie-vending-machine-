@@ -276,8 +276,6 @@ Na Etapa 3, a equipe montou a estrutura em MDF e integrou a placa eletrônica, o
 
 Na próxima etapa, a equipe fará ajustes técnicos para melhorar a detecção da queda dos cookies nos compartimentos centrais, desenvolverá suportes para os componentes e reforçará o gabinete da máquina para deixá-lo mais robusto.
 
-## Referências (links/datasheets/livros)
-
 ## Referências
 - [1] [Onshape — Exportação de arquivos DXF e DWG](https://cad.onshape.com/help/Content/File/exporting_files.htm).
 - [2] [Altium — Documentação do Altium Designer](https://www.altium.com/documentation/altium-designer).
