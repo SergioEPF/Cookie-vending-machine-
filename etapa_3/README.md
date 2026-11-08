@@ -203,7 +203,7 @@ O mecanismo também possui uma chave de fim de curso conectada ao GPIO32, utiliz
 | `controle_passo()` | Executa o ciclo de controle, acompanhando o sensor, o tempo de acionamento dos motores e as condições de segurança. |
 | `tarefa_controle()` | Executa continuamente os ciclos de controle, utilizando mutex para proteger os dados compartilhados. |
 
-
+O código completo está disponível em [Software](./software).
 ### 5.1 Desenvolvimento e montagem da placa eletrônica
 
 
