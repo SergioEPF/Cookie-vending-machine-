@@ -215,7 +215,7 @@ Foi desenvolvida uma placa de circuito impresso (PCB) com o objetivo de integrar
 
 A interface foi desenvolvida para facilitar a interação entre o consumidor e a máquina de cookies. Pelo painel, o cliente pode consultar os produtos disponíveis, conferir os preços, selecionar os itens do pedido e acompanhar o pagamento e a entrega dos cookies.
 
-A avaliação da interface contempla a navegação entre as telas, a seleção dos produtos, a exibição dos valores, a atualização do estado do pagamento e as mensagens de confirmação ou erro. O espaço para o painel foi definido na estrutura da máquina, e a **Figura 12** mostra a interface em funcionamento na tela de seleção dos produtos.
+A avaliação da interface contempla a navegação entre as telas, a seleção dos produtos, a exibição dos valores, a atualização do estado do pagamento e as mensagens de confirmação ou erro. O espaço para o painel foi definido na estrutura da máquina, e o **GIF 1** mostra a interface em funcionamento na tela de seleção dos produtos.
 
 
 <!-- GIF centralizado com reprodução automática -->
@@ -226,7 +226,7 @@ A avaliação da interface contempla a navegação entre as telas, a seleção d
     alt="Demonstração do sistema de pedidos"
   />
   <br>
-  <em>Figura 12 - Demonstração do funcionamento do sistema de pedidos.</em>
+  <em>GIF 1 - Demonstração do funcionamento do sistema de pedidos.</em>
 </p>
 
 
@@ -245,7 +245,7 @@ Para simular a passagem de um cookie durante a queda, o teste foi feito colocand
     alt="Demonstração do sistema de pedidos"
     />
   <br>
-  <em>Figura 13 - Demonstração do funcionamento dos sensores.</em>
+  <em>GIF 2 - Demonstração do funcionamento dos sensores.</em>
 </p>
 
 ### Teste da maquina completa
@@ -254,7 +254,7 @@ Os testes da máquina completa incluíram a abertura e o fechamento das tampas d
 
 Os motores foram testados individualmente. Cada motor foi conectado diretamente à placa para verificar se respondia ao acionamento.
 
-O GIF abaixo mostra o funcionamento da máquina, desde o abastecimento dos compartimentos até a retirada dos cookies pela portinhola.
+O **GIF 3** mostra o funcionamento da máquina, desde o abastecimento dos compartimentos até a retirada dos cookies pela portinhola.
 
 <p align="center">
   <img
@@ -263,7 +263,7 @@ O GIF abaixo mostra o funcionamento da máquina, desde o abastecimento dos compa
     alt="Demonstração do sistema de pedidos"
     />
   <br>
-  <em>Figura 14 - Demonstração do processo completo de compra.</em>
+  <em>GIF 3 - Demonstração do processo completo de compra.</em>
 </p>
 
 A única falha observada nos testes da máquina completa ocorreu na detecção da queda dos cookies. Nos compartimentos das extremidades, os sensores registraram a passagem dos cookies de forma consistente. Nos compartimentos centrais, algumas entregas não foram registradas, mesmo quando o cookie caiu. Uma possível causa é que, durante a queda, o cookie nem sempre bloqueia completamente o sinal entre o transmissor e o receptor.
