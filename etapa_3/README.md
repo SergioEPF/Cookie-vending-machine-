@@ -238,6 +238,17 @@ O teste inicial dos sensores foi realizado com duas protoboards posicionadas fre
 
 Para simular a passagem de um cookie durante a queda, a equipe colocou a mão entre os transmissores e o receptor, interrompendo o sinal por um breve instante. No osciloscópio, foram comparadas as formas de onda com e sem a obstrução para verificar a resposta do receptor.
 
+<p align="center">
+  <img
+    src="https://github.com/user-attachments/assets/37b2346b-2a6a-430b-ab22-a6e07705614d"
+    width="320"
+    alt="Demonstração do sistema de pedidos"
+
+  />
+  <br>
+  <em>Figura 17 - Demonstração do funcionamento do sistema de pedidos.</em>
+</p>
+
 ## Conclusão
 
 O projeto já apresenta elementos físicos de desenvolvimento, incluindo gabinete, mecanismos de espiral, montagem dos motores e fabricação da placa eletrônica.
