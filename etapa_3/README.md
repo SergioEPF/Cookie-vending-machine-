@@ -272,9 +272,9 @@ A equipe ajustou a frequência de operação dos transmissores e o foco do feixe
 
 ## Conclusão
 
-O projeto já apresenta elementos físicos de desenvolvimento, incluindo gabinete, mecanismos de espiral, montagem dos motores e fabricação da placa eletrônica.
+Na Etapa 3, a equipe montou a estrutura em MDF e integrou a placa eletrônica, os motores, os sensores e a interface de compra no celular. Os testes demonstraram o funcionamento da máquina do abastecimento à retirada dos cookies e confirmaram o bloqueio da operação ao abrir a porta de manutenção.
 
-As próximas etapas de documentação envolvem registrar a implementação dos sistemas de controle e pagamento, executar os ensaios funcionais e anexar evidências que comprovem o atendimento aos requisitos de cada subentrega.
+Na próxima etapa, a equipe fará ajustes técnicos para melhorar a detecção da queda dos cookies nos compartimentos centrais, desenvolverá suportes para os componentes e reforçará o gabinete da máquina para deixá-lo mais robusto.
 
 ## Referências (links/datasheets/livros)
 
