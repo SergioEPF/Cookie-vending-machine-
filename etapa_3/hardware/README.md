@@ -1,94 +1,103 @@
 
 # 5.1 Desenvolvimento e montagem da placa eletrônica
 
-Foi desenvolvida uma placa de circuito impresso (PCB) para integrar os componentes eletrônicos responsáveis pelo controle dos mecanismos de distribuição da máquina de cookies.
+Inicialmente, foi realizada a seleção dos componentes eletrônicos necessários para o funcionamento da máquina de cookies, considerando os requisitos de alimentação, acionamento dos motores e monitoramento dos sensores. Entre os componentes selecionados estão o microcontrolador ESP32, transistores, resistores, sensores infravermelhos, conversores de tensão e conectores. Os principais componentes utilizados, juntamente com suas especificações e respectivas funções, são apresentados na **Tabela 1 – Componentes eletrônicos utilizados e suas funções**.
 
-O projeto foi realizado no Altium Designer, iniciando pela elaboração do esquemático elétrico, apresentado na **Figura 12**, no qual foram definidas as conexões entre os componentes eletrônicos. Em seguida, foi desenvolvido o layout da PCB, apresentado na **Figura 13**, incluindo o posicionamento dos componentes, o roteamento das trilhas e a organização das conexões elétricas necessárias para o funcionamento do sistema.
 
-Após a finalização do projeto, foi realizada a fabricação da placa de circuito impresso. A **Figura 14** apresenta a placa fabricada, ainda sem a montagem dos componentes eletrônicos. Posteriormente, foi realizada a soldagem dos componentes, resultando na placa montada, conforme apresentado na **Figura 15** e na **Figura 16**.
+<!-- Tabela 1 - Imagem centralizada com legenda -->
+<p align="center">
+  <!-- Imagem da tabela de componentes -->
+  <img
+    src="https://github.com/user-attachments/assets/b270f0c8-de30-4c31-9ffb-d7a577bc1e76"
+    width="900"
+    alt="Tabela de componentes eletrônicos"
+  >
 
-Com a conclusão dessa etapa, a placa ficou preparada para a integração com os motores, sensores e demais dispositivos eletrônicos da máquina de cookies.
-A placa eletrônica da máquina de cookies foi desenvolvida para integrar os componentes responsáveis pela alimentação, controle dos motores e monitoramento dos sensores. Os principais componentes utilizados e suas respectivas funções são apresentados a seguir:
+  <!-- Legenda abaixo da imagem -->
+  <br>
+  <em>Tabela 1 - Componentes eletrônicos utilizados e suas funções.</em>
+</p>
 
-1. ESP32: Microcontrolador responsável pelo controle geral da máquina, realizando a leitura dos sensores, o processamento dos comandos e o acionamento dos motores responsáveis pela distribuição dos cookies.
 
-2. Motores CC 12 V: Responsáveis pelo movimento das espirais dos seis compartimentos, permitindo a liberação dos cookies conforme a seleção realizada pelo usuário.
 
-3. Transistores TIP122: Utilizados como dispositivos de chaveamento para acionar individualmente os motores de corrente contínua, permitindo que o ESP32 controle cargas alimentadas em 12 V.
+Após a definição dos componentes, iniciou-se o desenvolvimento do projeto eletrônico no software Altium Designer. Primeiramente, foi elaborado o esquemático elétrico, apresentado na **Figura 1**, no qual foram estabelecidas as conexões entre os componentes. Em seguida, foi desenvolvido o layout da placa de circuito impresso (PCB), apresentado na **Figura 2**, incluindo o posicionamento dos componentes, o roteamento das trilhas e a organização das conexões elétricas.
 
-4. Resistores de 560 Ω: Conectados às bases dos transistores TIP122, possuem a função de limitar a corrente de acionamento fornecida pelas saídas do ESP32.
 
-5. Módulo conversor DC-DC LM2596: Responsável por reduzir a tensão de alimentação de 12 V para 5 V, permitindo alimentar o ESP32 e outros componentes eletrônicos que necessitam dessa tensão.
+<!-- Figura 1 - Esquemático elétrico -->
+<p align="center">
+  <img
+    src="https://github.com/user-attachments/assets/b4c3670d-6670-46a2-937a-53e1630f94ea"
+    width="700"
+    alt="Esquemático elétrico"
+  >
+  <br>
+  <em>Figura 1 - Esquemático elétrico desenvolvido no Altium Designer.</em>
+</p>
 
-6. Módulo de carregamento rápido USB (QC 3.0): Utilizado para alimentar e carregar o celular integrado à máquina, convertendo a alimentação de 12 V em uma saída USB compatível.
+<!-- Figura 2 - Layout da placa eletrônica -->
+<p align="center">
+  <img
+    src="https://github.com/user-attachments/assets/b00feebc-5ee0-4bf5-8a90-9f8e58ff877b"
+    width="500"
+    alt="Layout da placa eletrônica"
+  >
+  <br>
+  <em>Figura 2 - Layout da placa eletrônica desenvolvido no Altium Designer.</em>
+</p>
 
-7. Sensor infravermelho (emissor e receptor): Instalado na região de saída dos cookies, permite detectar a passagem do produto após o acionamento do motor, auxiliando na confirmação da distribuição.
 
-8. Chave de fim de curso: Instalada na porta de manutenção, permite identificar sua abertura e impedir o acionamento dos motores enquanto a porta estiver aberta, aumentando a segurança durante a operação.
 
-9. Bornes de conexão: Utilizados para realizar as conexões elétricas entre a PCB e os dispositivos externos, como motores, sensores e alimentação, facilitando a montagem e a manutenção.
 
-10. Fonte de alimentação chaveada 12 V: Responsável por fornecer energia elétrica aos motores e aos circuitos da máquina, com conversão de tensão para os dispositivos que operam em 5 V.
 
-11. Conectores e pinos de conexão: Permitem a instalação e a interligação dos módulos eletrônicos à PCB, facilitando a substituição de componentes e a manutenção do sistema.
+Com a finalização do projeto, foi realizada a fabricação da placa de circuito impresso. A **Figura 3** apresenta a PCB fabricada, ainda sem os componentes eletrônicos. Posteriormente, foi realizada a montagem e a soldagem dos componentes, resultando na placa montada, conforme apresentado nas **Figuras 4 e 5**.
 
-12. Placa de circuito impresso (PCB): Responsável por integrar eletricamente os componentes por meio de trilhas de cobre, substituindo conexões individuais por uma estrutura organizada e permanente.
+Com a conclusão dessas etapas, a placa ficou preparada para a integração com os motores, sensores e demais dispositivos eletrônicos da máquina de cookies.
 
 Observação: A lista considera os componentes do projeto e das montagens mostradas nas figuras. Nem todos estão necessariamente soldados diretamente à PCB; alguns, como motores e sensores, são conectados externamente.
 
-Para o seu relatório, essa seção pode ser colocada logo após a 5.1 Desenvolvimento e montagem da placa eletrônica, com o título 5.2 Componentes eletrônicos e suas funções.
 
-<!-- Tabela com as três imagens da placa eletrônica -->
-<table>
-  <!-- Linha das imagens -->
-  <tr>
-    <td align="center" width="33%">
-      <img src="https://github.com/user-attachments/assets/b1df0e02-4995-4d15-be0a-7b2cddd3a8dc"
-           width="350" alt="Imagem 1 da placa eletrônica">
-    </td>
-    <td align="center" width="33%">
-      <img src="https://github.com/user-attachments/assets/b00feebc-5ee0-4bf5-8a90-9f8e58ff877b"
-           width="350" alt="Imagem 2 da placa eletrônica">
-    </td>
-    <td align="center" width="33%">
-      <img src="https://github.com/user-attachments/assets/c8339860-ae59-4b57-97a1-9c2be5efcc6d"
-           width="350" alt="Imagem 3 da placa eletrônica">
-    </td>
-  </tr>
-
-  <!-- Linha das legendas -->
-  <tr>
-    <td align="center">
-      <em>Figura 12 - Esquemático da placa.</em>
-    </td>
-    <td align="center">
-      <em>Figura 13 - Layout da placa.</em>
-    </td>
-    <td align="center">
-      <em>Figura 14 - Placa não montada.</em>
-    </td>
-  </tr>
-</table>
-
-
-<!-- Figuras 8 e 9 lado a lado -->
+<!-- Tabela com as três imagens da placa eletrônica lado a lado -->
 <table align="center">
   <tr>
-    <td align="center" width="50%">
+    <!-- Figura 3 - Placa não montada -->
+    <td align="center" width="33%">
+      <img
+        src="https://github.com/user-attachments/assets/c8339860-ae59-4b57-97a1-9c2be5efcc6d"
+        width="300"
+        alt="Placa eletrônica não montada"
+      >
+      <br>
+      <em>Figura 3 - Placa não montada.</em>
+    </td>
+    <!-- Figura 4 - Placa montada -->
+    <td align="center" width="33%">
       <img
         src="https://github.com/user-attachments/assets/d3dfc36b-71f0-43ce-8ec3-400846454987"
-        width="350"
-        alt="Esquemático elétrico da PCB">
+        width="300"
+        alt="Placa eletrônica montada"
+      >
       <br>
-      <em>Figura 15 - Esquemático elétrico da PCB.</em>
+      <em>Figura 4 - Placa montada.</em>
     </td>
-    <td align="center" width="50%">
+    <!-- Figura 5 - Placa montada (outra vista) -->
+    <td align="center" width="33%">
       <img
         src="https://github.com/user-attachments/assets/84ff2ed7-ee79-4e1e-8132-a9e9f5463654"
-        width="350"
-        alt="Layout da placa de circuito impresso">
+        width="300"
+        alt="Placa eletrônica montada - outra vista"
+      >
       <br>
-      <em>Figura 16 - Layout da PCB no Altium Designer.</em>
+      <em>Figura 5 - Placa montada (outra vista).</em>
     </td>
   </tr>
 </table>
+
+### Problemas enfrentados nessa etapa
+
+Durante a fabricação e montagem da placa de circuito impresso, foram identificados alguns problemas que exigiram ajustes para garantir o funcionamento do circuito.
+
+O primeiro problema estava relacionado ao **footprint do módulo conversor DC-DC (buck LM2596)**, cuja incompatibilidade com a disposição dos terminais do módulo utilizado foi identificada **somente após o processo de corrosão da placa**. Como a PCB já havia sido fabricada, optou-se por realizar a **soldagem do módulo na parte inferior da placa**, permitindo corrigir a disposição das conexões sem a necessidade de fabricar uma nova PCB.
+
+Além disso, foi identificado um **problema de conexão na malha de GND (terra)**, que comprometeu a continuidade elétrica entre determinados pontos do circuito. Para solucionar essa falha, foi realizado um pequeno *jumper* com fio, restabelecendo a conexão elétrica necessária.
+
+Após essas correções, foi possível dar continuidade à montagem e à integração dos componentes eletrônicos da máquina de cookies.
