@@ -207,7 +207,7 @@ O mecanismo também possui uma chave de fim de curso conectada ao GPIO32, utiliz
 ### 5.1 Desenvolvimento e montagem da placa eletrônica
 
 
-Foi desenvolvida uma **placa de circuito impresso (PCB)** com o objetivo de integrar os componentes eletrônicos responsáveis pelo controle e acionamento dos mecanismos de distribuição da máquina de cookies. As informações detalhadas sobre o projeto, incluindo o layout da placa, os componentes utilizados e seu funcionamento, estão disponíveis na pasta de [Hardware](./hardware/README.md).
+Foi desenvolvida uma placa de circuito impresso (PCB) com o objetivo de integrar os componentes eletrônicos responsáveis pelo controle e acionamento dos mecanismos de distribuição da máquina de cookies. As informações detalhadas sobre o projeto, incluindo o layout da placa, os componentes utilizados e seu funcionamento, estão disponíveis na pasta de [Hardware](./hardware/README.md).
 
 
 
@@ -215,7 +215,7 @@ Foi desenvolvida uma **placa de circuito impresso (PCB)** com o objetivo de inte
 
 A interface foi desenvolvida para facilitar a interação entre o consumidor e a máquina de cookies. Pelo painel, o cliente pode consultar os produtos disponíveis, conferir os preços, selecionar os itens do pedido e acompanhar o pagamento e a entrega dos cookies.
 
-A avaliação da interface contempla a navegação entre as telas, a seleção dos produtos, a exibição dos valores, a atualização do estado do pagamento e as mensagens de confirmação ou erro. O espaço para o painel foi definido na estrutura da máquina, e a Figura 17 mostra a interface em funcionamento na tela de seleção dos produtos.
+A avaliação da interface contempla a navegação entre as telas, a seleção dos produtos, a exibição dos valores, a atualização do estado do pagamento e as mensagens de confirmação ou erro. O espaço para o painel foi definido na estrutura da máquina, e a **Figura 12** mostra a interface em funcionamento na tela de seleção dos produtos.
 
 
 <!-- GIF centralizado com reprodução automática -->
@@ -226,7 +226,7 @@ A avaliação da interface contempla a navegação entre as telas, a seleção d
     alt="Demonstração do sistema de pedidos"
   />
   <br>
-  <em>Figura 17 - Demonstração do funcionamento do sistema de pedidos.</em>
+  <em>Figura 12 - Demonstração do funcionamento do sistema de pedidos.</em>
 </p>
 
 
@@ -245,7 +245,7 @@ Para simular a passagem de um cookie durante a queda, o teste foi feito colocand
     alt="Demonstração do sistema de pedidos"
     />
   <br>
-  <em>Figura 18 - Demonstração do funcionamento dos sensores.</em>
+  <em>Figura 13 - Demonstração do funcionamento dos sensores.</em>
 </p>
 
 ### Teste da maquina completa
@@ -263,7 +263,7 @@ O GIF abaixo mostra o funcionamento da máquina, desde o abastecimento dos compa
     alt="Demonstração do sistema de pedidos"
     />
   <br>
-  <em>Figura 19 - Demonstração do processo completo de compra.</em>
+  <em>Figura 14 - Demonstração do processo completo de compra.</em>
 </p>
 
 A única falha observada nos testes da máquina completa ocorreu na detecção da queda dos cookies. Nos compartimentos das extremidades, os sensores registraram a passagem dos cookies de forma consistente. Nos compartimentos centrais, algumas entregas não foram registradas, mesmo quando o cookie caiu. Uma possível causa é que, durante a queda, o cookie nem sempre bloqueia completamente o sinal entre o transmissor e o receptor.
