@@ -294,7 +294,11 @@ A avaliação da interface contempla a navegação entre as telas, a seleção d
 
 ## Testes
 
-Descrição dos testes/validações realizadas. Use fotos, diagramas, tabelas, etc.
+### Teste inicial dos sensores
+
+O teste inicial dos sensores foi realizado com duas protoboards posicionadas frente a frente. Em uma delas, foram montados três transmissores e, na outra, um receptor. A equipe utilizou um osciloscópio para monitorar o sinal na saída do receptor.
+
+Para simular a passagem de um cookie durante a queda, a equipe colocou a mão entre os transmissores e o receptor, interrompendo o sinal por um breve instante. No osciloscópio, foram comparadas as formas de onda com e sem a obstrução para verificar a resposta do receptor.
 
 ## Conclusão
 
