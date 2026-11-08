@@ -5,21 +5,17 @@ Inicialmente, foi realizada a seleção dos componentes eletrônicos necessário
 
 
 
+
 <!-- Tabela 1 - Imagem centralizada com legenda -->
 <p align="center">
   <!-- Imagem da tabela de componentes eletrônicos -->
   <img
-    src="https://github.com/user-attachments/assets/2db97949-5026-4d27-af0c-da1e504f0a20"
+    src="https://github.com/user-attachments/assets/88610cd5-6b61-47f3-8b1e-3a03f429ee93"
     width="900"
     alt="Tabela de componentes eletrônicos"
   >
 
   <!-- Legenda da tabela -->
-  <br>
-  <em>Tabela 1 - Componentes eletrônicos utilizados e suas funções.</em>
-</p>
-
-  <!-- Legenda abaixo da imagem -->
   <br>
   <em>Tabela 1 - Componentes eletrônicos utilizados e suas funções.</em>
 </p>
