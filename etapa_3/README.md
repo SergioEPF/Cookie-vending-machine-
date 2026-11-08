@@ -291,9 +291,8 @@ Desenvolver a interface responsável pela interação entre o consumidor e a má
     alt="Demonstração do sistema de pedidos"
   />
   <br>
-  <em>Figura 13 - Demonstração do funcionamento do sistema de pedidos.</em>
+  <em>Figura 17 - Demonstração do funcionamento do sistema de pedidos.</em>
 </p>
-
 
 
 ## Conclusão
@@ -301,11 +300,6 @@ Desenvolver a interface responsável pela interação entre o consumidor e a má
 O projeto já apresenta elementos físicos de desenvolvimento, incluindo gabinete, mecanismos de espiral, montagem dos motores e fabricação da placa eletrônica.
 
 As próximas etapas de documentação envolvem registrar a implementação dos sistemas de controle e pagamento, executar os ensaios funcionais e anexar evidências que comprovem o atendimento aos requisitos de cada subentrega.
-
-
-
-
-
 
 
 ## Testes
