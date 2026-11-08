@@ -277,7 +277,7 @@ Na Etapa 3, a equipe montou a estrutura em MDF e integrou a placa eletrônica, o
 Na próxima etapa, a equipe fará ajustes técnicos para melhorar a detecção da queda dos cookies nos compartimentos centrais, desenvolverá suportes para os componentes e reforçará o gabinete da máquina para deixá-lo mais robusto.
 
 ## Referências
-- [1] [Onshape — Exportação de arquivos DXF e DWG](https://cad.onshape.com/help/Content/File/exporting_files.htm).
+- [1] [Onshape](https://www.onshape.com/en/).
 - [2] [Altium — Documentação do Altium Designer](https://www.altium.com/documentation/altium-designer).
 - [3] [Espressif — Datasheet da série ESP32](https://documentation.espressif.com/esp32_datasheet_en.html).
 - [4] [Espressif — Guia de programação ESP-IDF para ESP32](https://docs.espressif.com/projects/esp-idf/en/stable/esp32/).
