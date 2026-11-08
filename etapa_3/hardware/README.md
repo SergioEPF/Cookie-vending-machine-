@@ -10,7 +10,7 @@ Inicialmente, foi realizada a seleção dos componentes eletrônicos necessário
 <p align="center">
   <!-- Imagem da tabela de componentes eletrônicos -->
   <img
-    src="https://github.com/user-attachments/assets/88610cd5-6b61-47f3-8b1e-3a03f429ee93"
+    src="https://github.com/user-attachments/assets/c2a363e8-4386-4d4e-8ff6-f97a2236546d"
     width="900"
     alt="Tabela de componentes eletrônicos"
   >
