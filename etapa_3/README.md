@@ -206,6 +206,8 @@ O mecanismo também possui uma chave de fim de curso conectada ao GPIO32, utiliz
 
 ### 5.1 Desenvolvimento e montagem da placa eletrônica
 
+[Hardware](./hardware/README.md)
+
 
 Foi desenvolvida uma placa de circuito impresso (PCB) para integrar os componentes eletrônicos responsáveis pelo controle dos mecanismos de distribuição da máquina de cookies.
 
