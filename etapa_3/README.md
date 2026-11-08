@@ -121,7 +121,7 @@ A Figura 7 reúne em um diagrama as conexões entre o navegador, o ESP32, o serv
     height="600"
   />
   <br>
-  <em>Figura 7 - Fluxograma da rede .</em>
+  <em>Figura 7 - Fluxograma da rede.</em>
 </p>
 
 
@@ -275,12 +275,9 @@ Com a conclusão dessa etapa, a placa ficou preparada para a integração com os
 
 ## 6. Projetar painel/interface com o usuário
 
-Desenvolver a interface responsável pela interação entre o consumidor e a máquina, apresentando produtos disponíveis, preços, informações de pagamento e andamento da distribuição.
+A interface foi desenvolvida para facilitar a interação entre o consumidor e a máquina de cookies. Pelo painel, o cliente pode consultar os produtos disponíveis, conferir os preços, selecionar os itens do pedido e acompanhar o pagamento e a entrega dos cookies.
 
-**Testes previstos:** navegação, seleção dos produtos, exibição dos valores, atualização do estado do pagamento e mensagens de confirmação ou erro.
-
-**Situação:** espaço físico para interface identificado na estrutura; implementação e testes da interface pendentes de documentação.
-
+A avaliação da interface contempla a navegação entre as telas, a seleção dos produtos, a exibição dos valores, a atualização do estado do pagamento e as mensagens de confirmação ou erro. O espaço para o painel foi definido na estrutura da máquina, e a Figura 17 mostra a interface em funcionamento na tela de seleção dos produtos.
 
 
 <!-- GIF centralizado com reprodução automática -->
@@ -295,16 +292,15 @@ Desenvolver a interface responsável pela interação entre o consumidor e a má
 </p>
 
 
+## Testes
+
+Descrição dos testes/validações realizadas. Use fotos, diagramas, tabelas, etc.
+
 ## Conclusão
 
 O projeto já apresenta elementos físicos de desenvolvimento, incluindo gabinete, mecanismos de espiral, montagem dos motores e fabricação da placa eletrônica.
 
 As próximas etapas de documentação envolvem registrar a implementação dos sistemas de controle e pagamento, executar os ensaios funcionais e anexar evidências que comprovem o atendimento aos requisitos de cada subentrega.
-
-
-## Testes
-
-Descrição dos testes/validações realizadas. Use fotos, diagramas, tabelas, etc.
 
 ## Referências (links/datasheets/livros)
 
