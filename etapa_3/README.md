@@ -234,20 +234,41 @@ A avaliação da interface contempla a navegação entre as telas, a seleção d
 
 ### Teste inicial dos sensores
 
-O teste inicial dos sensores foi realizado com duas protoboards posicionadas frente a frente. Em uma delas, foram montados três transmissores e, na outra, um receptor. A equipe utilizou um osciloscópio para monitorar o sinal na saída do receptor.
+O teste inicial dos sensores foi realizado com duas protoboards posicionadas frente a frente. Em uma delas, foram montados três transmissores e, na outra, um receptor. Foi utilizado um osciloscópio para monitorar o sinal na saída do receptor.
 
-Para simular a passagem de um cookie durante a queda, a equipe colocou a mão entre os transmissores e o receptor, interrompendo o sinal por um breve instante. No osciloscópio, foram comparadas as formas de onda com e sem a obstrução para verificar a resposta do receptor.
+Para simular a passagem de um cookie durante a queda, o teste foi feito colocando a mão entre os transmissores e o receptor, interrompendo o sinal por um breve instante. No osciloscópio, foram comparadas as formas de onda com e sem a obstrução para verificar a resposta do receptor.
 
 <p align="center">
   <img
-    src="https://github.com/user-attachments/assets/37b2346b-2a6a-430b-ab22-a6e07705614d"
+    src="https://github.com/user-attachments/assets/ec7f929b-b3b4-4a96-8b79-f3d1bbb9135f"
     width="320"
     alt="Demonstração do sistema de pedidos"
-
-  />
+    />
   <br>
-  <em>Figura 17 - Demonstração do funcionamento do sistema de pedidos.</em>
+  <em>Figura 18 - Demonstração do funcionamento dos sensores.</em>
 </p>
+
+### Teste da maquina completa
+
+Os testes da máquina completa incluíram a abertura e o fechamento das tampas de manutenção e da portinhola por onde o cliente retira os cookies. Também foi verificado o funcionamento da chave de fim de curso. Ao abrir a tampa de manutenção, a chave sinalizou a abertura e o sistema entrou em modo de manutenção, bloqueando a operação da máquina.
+
+Os motores foram testados individualmente. Cada motor foi conectado diretamente à placa para verificar se respondia ao acionamento.
+
+O GIF abaixo mostra o funcionamento da máquina, desde o abastecimento dos compartimentos até a retirada dos cookies pela portinhola.
+
+<p align="center">
+  <img
+    src="https://github.com/user-attachments/assets/c96c8041-e0b4-4472-867e-c2e9278c8b51"
+    width="700"
+    alt="Demonstração do sistema de pedidos"
+    />
+  <br>
+  <em>Figura 18 - Demonstração do processo completo de compra.</em>
+</p>
+
+A única falha observada nos testes da máquina completa ocorreu na detecção da queda dos cookies. Nos compartimentos das extremidades, os sensores registraram a passagem dos cookies de forma consistente. Nos compartimentos centrais, algumas entregas não foram registradas, mesmo quando o cookie caiu. Uma possível causa é que, durante a queda, o cookie nem sempre bloqueia completamente o sinal entre o transmissor e o receptor.
+
+A equipe ajustou a frequência de operação dos transmissores e o foco do feixe. A causa das falhas nos compartimentos centrais ainda está em análise para orientar os próximos ajustes e tornar a detecção confiável em todos os compartimentos.
 
 ## Conclusão
 
