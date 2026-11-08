@@ -1,3 +1,6 @@
+
+# 5.1 Desenvolvimento e montagem da placa eletrônica
+
 Foi desenvolvida uma placa de circuito impresso (PCB) para integrar os componentes eletrônicos responsáveis pelo controle dos mecanismos de distribuição da máquina de cookies.
 
 O projeto foi realizado no Altium Designer, iniciando pela elaboração do esquemático elétrico, apresentado na **Figura 12**, no qual foram definidas as conexões entre os componentes eletrônicos. Em seguida, foi desenvolvido o layout da PCB, apresentado na **Figura 13**, incluindo o posicionamento dos componentes, o roteamento das trilhas e a organização das conexões elétricas necessárias para o funcionamento do sistema.
